@@ -1,0 +1,508 @@
+% LaTeX project: A template for MUST Thesis v0.1.0.7
+%
+% MUSTthesis (https://github.com/iihciyekub/mustthesis) bindings for XeLaTeX
+% Author: Y.J.Li(iihciyekub)
+% GitHub: https://github.com/iihciyekub/mustthesis
+%
+%
+% Copyright 2019 Y.J.Li
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.3
+% of this license or (at your option) any later version.
+% The latest version of this license is in
+%   http://www.latex-project.org/lppl.txt
+% and version 1.3 or later is part of all distributions of LaTeX
+% version 2005/12/01 or later.
+%
+% This work has the LPPL maintenance status `maintained'.
+% 
+% The Current Maintainer of this work is Y.J.Li
+%
+% This work consists of the files MUSTthesis.tex, MUSTthesisC.cls and MUSTthesiS.sty
+%
+%% MUSTthesis.tex - Demo for MUSTthesis %%
+%% Last Modified: 2019-06-02 %%
+
+
+%!TEX encoding 	= UTF-8
+%!TEX program 	= xelatex
+%!BIB program	= bibtex
+\documentclass{format/MUSTThesisC}
+\def\projectBname{\texttt{A Template For MUST Thesis (v0.1.0.7 ,May,2019)}}
+\def\projectSname{ \texttt{MUST Thesis (v0.1.0.7)}}
+
+
+%% -------------------------------------------------<< 以下開始論文正文
+\begin{document}
+
+%% -------------------------------------------------<< \readme 为 MUST Thesis 模版说明,正式使用时注釋掉
+\newgeometry{left=0cm,right=0cm,top=0cm, bottom=0cm}
+\thispagestyle{empty}
+\vfill
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}	
+	
+	% 子图全局透明设置
+	\begin{scope}[opacity=0.0]
+		\draw[help lines,gray!20,step=1cm] (-0.49\paperwidth,-0.49\paperheight) grid (0.49\paperwidth,0.49\paperheight);
+		\fill (0,0) circle (1pt);
+		\foreach \i in {-10,-9,...,10}
+			\node at (\i,0) {{\large \i}};
+		\foreach \i in {-14,-13,...,14}
+			\node at (0,\i) {{\large \i}};
+	\end{scope}
+	
+	% GitHub 下载
+	\coordinate (cd1) at (-7.6,13.5);
+	\node[black!80](githubico) at (cd1) {\sfz{20pt}\faGithub};
+	\node[right=-2.87pt of githubico.east,fill=black!80,rectangle, rounded corners=2pt] {\url{https://github.com/iihciyekub/mustthesis}};	
+	\draw[white,line width=1.3pt]  (cd1) circle (10pt);	
+	
+		
+	
+	% 校徽logo
+	\path
+	let \p1 =(-4,2) in
+		% 节点放置校徽图片
+		node(logo)[anchor=east] at (\p1) {\includegraphics[width=3.5cm]{figure/MUSTSchoolBadgecolor}}
+		%  澳门科技大学
+		node(c)[anchor=west,text width =10cm,right=1pt of logo.15]  {\sfz{35pt}澳\hfill 門\hfill 科\hfill 技\hfill 大\hfill 學}
+
+
+		% 学校英文名
+		node(must)[anchor=west,text width=10cm,right=1pt of logo.-15] {\color{gray}\sfz{10pt}\textbf{MACAU \hfill UNIVERSITY\hfill OF\hfill SCIENCE\hfill AND\hfill TECHNOLOGY}}
+		% 线段
+		node[anchor= west,right=1pt of logo.-21]{\rule{10cm}{0.7pt}}
+		node[anchor= west,right=1pt of logo.-22]{\rule{2.87cm}{1.6pt}}
+		% 学院
+		node(SOB)[anchor=north west,right=1pt of logo.-28,gray]{{\footnotesize School of Business,2018}}
+		% 版本说明
+		node[left=0pt of c.east,yshift=10mm]{\color{Salmon}\footnotesize\projectBname \color{black!60} \sfz{18pt}{\faGraduationCap} }
+		
+		
+		node(L1)[anchor= north west,white,text height=5pt,fill=black!80,rectangle, rounded corners=1pt,right=2pt of logo.-37]
+		{\href{https://www.latex-project.org/lppl/}{ \color{white}\sfz{7pt}\texttt{\rlap{\color{black!80}p}Licenes:}}}
+		node(L2)[anchor= north west,text height=5pt,right = 0mm of L1,rectangle, fill=Periwinkle!80,rounded corners=1pt,right=1pt of L1] {\href{https://www.latex-project.org/lppl.txt}{\color{white}\sfz{7pt}\texttt{The LaTeX Project Public License (LPPL v1.3c)}}}
+		node[anchor=north west,right=0pt of L2]{\faBalanceScale\faCreativeCommons}
+		;
+
+
+
+
+
+	% author 作者信息	
+	\begin{scope}
+		\tikzstyle{a}=[draw=black!40,line width=1.5pt]
+		\coordinate (P1) at (5,-11);
+		\clip (P1) circle (0.55cm);
+		\node(note2) at (P1) {\includegraphics[width=1.2cm]{figure/author}};
+		\draw[a]  (P1) circle (0.55cm);	
+	\end{scope}
+
+
+	\node(e)[right=-1mm of note2.east,yshift=2mm] {};
+	\node(ee2)[right=-1mm of note2.east,yshift=-12mm] {};
+	\draw[Goldenrod,line width=3pt,name=l1] (e)--(ee2);
+	
+	\node(name1)[right=-.5mm of e ,anchor=north west] {\href{mailto:lyj8512@126.com}{\texttt{@}\iiname}};
+	\node[right=-.5mm of name1.west,yshift=-1.2em,gray] {\color{LimeGreen}{\faWechat} \color{gray}\texttt{iichieykub}};
+	\node[right=-.5mm of name1.west,yshift=-2.4em,gray] {{\footnotesize \texttt{Copyright} \copyright  \texttt{2019}}\iiname};		
+	
+\end{tikzpicture}
+\end{figure}
+
+\vfill
+
+
+%% 第二页
+\newpage
+\thispagestyle{empty}
+
+\vfill
+\begin{center}
+\begin{tikzpicture}
+
+%% -------------------------------------------------<< 子图全局透明设置
+\begin{scope}[opacity=0]
+\draw[help lines,gray!20,step=1cm] (-0.49\paperwidth,-0.49\paperheight) grid (0.49\paperwidth,0.49\paperheight);
+\fill (0,0) circle (1pt);
+\foreach \i in {-10,-9,...,10}
+\node at (\i,0) {{\large \i}};
+\foreach \i in {-14,-13,...,14}
+\node at (0,\i) {{\large \i}};
+\end{scope}
+
+
+
+
+%% -------------------------------------------------<<
+% 设置版本节点的样式
+\tikzset{gitnode/.style={anchor=east,fill=#1!50, draw=#1, text=black,rounded corners=2pt,opacity=0.7,node font=\texttt,font=\large,line width=0.6pt}}
+\tikzset{gitsubnode/.style={anchor=east,fill=#1!50, circle=1pt,draw=#1, text=black!60,line width=0.6pt}}
+
+% 设置全局坐标点
+\coordinate (git1) at (-5.5,12.5);
+\filldraw[gray!10!blue!2!red!1,opacity=0.2,rounded corners=5pt,draw=black,line width=.8pt,name path=A] 
+	let \p1=(git1) in
+	(\x1-4cm,\y1+1.1cm) rectangle +(19.2cm,-5.78) ;
+
+% 发布版本节点的代码
+\node(m1)[gitnode=LimeGreen] at (git1){\texttt{Release}};
+\draw[dashed,line width=.8pt,gray!40]   ($(m1.east)+(3mm,0)$) -- +(2cm,0)node[gitsubnode=LimeGreen,name=mm1]{} 
+--+(4.7cm,0)node[gitsubnode=LimeGreen,name=v2]{}
+--+(12.4cm,0)node[gitsubnode=LimeGreen,name=v3]{}
++(13,0);
+
+% v0.0.0.1
+\node[anchor=east,right=-6pt of mm1.west,yshift=5mm]  at (mm1) {\faHandODown\texttt{~v0.0.0.1}};
+% v0.0.0.4
+\node[anchor=east,right=-6pt of v2.west,yshift=5mm]  at (v2) {\faHandODown\texttt{~v0.0.0.4}};
+% v0.0.1.8
+\node[anchor=east,right=-6pt of v3.west,yshift=5mm]  at (v3) {\faHandODown\texttt{~v0.0.1.8}};
+
+
+
+% Prof.Jenny
+\node(m2)[gitnode=Melon,yshift=-1cm,label=left:\texttt{Init}] at (git1){\texttt{@Prof.Jenny}};
+\draw[dashed,line width=.8pt,gray!40]   ($(m2.east)+(6mm,0)$) --+(.3cm,0)node[gitsubnode=Melon,name=mm2]{\sfz{7pt}\faFlash} --+(13,0);
+\draw[->>,Melon,line width=1.5pt](mm2.north) .. controls +(0,.8) and +(-.6,0) .. (mm1.west);
+
+
+
+% FP
+\node(m3)[gitnode=Rhodamine,yshift=-2cm,label=left:\texttt{deve}] at (git1){\texttt{@pīng.Fán}};
+\draw[dashed,line width=.8pt,gray!40]   ($(m3.east)+(3mm,0)$) --+(2cm,0)node[gitsubnode=Rhodamine,name=mm3]{\sfz{8pt}\faPagelines} --+(13,0);
+\draw[->,gray,line width=1.5pt,opacity=0.7](mm2)-- (mm3.north west);
+
+
+
+
+
+
+% YLF
+\node(m4)[gitnode=Turquoise,yshift=-3cm,label=left:\texttt{deve}] at (git1){\texttt{\texttt{@yàn.lì.Fāng}}};
+\draw[dashed,line width=.8pt,gray!40]   ($(m4.east)+(3mm,0)$) --+(3cm,0)node[gitsubnode=Turquoise,name=mm4]{\faPlug } --+(13,0);
+\draw[->,gray,line width=1.5pt,opacity=0.7](mm3)-- (mm4.north west);
+\draw[->>,Turquoise,line width=1.5pt](mm4.north) .. controls +(0,2.3) and +(-1,0) .. (v2.west);
+
+
+
+
+\node(m5)[gitnode=SeaGreen,yshift=-4cm,label=left:\texttt{deve}] at (git1){\texttt{@}\iiname};
+\draw[dashed,line width=.8pt,gray!40]   ($(m5.east)+(3mm,0)$) --+(10cm,0)node[gitsubnode=SeaGreen,name=mm5]{\faBug} --+(13,0);
+\draw[->,gray,line width=1.5pt,opacity=0.7](mm4)-- (mm5.west);
+\draw[->>,SeaGreen,line width=1.5pt](mm5.north) .. controls +(0,3.1) and +(-1,0) .. (v3.west);
+
+
+
+
+
+
+
+
+%% -------------------------------------------------<< 文件夹
+\coordinate (f2) at ($(git1)+(2,-6)$);
+% 文件夹背景图
+\filldraw[gray!10!blue!2!red!1,opacity=0.6,rounded corners=5pt,draw=black,line width=.8pt,name path=A] 
+let \p1=(f2) in
+	(\x1-6cm,\y1+1.1cm) rectangle +(13.2cm,-9.8) ;
+
+% 项目文件根目录
+\node(project)[label={above:\faHandORight ~~\color{Purple}\projectSname}] at (f2){{\huge \faFolderOpen}};
+
+
+% content
+\def\ff{folder1}
+\node(\ff)[
+			right=0pt of project.south east, yshift=-.25cm,
+			label={right:\color{blue}\texttt{\textbf{content}}}
+			]
+			{{\Large \faFolderOpenO}};
+
+
+\draw[line width=1pt,rounded corners=2pt,gray](project) |-(\ff) ;
+\path [name path=C](\ff) -- +(20,0);
+\path [name intersections={of=A and C,by=F}];
+\fill[name=ii,opacity=0.6,rounded corners=1pt] ($(F) + (-4pt,-2pt)$) rectangle +(8pt,4pt) node(ee){};                                                                                       
+\draw (ee.center) +(0,-2pt) edge[in=180,out=0] +(2,2)  edge[in=180,out=0] +(1,2);
+
+\foreach \a /\b /\c  in {
+	25/\texttt{En-Abstract.tex}/\faFileTextO,
+	75/\texttt{Zh-Abstract.tex}/\faFileTextO,
+	125/\texttt{chapter01.tex}/\faFileTextO,
+	175/\texttt{chapter02.tex}/\faFileTextO,
+	225/\texttt{chapter03.tex}/\faFileTextO,
+	275/\texttt{appendix.tex}/\faFileTextO,
+	325/\texttt{acknowledgement.tex}/\faFileTextO
+}
+{
+	\node(file\a)[right=0pt of \ff.south east,yshift=- \a * .1mm,label=right:\color{gray}\texttt{{\footnotesize \b}},black!70]{ \c };
+	\draw[line width=1pt,rounded corners=2.25pt,gray](\ff) |-(file\a);
+%	\draw[line width =.6pt,gray](file\a.west) .. controls +(180:2cm) and +(0:3.1cm) .. +(-2.854cm, -25+\a * .1mm);
+}
+
+
+
+% figure
+\ff{folder2}
+\node(\ff)[left=0pt of project.south west, yshift=-1cm,label={left:\color{blue}\texttt{\textbf{figure}}}]{{\Large \faFolderOpenO}};
+\draw[line width=1pt,rounded corners=2pt,gray](project) |-(\ff);
+
+\foreach \a /\b /\c  in {
+	25/\texttt{MUSTSchoolBadgebk.pdf}/\faFilePdfO,
+	75/\texttt{MUSTSchoolBadgecolor.pdf}/\faFilePdfO,
+	125/\texttt{MUSTThesistemplatever.pdf}/\faFilePdfO,
+	175/\texttt{author.jpg}/\faFileImageO		
+}
+{
+	\node(file\a)[left=0pt of \ff.south west,yshift=-\a * .1mm,label=left:\color{gray}\texttt{{\footnotesize \b}},black!70]{ \c };
+	\draw[line width=1pt,rounded corners=2.25pt,gray](\ff) |-(file\a);
+}
+
+
+% fonts
+\ff{folder3}
+\node(\ff)[right=0pt of project.south east, yshift=-4.5cm,label={right:\color{blue}\texttt{\textbf{fonts}}}]{{\Large \faFolderOpenO}};
+\draw[line width=1pt,rounded corners=1pt,gray](project) |-(\ff);
+
+\foreach \a /\b /\c  in {
+	25/\texttt{FontAwesome.otf}/\faFont,
+	75/\texttt{KaiTi.ttf}/\faFont
+%		125/\texttt{MUSTThesistemplatever.pdf}/\faFilePdfO,	
+}
+{
+	\node(file\a)[right=0pt of \ff.south east,yshift=-\a * .1mm,label=right:\color{gray}\texttt{{\footnotesize \b}},black!70]{ \c };
+	\draw[line width=1pt,rounded corners=2.25pt,gray](\ff) |-(file\a);
+}
+
+
+
+
+% format
+\ff{folder4}
+\node(\ff)[left=0pt of project.south west, yshift=-3.75cm,label={left:\color{blue}\texttt{\textbf{format}}}]{{\Large \faFolderOpenO}};
+\draw[line width=1pt,rounded corners=2pt,gray](project) |-(\ff);
+
+\foreach \a /\b /\c  in {
+	25/\texttt{fontawesome.sty}/\faFileCodeO,
+	75/\texttt{MUSTThesisC.cls}/\faFileCodeO,
+	125/\texttt{MUSTThesisS.sty}/\faFileCodeO	
+}
+{
+	\node(file\a)[left=0pt of \ff.south west,yshift=-\a * .1mm,label=left:\color{gray}\texttt{{\footnotesize \b}},black!70]{ \c };
+	\draw[line width=1pt,rounded corners=2.25pt,gray](\ff) |-(file\a);
+}
+
+
+
+
+% reference
+\ff{folder5}
+\node(\ff)[left=0pt of project.south west, yshift=-6cm,label={left:\color{blue}\texttt{\textbf{reference}}}]{{\Large \faFolderOpenO}};
+\draw[line width=1pt,rounded corners=1pt,gray](project) |-(\ff);
+
+\foreach \a /\b /\c  in {
+	25/\texttt{ch-ref.bib}/\faFileTextO,
+	75/\texttt{en-ref.bib}/\faFileTextO
+}
+{
+	\node(file\a)[left=0pt of \ff.south west,yshift=-\a * .1mm,label=left:\color{gray}\texttt{{\footnotesize \b}},black!70]{ \c};
+	\draw[line width=1pt,rounded corners=2.25pt,gray](\ff) |-(file\a);
+}
+
+
+
+% Tex 主文档
+\ff{folder5}
+\node(\ff)[
+		right=0pt of project.south east, yshift=-6.4cm,
+		label={[draw=Cyan,line width=1.2pt,text width=2.6cm]right:\color{black!60}\texttt{\textbf{MUSTThesis.tex}}},
+		black!70
+		]{ \faFileTextO};
+		
+\node(df)[right=3cm of \ff.east]{\#~ \LaTeX 主文档};		
+		
+\draw[line width=1pt,rounded corners=1pt,gray](project) |-(\ff);
+
+
+% lic许可文件
+\ff{folder6}
+\node(\ff)[
+		right=0pt of project.south east, yshift=-7.1cm,
+		label={[draw=Cyan,line width=1.2pt,text width=2.6cm]right:\color{gray}\texttt{lppl-1-3c.lic}},
+		black!70]
+		{ \faFileTextO};
+		
+\node(df)[right=3cm of \ff.east]{\#~许可文件};
+\draw[line width=1pt,rounded corners=1pt,gray](project) |-(\ff);
+
+
+% iitool.exe
+\ff{folder7}
+\node(\ff)[
+		right=0pt of project.south east, yshift=-7.8cm,
+		label={[draw=Cyan,line width=1.2pt,text width=2.6cm]right:\color{gray}\texttt{iitool.exe}},
+		black!70]
+		{ \faFileTextO};
+\node(df)[right=3cm of \ff.east]{\#~自动化编译工具};	
+\draw[line width=1pt,rounded corners=1pt,gray](project) |-(\ff);
+
+
+
+\end{tikzpicture}
+\end{center}
+
+\vfill
+
+
+
+
+
+
+
+\restoregeometry
+\newpage
+
+
+
+%% -------------------------------------------------<< 增加 MUST 校徽水印-----论文终稿使用
+%\AddToShipoutPicture{\BackgroundPic}
+
+
+
+%% -------------------------------------------------<< 自動生成 MUST 指定格式的扉頁
+\def\Ctitle 		{中文題目}
+\def\Etitle 		{英文題目}
+\def\Sname 			{Y.J.Li}
+\def\Sno 			{1809853G-BM30-0053}
+\def\Sfaculty 		{商學院}
+\def\Sprogram 		{XXX}
+\def\Smajor 		{XXXX}
+\def\Ssupervisor	{A/Prof.Jenny}
+\def\Sdate			{\today}
+
+% 自動生成論文扉頁
+\mustTitle
+
+
+
+%% -------------------------------------------------<< \mustCabstract 生成中文摘要
+\mustCabstract 
+{
+% 引用目錄下的文件內容
+\input{content/Zh-Abstract}
+}
+{關鍵字1；關鍵2}
+
+
+
+% \mustEabstract 生成英文摘要
+\mustEabstract
+{
+\input{content/En-Abstract}
+}
+{words, words}
+
+
+
+%% -------------------------------------------------<< 生成目錄
+\mustcontents
+
+
+
+% 調整行間距
+\linespread{1.65}\selectfont
+
+
+\chapter{緒論}
+\input{content/chapter01.tex}
+\chapter{論證章}
+\input{content/chapter02.tex}
+\chapter{結論和建議}
+\input{content/chapter03.tex}
+
+
+
+
+%% -------------------------------------------------<< bib 參考文獻 中英文 bib 文件要分别创建
+\bibliographystyle{apalike}
+\bibreference{
+	\bibliography{reference/ch-ref,reference/en-ref}
+}
+
+
+
+%% -------------------------------------------------<< 附錄
+\MUSTappendix{
+\input{content/appendix.tex}
+}
+
+
+%% -------------------------------------------------<< 致謝
+\MUSTacknowledgement{
+\input{content/acknowledgement.tex}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%% -------------------------------------------------<< 個人簡歷
+% 入學時間
+\def\mustProfilea{
+	2019年5月10日
+}
+
+
+% 起止年月
+\def\mustProfileb{
+	2010.11 $\sim$ 2011.11 \\ 
+	2010.11 $\sim$ 2011.11
+}
+
+
+% 就讀學校
+\def\mustProfilec{
+	X~X~X~大學 \\ 
+	X~X~X~大學
+}
+
+
+% 取得學位名稱
+\def\mustProfiled{
+	X~X~学士学位\\
+	X~X~硕士学位
+}
+
+
+%發表的學術論文、著作（論文/著作名稱、報刊/出版社名稱、發表時間、刊物/出版社級別）
+\def\mustProfilee{
+	待写,待补
+}
+
+
+%參加的學術項目(項目名稱、項目時間、立項單位、承擔的工作)
+\def\mustProfilef{
+	待写,待补
+}
+
+
+
+% 自动生成個人簡歷
+\MUSTProfile
+
+
+
+\end{document}

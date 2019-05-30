@@ -1,0 +1,330 @@
+%% A template for MUST Thesis
+%% Title: MUSTThesisS.sty
+%% Creator: MUSTThesisS v0.97.2
+%% CreationDate: Sun May 26 15:30:36 2019
+%% Changes added by lyj8512@126.com (LiYongJian) on <2019/05/27>
+
+\RequirePackage{subcaption}
+\RequirePackage{float}
+\usepackage{lastpage}
+\usepackage{layout}
+\usepackage{makecell}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{indentfirst}
+\usepackage{fancyhdr}
+\usepackage{fancybox}
+
+\usepackage{color}
+\usepackage{soul}
+
+\usepackage{verbatim}
+\usepackage{setspace}
+\usepackage{adjustbox}
+\usepackage{eurosym}
+
+% 超链接
+\usepackage[colorlinks,linkcolor=black,citecolor=black,anchorcolor=black]{hyperref}
+\usepackage[dvipsnames]{xcolor}% http://ctan.org/pkg/xcolor
+% 生成文字段落
+\usepackage{lipsum,wasysym}
+% 常用表格宏包
+\usepackage{array,tabularx, caption, multirow,boldline,booktabs,longtable,makecell}
+% 旋轉表格宏包
+\usepackage[figuresright]{rotating}
+% 偽算法宏包
+\usepackage[boxed,ruled,noline,linesnumbered,commentsnumbered]{algorithm2e}
+% 函數圖宏包
+\usepackage{pgfplots}
+\pgfplotsset{width=10cm,compat=1.16}
+\usepgfplotslibrary{smithchart,polar}
+% tikz 繪圖宏包
+\usepackage{tikz}
+\usetikzlibrary{bending,intersections,calc,graphs,arrows,decorations.pathmorphing,backgrounds,positioning,fit,petri}
+% 參考文獻引用宏包
+\usepackage[round]{natbib}
+\addtolength{\bibsep}{-0.5 em}
+% 代碼高亮宏包
+\usepackage{listings}
+
+
+
+
+
+
+
+
+%% -------------------------------------------------<< 字體設置
+\newcommand{\yihao}{\fontsize{28pt}{\baselineskip}\selectfont} %一号
+\newcommand{\erhao}{\fontsize{21pt}{\baselineskip}\selectfont} %二号
+\newcommand{\xiaoerhao}{\fontsize{18pt}{\baselineskip}\selectfont} %小二号
+\newcommand{\sanhao}{\fontsize{15.75pt}{\baselineskip}\selectfont} %三号
+\newcommand{\sihao}{\fontsize{14pt}{\baselineskip}\selectfont}% 四号
+\newcommand{\sfz}[1]{\fontsize{#1}{\baselineskip}\selectfont}% 自定义字号
+\renewcommand\theadalign{tl}
+\renewcommand\theadfont{\large}
+
+
+
+
+
+%% -------------------------------------------------<< 定義一个命令 \BackgroundPic ,設置水印
+\usepackage{eso-pic}
+\newcommand\BackgroundPic{%
+	\put(0,0){%
+		\parbox[b][\paperheight]{\paperwidth}{%
+			\vfill
+			\centering
+			\includegraphics[width=0.85\textwidth,keepaspectratio]{figure/MUSTSchoolBadgebk.pdf}%
+			\vfill
+}}}
+
+%% -------------------------------------------------<< 定義一个命令 \iiname ,用于生成作者名字
+\def\iiname{
+	\hspace{-1.3ex}\texttt{
+		\raisebox{-0.16ex}{Y}\hspace{-.4ex}\raisebox{0.72ex}{.}\hspace{-.4ex}\textbf{J}\hspace{-.3ex}\raisebox{0.72ex}{.}\hspace{-.2ex}\raisebox{-0.16ex}{L}\hspace{-.45ex}\raisebox{-0.4ex}{i}
+	}\hspace{-1.3ex}
+}
+
+
+
+%% -------------------------------------------------<< 定义一个命令 \readme ,自動生成说明首页 
+\def\readme{
+%	\newgeometry{left=0cm,right=0cm,top=0cm}
+%	\thispagestyle{empty}
+%	\setlength{\unitlength}{1cm}
+%
+%\begin{tikzpicture}
+%\node at (0,0) {\includegraphics[width=5cm,height=5cm]{figure/MUSTSchoolBadgecolor}};
+%\draw (0,0) circle(4);
+%\end{tikzpicture} %
+%
+%
+%
+%
+%	%	\vspace{-3em}\mbox{{\tikz \draw[color=yellow!50,line width=40pt] (0,0)--(0,4);}} \hfill erere:3333
+%	
+%	\vfill
+%	\begin{center}
+%		\includegraphics[width=0.287\linewidth]{figure/MUSTSchoolBadgecolor}\\
+%		{\vspace{2.5em}\fontsize{30pt}{\baselineskip}\selectfont{澳~門~科~技~大~學}}\\[1.25em]
+%		{\fontsize{18pt}{\baselineskip}\selectfont\textbf{MACAU UNIVERSITY OF SCIENCE AND TECHNOLOGY}}\\[1em]
+%		\includegraphics[width=0.1\textwidth]{figure/MUSTThesishat}\\
+%		{\color{gray} \zihao{4} \ddag{}~~ver.$0.1.0.7$~~\ddag{}}\\
+%		{\vspace{2em}\fontsize{15pt}{\baselineskip}\selectfont{A template for MUST Thesis}}\\
+%	\end{center}
+%	\vfill
+%	\clearpage
+%	\newgeometry{left=0cm,right=0cm,top=1.5cm}
+%	\thispagestyle{empty}	
+%	\vspace{2em}
+%	\huge MUST Thesis template
+%	\vspace{-3em}
+%	\begin{center}
+%		\rule{.45\linewidth}{1.5pt}version\rule{.45\linewidth}{1.5pt}
+%	\end{center}
+%	\vspace{1em}
+%	\qquad\includegraphics[width=0.8\linewidth]{figure/MUSTThesistemplatever}
+%	\restoregeometry
+%	\clearpage
+}
+
+
+
+
+
+
+%% -------------------------------------------------<< 定义一个命令 \mustTitle ,生成指定格式扉頁
+% 子命令,主要用于简化\mustTitle 命令
+\newcommand{\ee}[3]{
+	\makecell*[l{p{2.25cm}}]{\sanhao #1\\[2mm]\sanhao #2}
+	&\hspace{-2mm}\sanhao\textbf{：}    
+	&\hspace{-8mm}\makecell*[c{p{22em}}]{\centering{\vspace{.5mm}\sanhao #3}\\ \rule[-.25mm]{7cm}{.4mm}} \\[2mm]
+}
+
+% 設計封面格式 正文調用命令 \mustTitle
+\def\mustTitle{
+	\begin{titlepage}
+		\thispagestyle{empty} 														% 設置當前頁面無頁碼
+		\vspace*{.5cm}																% 標題偏移量	
+		\begin{center}
+			\zihao{2}																%
+			\begin{tabular}{p{2em}<{\flushleft} c p{16em}<{\flushleft}}				%
+				題\hfill 目&\hspace{-4mm}： & \Ctitle \\
+				Title& \hspace{-4mm}： & \Etitle
+			\end{tabular}
+		\end{center}	
+		\vspace*{1.5cm}																%
+		{\fontsize{12pt}{\baselineskip}\selectfont
+			\begin{table}[htbp]
+				\centering
+				\begin{tabular}{ccc}
+					\ee{姓\qquad 名}{Name}{\Sname}
+					\ee{學\qquad 號}{StudentNo.}{\Sno}
+					\ee{學\qquad 院}{Faculty}{\Sfaculty}
+					\ee{課\qquad 程}{Program}{\Sprogram}
+					\ee{專\qquad 業}{Major}{\Smajor}
+					\ee{指導教師}{Supervisor}{\Ssupervisor}
+					\ee{日\qquad 期}{Date}{\Sdate}
+				\end{tabular}
+			\end{table}
+		}
+\end{titlepage}
+\clearpage
+\setcounter{page}{1}
+}
+
+
+
+
+
+
+%% -------------------------------------------------<< 定義一个命令 \mustcontents ,設置目錄正文調用命令 
+\def\mustcontents{
+	\thispagestyle{plain}
+	\renewcommand{\contentsname}{目~~~~錄}
+	\renewcommand{\chaptername}{目錄}
+	%\addcontentsline{toc}{chapter}{目錄}		% 設置目錄是否出現在目錄中
+	\setcounter{tocdepth}{1}		% 目錄顯示深度
+	\begin{spacing}{1.65}
+		\sihao\tableofcontents		% 目錄字體大小及行間距
+	\end{spacing}
+	\newpage						% 新開一頁用於寫論文正文	
+	\pagenumbering{arabic} 			% 目錄下一頁 頁碼使用由阿拉伯數字
+}
+
+
+
+
+
+
+%% -------------------------------------------------<< 定義一个命令 \bibreference ,用於生成指定的參考文獻格式
+\newcommand{\bibreference}[1]{
+\newpage
+\chapter*{參考文獻}
+\renewcommand\refname{}
+\rhead{\fontsize{10pt}{\baselineskip}\selectfont 參考文獻}
+\addcontentsline{toc}{chapter}{參考文獻}
+%\vspace{-2em}
+%\hspace{-2em}\noindent\zihao{4} {\it\bfseries 英文文獻 }
+\vspace{-4em}
+\begin{spacing}{1.1}
+	\zihao{4}
+	\nocite{*}
+	#1
+\end{spacing}
+\markboth{參考文獻}{}
+\rhead{\fontsize{10pt}{\baselineskip}\selectfont\leftmark}	
+}
+
+
+
+
+
+
+%% -------------------------------------------------<< 定義一个命令 \MUSTappendix ,用於生成指定的參考文獻格式
+\newcommand{\MUSTappendix}[1]{
+	\clearpage
+	\chapter*{附錄}
+	\markboth{附錄}{}
+	\addcontentsline{toc}{chapter}{附錄}	
+	#1
+}
+
+
+
+
+
+
+%% -------------------------------------------------<< 定義一个命令 \MUSTappendix ,用於生成指定的參考文獻格式
+\newcommand{\MUSTacknowledgement}[1]{
+	\clearpage
+	\chapter*{致謝}
+	\markboth{致謝}{致謝}
+	\addcontentsline{toc}{chapter}{致謝}
+	#1
+	\vspace{1cm}
+	\par\rightline{\Sname}
+	\rightline{澳門科技大學商學院}
+
+	\rightline{\today}
+}
+
+
+
+
+%% -------------------------------------------------<< 定義一个命令 \MUSTProfile ,用於生成指定的个人简历
+\newcommand{\MUSTProfile}{
+\clearpage
+\chapter*{個人簡歷}
+\markboth{個人簡歷}{個人簡歷}
+\addcontentsline{toc}{chapter}{個人簡歷}
+\vspace{-2em}
+\begin{table}[H]
+	\renewcommand\arraystretch{1.7}
+	\large {
+		\centering
+		\begin{tabular}{|p{1em} *{14}{p{1.25em}}|}
+			\hline
+			&&&&&&&&&&&&&&\\[-.84cm]
+			\multicolumn{3}{|c}{\textbf{姓\hfill 名}}		
+			& \multicolumn{4}{|c}{\Sname} 
+			& \multicolumn{4}{|c}{\textbf{入\hfill 學\hfill 時\hfill 間}}
+			& \multicolumn{4}{|c|}{\mustProfilea} \\ \hline
+			% 第二行
+			\multirowcell{2}{  ~\\ \textbf{教}\\ \textbf{育}\\ \textbf{背}\\ \textbf{景}\\  \quad}	
+			&\multicolumn{5}{|c}{\textbf{起\hfill 止\hfill  年 \hfill 月}}  
+			&\multicolumn{5}{|c}{\textbf{就\hfill 讀\hfill 學\hfill 校}}  
+			&\multicolumn{4}{|c|}{\textbf{取\hfill 得\hfill 學\hfill 位\hfill 名\hfill 稱}} \\ \cline{2-15}
+			
+			% 第三行	
+			&\multicolumn{5}{|p{1em}}{\raisebox{1.68cm}[2.3cm][0cm]{
+					\parbox[t]{10em}{
+						\mustProfileb
+					}
+			}} 
+			&\multicolumn{5}{|p{1em}}{\raisebox{1.68cm}[2.3cm][0cm]{
+					\parbox[t]{10em}{
+						\mustProfilec
+					}
+			}} 
+			&\multicolumn{4}{|p{1em}|}{\raisebox{1.68cm}[2.3cm][0cm]{
+					\parbox[t]{10em}{
+						\mustProfiled 
+					}
+			}}\\ \cline{1-15}
+			
+			\multirowcell{2}{\vspace{6.8cm} \\ \textbf{在}\\ \textbf{讀}\\ \textbf{期}\\ \textbf{間}\\ \textbf{學}\\ \textbf{術}\\ \textbf{成}\\ \textbf{果}}
+			&\multicolumn{14}{|m{31em}|}{\textit{\color{gray}發表的學術論文、著作（論文/著作名稱、報刊/出版社名稱、發表時間、刊物/出版社級別）}}  \\ 
+			&\multicolumn{14}{|m{31em}|}{\raisebox{7.4cm}[8cm][0cm]{
+					\parbox[t]{13cm}{
+						\mustProfilee
+					}
+			}} \\ \cline{2-15}
+			
+			&\multicolumn{14}{|m{31em}|}{\textit{\color{gray}參加的學術項目(項目名稱、項目時間、立項單位、承擔的工作)}} \\ 
+			&\multicolumn{14}{|m{31em}|}{\raisebox{7.4cm}[8cm][0cm]{
+					\parbox[t]{13cm}{
+						\mustProfilef
+					}
+			}} \\ \cline{1-15}
+	\end{tabular}}
+\end{table}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
