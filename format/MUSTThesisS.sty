@@ -1,8 +1,31 @@
-%% A template for MUST Thesis
-%% Title: MUSTThesisS.sty
-%% Creator: MUSTThesisS v0.97.2
-%% CreationDate: Sun May 26 15:30:36 2019
-%% Changes added by lyj8512@126.com (LiYongJian) on <2019/05/27>
+% LaTeX project: A template for MUST Thesis v0.1.0.8
+%
+% MUSTthesis (https://github.com/iihciyekub/must-thesis) bindings for XeLaTeX
+% Author: Y.J.Li(iihciyekub)
+% GitHub: https://github.com/iihciyekub/must-thesis
+% 
+% file: MUSTThesisS.sty
+% Directory: ./format/
+% Usage: \usepackage{format/MUSTThesisS}
+%
+% Copyright 2019 Y.J.Li
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.3
+% of this license or (at your option) any later version.
+% The latest version of this license is in
+%   http://www.latex-project.org/lppl.txt
+% and version 1.3 or later is part of all distributions of LaTeX
+% version 2005/12/01 or later.
+%
+% This work has the LPPL maintenance status `maintained'.
+% 
+% The Current Maintainer of this work is Y.J.Li
+%
+% This work consists of the files MUSTthesis.tex, MUSTthesisC.cls and MUSTthesiS.sty
+%
+%% MUSTThesisS.sty %%
+%% Last Modified: 2019-06-02 %%
 
 \RequirePackage{subcaption}
 \RequirePackage{float}
@@ -48,9 +71,14 @@
 \usepackage{listings}
 
 
-
-
-
+%% -------------------------------------------------<< 自定義命令
+\def\projectBname{\texttt{A Template For MUST Thesis (v0.1.0.8 ,June,2019)}}% 項目版本全稱
+\def\projectSname{ \texttt{MUST Thesis (v0.1.0.8)}}% 項目版本簡稱
+\def\iiname{% 自定義ii昵稱
+	\hspace{-1.3ex}\texttt{
+		\raisebox{-0.16ex}{Y}\hspace{-.4ex}\raisebox{0.72ex}{.}\hspace{-.4ex}\textbf{J}\hspace{-.3ex}\raisebox{0.72ex}{.}\hspace{-.2ex}\raisebox{-0.16ex}{L}\hspace{-.45ex}\raisebox{-0.4ex}{i}
+	}\hspace{-1.3ex}
+}
 
 
 
@@ -61,8 +89,11 @@
 \newcommand{\sanhao}{\fontsize{15.75pt}{\baselineskip}\selectfont} %三号
 \newcommand{\sihao}{\fontsize{14pt}{\baselineskip}\selectfont}% 四号
 \newcommand{\sfz}[1]{\fontsize{#1}{\baselineskip}\selectfont}% 自定义字号
-\renewcommand\theadalign{tl}
-\renewcommand\theadfont{\large}
+
+
+\renewcommand\theadalign{tl}% 重置嵌套格的對齊位置
+
+\renewcommand\theadfont{\large}% 設置嵌套方格的字體大小
 
 
 
@@ -78,58 +109,6 @@
 			\includegraphics[width=0.85\textwidth,keepaspectratio]{figure/MUSTSchoolBadgebk.pdf}%
 			\vfill
 }}}
-
-%% -------------------------------------------------<< 定義一个命令 \iiname ,用于生成作者名字
-\def\iiname{
-	\hspace{-1.3ex}\texttt{
-		\raisebox{-0.16ex}{Y}\hspace{-.4ex}\raisebox{0.72ex}{.}\hspace{-.4ex}\textbf{J}\hspace{-.3ex}\raisebox{0.72ex}{.}\hspace{-.2ex}\raisebox{-0.16ex}{L}\hspace{-.45ex}\raisebox{-0.4ex}{i}
-	}\hspace{-1.3ex}
-}
-
-
-
-%% -------------------------------------------------<< 定义一个命令 \readme ,自動生成说明首页 
-\def\readme{
-%	\newgeometry{left=0cm,right=0cm,top=0cm}
-%	\thispagestyle{empty}
-%	\setlength{\unitlength}{1cm}
-%
-%\begin{tikzpicture}
-%\node at (0,0) {\includegraphics[width=5cm,height=5cm]{figure/MUSTSchoolBadgecolor}};
-%\draw (0,0) circle(4);
-%\end{tikzpicture} %
-%
-%
-%
-%
-%	%	\vspace{-3em}\mbox{{\tikz \draw[color=yellow!50,line width=40pt] (0,0)--(0,4);}} \hfill erere:3333
-%	
-%	\vfill
-%	\begin{center}
-%		\includegraphics[width=0.287\linewidth]{figure/MUSTSchoolBadgecolor}\\
-%		{\vspace{2.5em}\fontsize{30pt}{\baselineskip}\selectfont{澳~門~科~技~大~學}}\\[1.25em]
-%		{\fontsize{18pt}{\baselineskip}\selectfont\textbf{MACAU UNIVERSITY OF SCIENCE AND TECHNOLOGY}}\\[1em]
-%		\includegraphics[width=0.1\textwidth]{figure/MUSTThesishat}\\
-%		{\color{gray} \zihao{4} \ddag{}~~ver.$0.1.0.7$~~\ddag{}}\\
-%		{\vspace{2em}\fontsize{15pt}{\baselineskip}\selectfont{A template for MUST Thesis}}\\
-%	\end{center}
-%	\vfill
-%	\clearpage
-%	\newgeometry{left=0cm,right=0cm,top=1.5cm}
-%	\thispagestyle{empty}	
-%	\vspace{2em}
-%	\huge MUST Thesis template
-%	\vspace{-3em}
-%	\begin{center}
-%		\rule{.45\linewidth}{1.5pt}version\rule{.45\linewidth}{1.5pt}
-%	\end{center}
-%	\vspace{1em}
-%	\qquad\includegraphics[width=0.8\linewidth]{figure/MUSTThesistemplatever}
-%	\restoregeometry
-%	\clearpage
-}
-
-
 
 
 
@@ -186,7 +165,7 @@
 	\renewcommand{\chaptername}{目錄}
 	%\addcontentsline{toc}{chapter}{目錄}		% 設置目錄是否出現在目錄中
 	\setcounter{tocdepth}{1}		% 目錄顯示深度
-	\begin{spacing}{1.65}
+	\begin{spacing}{1.65}			% 目錄行間距
 		\sihao\tableofcontents		% 目錄字體大小及行間距
 	\end{spacing}
 	\newpage						% 新開一頁用於寫論文正文	
@@ -199,19 +178,18 @@
 
 
 %% -------------------------------------------------<< 定義一个命令 \bibreference ,用於生成指定的參考文獻格式
-\newcommand{\bibreference}[1]{
+\newcommand{\bibreference}{
 \newpage
 \chapter*{參考文獻}
 \renewcommand\refname{}
 \rhead{\fontsize{10pt}{\baselineskip}\selectfont 參考文獻}
 \addcontentsline{toc}{chapter}{參考文獻}
-%\vspace{-2em}
-%\hspace{-2em}\noindent\zihao{4} {\it\bfseries 英文文獻 }
 \vspace{-4em}
 \begin{spacing}{1.1}
 	\zihao{4}
 	\nocite{*}
-	#1
+%	#1
+\input{format/ref.tex}
 \end{spacing}
 \markboth{參考文獻}{}
 \rhead{\fontsize{10pt}{\baselineskip}\selectfont\leftmark}	

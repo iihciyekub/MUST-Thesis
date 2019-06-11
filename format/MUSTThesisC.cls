@@ -1,9 +1,12 @@
-% LaTeX project: A template for MUST Thesis v0.1.0.7
+% LaTeX project: A template for MUST Thesis v0.1.0.8
 %
-% MUSTthesis (https://github.com/iihciyekub/mustthesis) bindings for XeLaTeX
+% MUSTthesis (https://github.com/iihciyekub/must-thesis) bindings for XeLaTeX
 % Author: Y.J.Li(iihciyekub)
-% GitHub: https://github.com/iihciyekub/mustthesis
+% GitHub: https://github.com/iihciyekub/must-thesis
 %
+% file: MUSTThesisC.cls
+% Directory: ./format/
+% Usage: \documentclass{format/MUSTThesisC}
 %
 % Copyright 2019 Y.J.Li
 %
@@ -21,8 +24,8 @@
 %
 % This work consists of the files MUSTthesis.tex, MUSTthesisC.cls and MUSTthesiS.sty
 %
-%% MUSTthesis.tex - Demo for MUSTthesis %%
-%% Last Modified: 2019-06-02 %%
+%% MUSTThesisC.cls %%
+%% Last Modified: 2019-06-11 %%
 
 \NeedsTeXFormat{LaTeX2e}		[1995/12/01]
 \ProvidesClass{format/MUSTThesisC}			[2019/05/27 v0.1.0]
@@ -41,19 +44,13 @@
 
 \RequirePackage{fontspec}
 
-
+%% -------------------------------------------------<< 加載開源宏包
 \newfontfamily{\FA}[Path = fonts/]{FontAwesome.otf}
 \RequirePackage{format/fontawesome}
-%% ------------------------------------------------->>
-
-
-
-
 
 
 %% -------------------------------------------------<<加載自定义论文样式宏包
 \RequirePackage{format/MUSTThesisS}
-
 
 
 
