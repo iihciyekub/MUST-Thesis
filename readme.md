@@ -1,16 +1,20 @@
 #  A $\LaTeX$ template for <font face="verdana" color="green">MUST-Thesis</font> 
 
-😆💬: 献给喜欢 <font face="verdana" color="red">***码字三分钟,排版10小时,第二天不满意又双叒叕..再重新排版***</font>   的小伙伴们
+> 😆🤗😶😛😮
+>
+> 💬:献给喜欢 <font face="verdana" color="red">***码字三分钟,排版10小时,第二天不满意又双叒叕..再重新排版***</font>   的小伙伴们
+
+
 
 
 
 > ##  Ver 0.1.0.8 (2019.06.11)
 
-- 添加 自动化程序: [iitool.exe](https://github.com/iihciyekub/MUST-iitool) (一键无脑 自动化编译)
+- 添加 自动化程序: [iitool.exe](https://github.com/iihciyekub/MUST-iitool) (自动化编译:生成 refTex --> xelatex --> xelatex :: PDF)
 
   [GitHub地址]: https://github.com/iihciyekub/MUST-iitool	"iitool.exe"
 
-   --该工具已开源,用于自动处理特殊的(MUST-APA)参考文献格式;
+   --该工具用于自动处理特殊格式要求下的(MUST-APA)参考文献文本;
 
 
 > ##  Ver 0.1.0.7 (2019.05.27)
