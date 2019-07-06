@@ -1,10 +1,10 @@
-%% -------------------------------------------------<< \readme 为 MUST Thesis 模版说明,正式使用时注釋掉
+%% -------------------------------------------------<< \readme 為 MUST Thesis 模版說明,正式使用時註釋掉
 \newgeometry{left=0cm,right=0cm,top=0cm, bottom=0cm}
 \thispagestyle{empty}
 \vfill
 \begin{center}
 	\begin{tikzpicture}
-		% 子图全局透明设置
+		% 子圖全局透明設置
 		\begin{scope}[opacity=0.0]
 			\draw[help lines,gray!20,step=1cm] (-0.49\paperwidth,-0.49\paperheight) grid (0.49\paperwidth,0.49\paperheight);
 			\fill (0,0) circle (1pt);
@@ -14,7 +14,7 @@
 			\node at (0,\i) {{\large \i}};
 		\end{scope}
 
-		% GitHub 下载
+		% GitHub 下載
 		\coordinate (cd1) at (-7.6,13.5);
 		\node[black!80](githubico) at (cd1) {\sfz{20pt}\faGithub};
 		\node[right=-2.87pt of githubico.east,fill=black!80,rectangle, rounded corners=2pt] {\url{https://github.com/iihciyekub/mustthesis}};
@@ -25,20 +25,20 @@
 		% 校徽logo
 		\path
 		let \p1 =(-4,2) in
-		% 节点放置校徽图片
+		% 節點放置校徽圖片
 		node(logo)[anchor=east] at (\p1) {\includegraphics[width=3.5cm]{figure/MUSTSchoolBadgecolor}}
-		%  澳门科技大学
+		%  澳門科技大學
 		node(c)[anchor=west,text width =10cm,right=1pt of logo.15]  {\sfz{35pt}澳\hfill 門\hfill 科\hfill 技\hfill 大\hfill 學}
 
 
-		% 学校英文名
+		% 學校英文名
 		node(must)[anchor=west,text width=10cm,right=1pt of logo.-15] {\color{gray}\sfz{10pt}\textbf{MACAU \hfill UNIVERSITY\hfill OF\hfill SCIENCE\hfill AND\hfill TECHNOLOGY}}
-		% 线段
+		% 線段
 		node[anchor= west,right=1pt of logo.-21]{\rule{10cm}{0.7pt}}
 		node[anchor= west,right=1pt of logo.-22]{\rule{2.87cm}{1.6pt}}
-		% 学院
+		% 學院
 		node(SOB)[anchor=north west,right=1pt of logo.-28,gray]{{\footnotesize School of Business,2018}}
-		% 版本说明
+		% 版本說明
 		node[left=0pt of c.east,yshift=10mm]{\color{Salmon}\footnotesize\projectBname \color{black!60} \sfz{18pt}{\faGraduationCap} }
 
 
@@ -76,7 +76,7 @@
 \vfill
 
 
-%% 第二页
+%% 第二頁
 \newpage
 \thispagestyle{empty}
 
@@ -84,7 +84,7 @@
 \begin{center}
 	\begin{tikzpicture}
 
-		%% -------------------------------------------------<< 子图全局透明设置
+		%% -------------------------------------------------<< 子圖全局透明設置
 		\begin{scope}[opacity=0]
 			\draw[help lines,gray!20,step=1cm] (-0.49\paperwidth,-0.49\paperheight) grid (0.49\paperwidth,0.49\paperheight);
 			\fill (0,0) circle (1pt);
@@ -98,17 +98,17 @@
 
 
 		%% -------------------------------------------------<<
-		% 设置版本节点的样式
+		% 設置版本節點的樣式
 		\tikzset{gitnode/.style={anchor=east,fill=#1!50, draw=#1, text=black,rounded corners=2pt,opacity=0.7,node font=\texttt,font=\large,line width=0.6pt}}
 		\tikzset{gitsubnode/.style={anchor=east,fill=#1!50, circle=1pt,draw=#1, text=black!60,line width=0.6pt}}
 
-		% 设置全局坐标点
+		% 設置全局坐標點
 		\coordinate (git1) at (-5.5,12.5);
 		\filldraw[gray!10!blue!2!red!1,opacity=0.2,rounded corners=5pt,draw=black,line width=.8pt,name path=A]
 		let \p1=(git1) in
 		(\x1-4cm,\y1+1.1cm) rectangle +(19.2cm,-5.78) ;
 
-		% 发布版本节点的代码
+		% 發佈版本節點的代碼
 		\node(m1)[gitnode=LimeGreen] at (git1){\texttt{Release}};
 		\draw[dashed,line width=.8pt,gray!40]   ($(m1.east)+(3mm,0)$) -- +(2cm,0)node[gitsubnode=LimeGreen,name=mm1]{}
 		--+(4.7cm,0)node[gitsubnode=LimeGreen,name=v2]{}
@@ -162,14 +162,14 @@
 
 
 
-		%% -------------------------------------------------<< 文件夹
+		%% -------------------------------------------------<< 文件夾
 		\coordinate (f2) at ($(git1)+(2,-6)$);
-		% 文件夹背景图
+		% 文件夾背景圖
 		\filldraw[gray!10!blue!2!red!1,opacity=0.6,rounded corners=5pt,draw=black,line width=.8pt,name path=A]
 		let \p1=(f2) in
 		(\x1-6cm,\y1+1.1cm) rectangle +(13.2cm,-9.8) ;
 
-		% 项目文件根目录
+		% 項目文件根目錄
 		\node(project)[label={above:\faHandORight ~~\color{Purple}\projectSname}] at (f2){{\huge \faFolderOpen}};
 
 
@@ -276,7 +276,7 @@
 
 
 
-		% Tex 主文档
+		% Tex 主文檔
 		\ff{folder5}
 		\node(\ff)[
 			right=0pt of project.south east, yshift=-6.4cm,
@@ -284,12 +284,12 @@
 			black!70
 		]{ \faFileTextO};
 
-		\node(df)[right=3cm of \ff.east]{\#~ \LaTeX 主文档};
+		\node(df)[right=3cm of \ff.east]{\#~ \LaTeX 主文檔};
 
 		\draw[line width=1pt,rounded corners=1pt,gray](project) |-(\ff);
 
 
-		% lic许可文件
+		% lic許可文件
 		\ff{folder6}
 		\node(\ff)[
 			right=0pt of project.south east, yshift=-7.1cm,
@@ -297,7 +297,7 @@
 			black!70]
 		{ \faFileTextO};
 
-		\node(df)[right=3cm of \ff.east]{\#~许可文件};
+		\node(df)[right=3cm of \ff.east]{\#~許可文件};
 		\draw[line width=1pt,rounded corners=1pt,gray](project) |-(\ff);
 
 
@@ -308,7 +308,7 @@
 			label={[draw=Cyan,line width=1.2pt,text width=2.6cm]right:\color{gray}\texttt{iitool.exe}},
 			black!70]
 		{ \faFileTextO};
-		\node(df)[right=3cm of \ff.east]{\#~自动化编译工具};
+		\node(df)[right=3cm of \ff.east]{\#~自動化編譯工具};
 		\draw[line width=1pt,rounded corners=1pt,gray](project) |-(\ff);
 
 
