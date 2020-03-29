@@ -1,4 +1,4 @@
-% LaTeX project: A template for MUST Thesis v0.1.0.8
+﻿% LaTeX project: A template for MUST Thesis v0.1.1.0
 %
 % MUSTthesis (https://github.com/iihciyekub/must-thesis) bindings for XeLaTeX
 % Author: Y.J.Li(iihciyekub)
@@ -25,7 +25,7 @@
 % This work consists of the files MUSTthesis.tex, MUSTthesisC.cls and MUSTthesiS.sty
 %
 %% MUSTThesisC.cls %%
-%% Last Modified: 2019-06-11 %%
+%% Last Modified: 2019-12-11 %%
 
 \NeedsTeXFormat{LaTeX2e}		[1995/12/01]
 \ProvidesClass{format/MUSTThesisC}			[2019/05/27 v0.1.0]
@@ -39,13 +39,13 @@
 
 %% -------------------------------------------------<<加载必要的中文包,并指定字体
 \RequirePackage{xeCJK}
-\setCJKmainfont[AutoFakeSlant=0.3, AutoFakeBold=2.17,Path=fonts/]{KaiTi.ttf}
+\setCJKmainfont[AutoFakeSlant=0.3, AutoFakeBold=2.17,Path=fonts/]{KaiTi}
 \setmainfont{Times New Roman}% 指定英文字體
 
 \RequirePackage{fontspec}
 
 %% -------------------------------------------------<< 加載開源宏包
-\newfontfamily{\FA}[Path = fonts/]{FontAwesome.otf}
+
 \RequirePackage{format/fontawesome}
 
 
