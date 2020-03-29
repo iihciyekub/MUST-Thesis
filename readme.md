@@ -3,7 +3,11 @@
 
 > 😆💬:献给喜欢 <font face="verdana" color="red">***码字三分钟,排版10小时,第二天不满意又双叒叕..再重新排版***</font>   的小伙伴们
 
+> ##  Ver 0.1.1.2 (2020.03.29)
 
+- 请使用 Texlive 2019-20190410 编译环境, 官方镜像下载地址: [Texlive 2019-20190410](https://mirror.bjtu.edu.cn/CTAN/systems/texlive/Images/)
+- 修正编译错误问题
+- 修正中英文文献格式问题,详细可请看  [GIt 地址 iitool.exe](https://github.com/iihciyekub/MUST-iitool)
 
 > ##  Ver 0.1.0.9 (2019.07.06)
 
