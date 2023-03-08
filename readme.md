@@ -5,7 +5,8 @@
 
 > ##  Ver 2.30.3 (2023.03.08)
 
-- [overleaf online Ver] (https://www.overleaf.com/read/mjzpcxztzqzv),_https://www.overleaf.com/read/mjzpcxztzqzv_
+- [overleaf online Ver](https://www.overleaf.com/read/mjzpcxztzqzv)
+- 项目(只读)地址: _https://www.overleaf.com/read/mjzpcxztzqzv_
 - 增加原创申明页,个人简历页
 - 解决澳科大要求提交奇偶数页边距要一致问题. 用户可以通过文档类选项进行不同的选择: 打印版(奇偶页边距对称);提交版(奇偶页边距一致)
 - 解决一系列与排版要求一致的问题.
