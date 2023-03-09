@@ -9,10 +9,10 @@
 - 项目(只读)地址: _https://www.overleaf.com/read/mjzpcxztzqzv_
 - 增加原创申明页,个人简历页
 - 解决澳科大要求提交奇偶数页边距要一致问题. 用户可以通过文档类选项进行不同的选择: 打印版(奇偶页边距对称);提交版(奇偶页边距一致)
-- 解决一系列与排版要求一致的问题.
-- [澳门科技大学特殊文献排版格式, bbl 文件在线转换工具,有效期至2024-03](http://pychat.online/must-ref-converter)
-- myfun.js + must-bbl-converter.html 可本地编译
-- 最新版本目前没更新在github上, 暂时以 overleaf + 工具 http://pychat.online/must-ref-converter 测试使用
+- 解决其它一系列与排版要求一致的问题.
+- 提供[澳门科技大学特殊文献排版格式, bbl 文件在线转换工具,有效期至2024-03](http://pychat.online/must-bbl-converter.html)
+- overleaf 项目上, 已添加 myfun.js + must-bbl-converter.html ,可本地运行
+- [说明]最新版本目前没更新在github上, 暂时以 overleaf + 工具 http://pychat.online/must-bbl-converter.html 测试使用
 
 > ##  Ver 0.1.1.2 (2020.03.29)
 
