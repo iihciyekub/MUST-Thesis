@@ -3,7 +3,7 @@
 % 作者: 李永建 澳门科技大学-毕业论文latex模板-2023
 % Github: https://github.com/iihciyekub/MUST-Thesis
 % Overleaf(read): https://www.overleaf.com/read/mjzpcxztzqzv
-% 最后更新: 2023-03-18
+% 最后更新: 2023-03-19
 
 \documentclass[
     添加扉页=是,
@@ -26,16 +26,16 @@
 \def\DateofWriting		{\datea\today}% 設置論文寫作完成時間
 \def\DateofDeclaration	{\dateb\today}% 設置論文原創聲明時間
 \def\DateofSignature	{2023/06/30}% 設置簽署論文原創聲明的時間
-\def\PublicAfterYears   {5}% 設置論文幾年后公開
+\def\PublicAfterYears   {0}% 設置論文幾年后公開
 
 
-
+\def\测试{eeee}
 
  
 \begin{document}
 
 \begin{abstract@cn}{關鍵字1、關鍵字1、關鍵字1、關鍵字1、}
-本研究採用2009 年至2014 年首度上市的公司279 家為研究
+\测试 本研究採用2009 年至2014 年首度上市的公司279 家為研究
 樣本，檢驗公司治理與財務績效之關聯性。利用樣本公司上市時
 的公司治理變數，檢驗公司治理對上市後的會計績效影響與上市
 後30 天的市場報酬，再進而依據過去文獻對公司治理變數的論
@@ -72,6 +72,8 @@
 在公司治理與財務績效上是否有差異。透過相關分析、T 檢定、
 迴歸分析，檢驗三大研究假說，實證結果獲得以下主要結論：
 \end{abstract@cn}
+
+
 
 \begin{abstract@en}{keyword1、keyword1、keyword1、keyword1、}
 This research used 279 companies established between 2009 and 2014 as the
@@ -210,6 +212,24 @@ $V_0=X_0(1-T)(1-b) \sum_{t=1}^n \frac{(1+g)^t}{(1+k)^t}+\frac{X_0(1-T)(1-g)^{n+1
 
 
 
+\section{函數圖}
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}
+	xlabel=$x$, ylabel=$y$,
+	small,
+	]
+	\fun[exp(-x^2-y^2)*x]
+	\end{axis}
+	\end{tikzpicture}
+	\caption{$x\cdot \exp(-x^2-y^2)$ 函數圖}
+	\label{fig:sig}
+\end{figure}
+圖\ref{fig:sig} 表示$x\cdot \exp(-x^2-y^2)$ 函數圖.
+
+
 
 
 
@@ -300,12 +320,8 @@ $V_0=X_0(1-T)(1-b) \sum_{t=1}^n \frac{(1+g)^t}{(1+k)^t}+\frac{X_0(1-T)(1-g)^{n+1
 
 
 \subsubsection{研究動機}
-美國學者對公司治理的討論可追溯自1930 年代，Berle \&
-Means(1932)指出，美國企業存在著股權分散的必要性，因為隨著企
-業規模不斷的擴大，使得多數的中大型公司皆需將經營權與所有權
-加以分離來經營，以期達到專業化的目的。
-有系統地討論此一問題者為Jensen，在1988 年Jensen 首度有系統地
-收錄以公司治理為主題的文章(Weston, Siu \& Johnson; 2002)。
+文獻\cite{article,book,cho,chapter,conference,patent}
+中文文獻\cite{cnarticle,cnbook,cncho,cnchapter,cnconference,cnpatent}
 
 
 
