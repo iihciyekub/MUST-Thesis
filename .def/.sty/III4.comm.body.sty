@@ -1,0 +1,30 @@
+
+
+% 全文加水印
+\RequirePackage{eso-pic}
+\newcommand\addBackgroundPic[1]{%
+    \AddToShipoutPicture{
+    	\put(0,0){%
+    		\parbox[b][\paperheight]{\paperwidth}{%
+    			\vfill
+    			\centering
+    			\includegraphics[width=9.9cm,keepaspectratio]{#1}%
+    			\vfill}
+       }
+    }
+}
+
+
+
+ 
+% 设置全文字体
+\AtBeginDocument{
+    \renewcommand\arraystretch{0.5}
+    \large\linespread{1.625}\selectfont
+    % 是否加水印  
+    \ifwm\addBackgroundPic{\resourcePath mustlogo.jpg}\fi
+    % 增加封面
+    \iftp\addtitlepage\fi
+    % 增加原创声明页
+    \ifdp\adddeclarepage\fi
+}

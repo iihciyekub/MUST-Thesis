@@ -1,0 +1,27 @@
+\RequirePackage{titletoc}
+% 设置目录深度章,节
+\setcounter{tocdepth}{1}
+
+
+%\titlecontents{标题名}[左间距]{标题格式}{标题前綴}{无序号标题}{指引线与页码}[下间距]
+\titlecontents{chapter}
+    [3.4 em] %\bfseries
+    {\fontsize{14pt}{18 pt}\selectfont}
+    {\contentslabel[第\thecontentslabel 章]{3.5 em}}
+    {}
+    { \titlerule*[0.5pc]{$\cdot$}\contentspage}
+    []
+%
+\titlecontents{section}
+    [4.8 em]
+    {\fontsize{14 pt}{16 pt}\selectfont}
+    {\contentslabel[第\thecontentslabel 節]{3.5 em}}
+    {}
+    {\titlerule*[0.5pc]{$\cdot$}\contentspage}
+    []
+ 
+
+
+
+
+

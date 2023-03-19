@@ -1,0 +1,46 @@
+% 日期管理
+\RequirePackage[yyyymmdd]{datetime}
+% \renewcommand{\dateseparator}{-}
+\newdateformat{datea}{\THEYEAR 年\THEMONTH 月}
+\newdateformat{dateb}{\THEYEAR/\THEMONTH/\THEDAY}
+
+
+\RequirePackage{ifthen}
+\RequirePackage{xparse}
+\NewDocumentCommand{\fz}{O{14pt} O{1.85}}{
+    % 设置字体
+    \fontsize{#1}{\baselineskip}\selectfont
+    % 设置行间距,一般1.5*1.5/1.2 = 1.85
+    \linespread{#2}\selectfont
+}
+
+
+
+
+
+
+
+
+% 浮动宏包放置图表
+\RequirePackage{float}
+
+
+
+
+
+
+
+
+
+
+
+% [pdf相关]
+\RequirePackage{pdfpages}           % 插入指定页码 pdf的宏包
+
+
+
+
+
+
+
+

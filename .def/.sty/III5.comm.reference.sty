@@ -1,0 +1,41 @@
+
+
+\RequirePackage{fontawesome}
+\newcommand{\addreference}{
+    \clearpage
+    \chapter*{\fontsize{18 pt}{18 pt}\selectfont 參考文獻}
+    \markboth{參考文獻}{}
+    \addcontentsline{toc}{chapter}{\hspace{-3.35 em}參考文獻}
+    \addtolength{\itemsep}{4em}
+    \IfFileExists{ref.bbl}{%
+        \input{ref.bbl}
+    }{%
+        \IfFileExists{ref.bib}{
+        {\small\noindent \textcolor{magenta}{\Large\faWarning} \textbf{澳门科技大学研究生毕业论文参考文献有特殊格式要求。在本项目中，我们使用 *.BIB 的方式进行编译，目的是生成 *.BBL 文件。}\\
+        \textcolor{Dandelion}{\Large\faQuestionCircle}\textbf{ bbl 文件有什么用？}\\
+        \rule[1 em]{\linewidth}{0.5pt}\\[-1.5em]
+        \textcolor{Emerald}{\faMailReply} 有了bbl 文件,我们只需要将中英混合文献进行人工或自动的分类排序,就能得到符合澳门科技大学毕业论文要求的排版格式.如果你想了解更多有关 bbl 文件,请进一步百度或谷歌. \\
+        \textcolor{Dandelion}{\Large\faQuestionCircle} \textbf{在哪里可以找到 bbl 文件？}\\
+        \rule[1 em]{\linewidth}{0.5pt}\\[-1.5em]
+        \textcolor{Emerald}{\faMailReply} 有2种模式:
+        \begin{itemize}
+        \item 本地模式：您可以在根目录下找到最新的 *.bbl 文件。
+        \item Overleaf 模式：编译成功后，点击旁边的“logs and outfiles”图标，然后在右下角找到“others logs and files”，单击即可找到 bbl 文件。
+        \end{itemize}
+        \textcolor{Dandelion}{\Large\faQuestionCircle}\textbf{ 有 bbl 之后？}\\
+        \rule[1 em]{\linewidth}{0.5pt}\\[-1.5em]
+        \textcolor{Emerald}{\faMailReply} 通过以下操作:
+        \begin{itemize}
+        \item 本地转换工具: 本项目目录 ".bbl-tool/must-bbl-converter.html"下载后浏览打开即可食用;
+        \item 在线转换工具: URL \textit{http://pychat.online/must-bbl-converter.html}
+        \item 将格式化后的 bbl 文件更名为“ref.bbl”，放入与main.tex 同目录即可
+        \item 请注意目录下存在“ref.bbl”文件时，参考文献内容往后将不会改变; 如果想重新添加新文献，删除 ref.bbl 文件后重复以上步骤即可。
+        \end{itemize}
+        }
+            \bibliographystyle{.def/.sty/apa5}
+            \bibliography{ref.bib}
+        }{%
+            不存在 ref.bib 或 ref.bbl 文件.
+        }
+    }
+}

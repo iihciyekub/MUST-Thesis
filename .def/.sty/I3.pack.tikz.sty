@@ -1,0 +1,101 @@
+% ------
+% http://www.gnuplot.info/
+
+
+
+% -------help
+
+% /pgf/number format/precision=3,
+% /pgf/number format/fixed,
+% /pgf/number format/fixed zerofill,
+% 
+
+% 四則運算宏包
+\RequirePackage{calc}
+% 函數圖宏包
+\RequirePackage{pgfplots}
+% PGF 數學計算
+\RequirePackage{pgfmath}
+% 
+% 設置畫布大小
+\pgfplotsset{width=10.5 cm,compat=1.16}
+% 
+% PGF 宏包庫
+\usepgfplotslibrary{smithchart,polar}
+% ------------>>  ------------>> %
+
+% ------------>>  ------------>> %
+
+
+% foreach \breakforeach 命令
+\RequirePackage{pgffor}
+% 
+% tikz 繪圖宏包
+\RequirePackage{tikz}
+\usetikzlibrary{
+    bending,% 弧線
+    intersections,% 線段交點
+    calc,%計算座標
+    graphs,
+    arrows,%箭頭
+    arrows.meta,% 箭頭樣式
+    decorations.pathmorphing,
+    backgrounds,
+    positioning,
+    fit,petri,
+    shapes.geometric,
+    decorations.text,
+    decorations
+} 
+ 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+% https://blog.csdn.net/zengxiantao1994/article/details/53114579?locationNum=3&fps=1
+
+
+% 打印交點座標
+\NewDocumentCommand{\printxy}{O{i-1}}{
+    \pgfplotspointgetcoordinates{(#1)}
+    \scriptsize $(%fixed, or, precision=3
+    \pgfmathprintnumber[precision=3]{%
+                \pgfkeysvalueof{/data point/x}},
+    \pgfmathprintnumber[precision=3]{%
+                \pgfkeysvalueof{/data point/y}}
+    )$%
+}
+           
+
+
+
+
+% fun[表達式][x範圍][y範圍][路徑名與其它]
+\NewDocumentCommand{\fun}{ O{y-x}  O{0:24} O{0:5} O{name}}{
+    \addplot +[no markers, raw gnuplot, empty line = jump, name path = #4] 
+        gnuplot {set xrange [#2];    set yrange [#3];
+            set contour base;   set cntrparam levels discrete 0.003;
+            unset surface;      set view map;
+            set isosamples 50;  set samples 50;
+            % splot  y - 5* (1 - exp(-(6-y)*(23-x)/18  )) ;  
+            splot #1 ;
+        };
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+ 

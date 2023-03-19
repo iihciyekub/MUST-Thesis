@@ -1,0 +1,63 @@
+
+\tikzset{
+tl/.style={inner sep = 0,anchor = north west, align = left},
+ul/.style={inner sep = 0,anchor = base, font = {\fontsize{14 pt}{14 pt}\selectfont},align = center, text width = 6 cm,name = c1},
+ul2/.style={inner sep = 0,anchor = base, font = {\fontsize{11 pt}{12 pt}\selectfont},align = center, text width = 6 cm,name = c1}
+}
+
+% 增加首页
+\def\titlefilepath{\resourcePath GS004.pdf}
+\newcommand{\addtitlepage}{
+    \IfFileExists{\titlefilepath}{
+        \clearpage
+        \thispagestyle{plain}
+        \thispagestyle{empty}
+        \begin{tikzpicture}[remember picture,overlay]
+            \node[inner sep = 0] at (current page.center) {\includegraphics[width=\paperwidth,height=\paperheight]{\titlefilepath}};
+            \node[tl,font = {\fontsize{22 pt}{18 pt}\selectfont},text width = 12.5 cm] 
+                at (1.5 cm,-3.23 cm) {\cntitle};
+            \node[tl,font = {\fontsize{18 pt}{14 pt}\selectfont},text width = 13.5 cm] 
+                at (0.82 cm,-6.1 cm) {\entitle};
+            \node[ul] at (8 cm,-13.2 cm) {\Name };
+            \node[ul,below = 0.9 cm of c1]{\StudentNo};
+            \node[ul,below = 0.9 cm of c1]{\Faculty};
+            \node[ul,below = 0.9 cm of c1]{\Program};
+            \node[ul,below = 0.9 cm of c1]{\Major};
+            \node[ul,below = 0.9 cm of c1]{\Supervisor};
+            \node[ul,below = 0.9 cm of c1]{\DateofWriting};
+        \end{tikzpicture}
+        }{
+        不存在,\titlefilepath,文件欠缺!
+        }
+}
+
+
+
+
+% 增加原创声明文件
+\def\declarefilepath{\resourcePath S023.pdf}
+\newcommand{\adddeclarepage}{
+    \IfFileExists{\declarefilepath}{
+        \clearpage
+        \thispagestyle{plain}
+        \thispagestyle{empty}
+        \def\choo{0}
+        \ifnum\PublicAfterYears=3\def\choo{0.46}\fi
+        \ifnum\PublicAfterYears=0\def\choo{0.92}\fi
+            \pagestyle{plain}
+            \thispagestyle{empty}
+            \begin{tikzpicture}[remember picture,overlay]
+                \node[inner sep = 0] at (current page.center) {\includegraphics[width=\paperwidth,height=\paperheight]{\declarefilepath}};
+                \coordinate (O) at ($(current page.north west) + (3.8cm, - 2.5cm)$);
+                \node[ul2,font= {\Large},name=R] at ($(O) + (-1.4 cm,-19.35 cm) +(0cm,\choo cm)$) {\textbf{$\checkmark$ }};
+                \node[ul2] at ($(O) + (1 cm, -8.9 cm)$) {\Name };
+                \node[ul2,below = 0.9 cm of c1]{\StudentNo};
+                \node[ul2,right = 4 cm of c1]{\DateofDeclaration};
+                \node[ul2,below = 13.7 cm of c1]{\DateofSignature};
+                \node[ul2,left = 3 cm of c1]{\DateofSignature};
+            \end{tikzpicture}
+        }{
+          不存在,\titlefilepath,文件欠缺!
+        }
+         \pagestyle{fancy}
+}

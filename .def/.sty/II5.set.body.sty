@@ -1,0 +1,44 @@
+
+% 关联宏包
+\RequirePackage{parskip} 
+% 设置段落之间间距
+\setlength{\parskip}{10pt}
+% 设定段落首行缩进2字符
+\setlength{\parindent}{2 em}
+
+
+
+
+% [枚举]
+\RequirePackage{enumitem}
+% 枚举设置
+\setitemize{
+% / 第条item之间的间距
+    itemsep=-0em,
+    partopsep=0pt,
+    parsep=0pt,
+    topsep=-10pt,
+    leftmargin =3em
+}% [ref] (https://cloud.tencent.com/developer/article/1827319)
+
+
+
+
+
+%%%% 定理类环境的定义 %%%%
+\newtheorem{example}{例}             % 整体编号
+\newtheorem{theorem}{定理}[chapter]  % 按 section 编号
+\newtheorem{definition}{定义}[chapter]
+\newtheorem{axiom}{公理}
+\newtheorem{property}{性质}[chapter]
+\newtheorem{proposition}{命题}[chapter]
+\newtheorem{lemma}{引理}[chapter]
+\newtheorem{corollary}{推论}[chapter]
+\newtheorem{remark}{注解}
+\newtheorem{condition}{条件}
+\newtheorem{conclusion}{结论}[chapter]
+\newtheorem{assumption}{假设}[chapter]
+
+
+
+ 

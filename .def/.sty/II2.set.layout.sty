@@ -1,0 +1,57 @@
+% 加载 geometry 宏包，用于设置页面布局
+\RequirePackage {geometry}
+
+% 设置页面大小为 A4 纸张大小，即 21cm x 29.7cm % 设置边注宽度为 2.8cm，边注与正文之间的距离为 0.8cm % 设置左边距为 3.8cm，右边距为 2.5cm，上边距为 2.5cm，下边距为 3cm % 设置脚注与正文之间的距离为 2em，页眉高度为 0.6cm，页眉与正文之间的距离为 0.6cm，页脚与正文之间的距离为 25pt
+\def\ileft{3.8}
+\def\iright{2.5}
+\geometry{
+    % showframe,
+    papersize={21cm,29.7cm},
+    % marginparwidth =2.8 cm,
+    % marginparsep=0.8 cm,
+    left= \ileft cm, 
+    right= \iright cm, 
+    top= 2.5 cm, 
+    bottom= 2.5 cm,
+    footnotesep = 2 em,
+    headheight = 0.6 cm,
+    headsep = 0.5 em,
+    footskip = 25 pt
+}
+
+
+
+
+
+% 加载 fancyhdr 宏包，用于定义页面样式
+\RequirePackage{fancyhdr}
+\renewcommand{\headrulewidth}{0.4 pt}
+\renewcommand{\footrulewidth}{0pt}
+\pagestyle{fancy}
+\fancyhf{}
+
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+% 定义右页眉的内容，显示当前章节的标题
+\fancyhead[R]{\fontsize{10pt}{10 pt}\selectfont\leftmark}
+\fancyhead[L]{\fontsize{10pt}{10 pt}\selectfont\cntitle}
+\fancyfoot[C]{\fontsize{10pt}{10 pt}\selectfont\thepage}
+
+
+
+
+
+
+% 免去版心底部对齐,  
+% \flushbottom 底部版心对齐
+\raggedbottom
+
+
+
+
+
+
+
+% 调整版心宽度的环境 adjustwidth
+\RequirePackage{changepage}
+
+

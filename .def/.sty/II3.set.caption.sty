@@ -1,0 +1,97 @@
+
+% zhnumber 宏包来将章节的序列转为汉字数字
+\RequirePackage{zhnumber}
+% 转换章节序列为汉字
+\renewcommand{\thechapter}{\zhnum{chapter}}
+\renewcommand{\thesection}{\zhnum{section}}
+\renewcommand{\thesubsection}{\zhnum{subsection}}
+\renewcommand{\thesubsubsection}{\arabic{subsubsection}}
+
+
+% 设置章节标题
+\RequirePackage{titlesec}
+
+% 设置chapter、section、subsection三级计数器
+\setcounter{secnumdepth}{4}
+
+% \titleformat{command}[shape]{format}{label}{sep}{before-code}{after-code}
+% 各個參數的含義如下：
+% command：需要設置格式的標題命令，例如 \chapter、\section、\subsection 等。
+% shape：標題的形狀，可以是 hang（懸掛式）、block（塊狀）、display（顯示式）等，默認為 hang。
+% format：標題的格式，可以包含字體大小、字體顏色、加粗、斜體等設置。
+% label：標題的標籤，例如章節號碼。
+% sep：標題標籤和標題文字之間的距離。
+% before-code：標題前的代碼，例如設置標題前的垂直間距、插入圖片等。
+% after-code：標題後的代碼，例如設置標題後的垂直間距、插入分隔線等。
+% \titlespacing{command}{left}{before-sep}{after-sep}[right-sep]
+% 1
+\titleformat{\chapter}[hang]
+    {\centering\bfseries\fontsize{22 pt}{22 pt}\selectfont}
+    {第\thechapter 章}
+    {22 pt}
+    {\thispagestyle{fancy}}
+    {}
+\titlespacing{\chapter}{0 pt}{0 pt}{12 pt}[0 pt]
+% 2
+\titleformat{\section}[hang]
+    {\centering\bfseries\fontsize{18 pt}{18 pt}\selectfont}
+    {第\thesection 節}
+    {18 pt}
+    {}
+\titlespacing{\section}{0 pt}{9 pt}{10 pt}[0 pt]
+%3
+\titleformat{\subsection}[hang]
+    {\itshape\fontsize{16 pt}{16 pt}\selectfont}
+    {\thesubsection 、}
+    {0 em}
+    {}
+\titlespacing{\subsection}{0 pt}{0 pt}{10 pt}[0 pt]
+% 4
+\titleformat{\subsubsection}[hang]
+    {\bfseries\fontsize{14pt}{14 pt}\selectfont}
+    {\thesubsubsection.}
+    {0.2 em}
+    {}
+\titlespacing{\subsubsection}{0 pt}{5 pt}{5 pt}[0 pt]
+
+
+
+
+
+
+
+
+% 图表标题
+\RequirePackage{caption}
+\RequirePackage{subcaption}
+\captionsetup{
+    aboveskip   = 0 pt, % 标题上下文距离
+    belowskip   = 0 pt,
+    labelsep    = quad, % 设置标题分割符
+    labelfont   = bf,   % 设置标题样式
+    textfont    = bf,
+}
+
+
+\renewcommand{\figurename}{圖}
+\renewcommand\thefigure{\arabic{chapter}-\arabic{figure}}
+
+\renewcommand{\tablename}{表}
+\renewcommand\thetable{\arabic{chapter}-\arabic{table}}
+
+\renewcommand{\algorithmcfname}{算法}
+\renewcommand\thealgocf{\arabic{chapter}-\arabic{algocf}}
+
+%  更改数学公式编号
+\renewcommand\theequation{\arabic{chapter}.\arabic{equation}}
+
+
+
+
+
+
+
+
+
+
+

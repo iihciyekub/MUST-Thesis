@@ -1,0 +1,109 @@
+
+\tikzset{
+ur/.style={
+    inner sep = 0,
+    font = {\fontsize{12 pt}{8 pt}\selectfont},
+    text width = 3.5 cm,
+    name = cr1,
+    align = left, 
+    anchor = center, 
+    % draw
+    },
+ut/.style={
+    inner sep = 0,
+    font = {\fontsize{12 pt}{8 pt}\selectfont},
+    text width = 3.5 cm,
+    name = ct1,
+    align = left, 
+    % draw
+    },
+}
+
+
+% 用于读取list 的宏包
+\RequirePackage{listofitems}% \readlist\mylist{#1}
+
+% # 定义一个形状
+\def\daa#1{
+    \readlist\mylist{#1}
+    \tikz{\path 
+            node[ut,text width = 3.5 cm,anchor = north west] at (0,0) {$\ast$ \mylist[1]}
+            node[ut,right =3.8 cm of ct1.north west, text width = 5.25 cm,anchor = north west]{\mylist[2]}
+            node[ut,right =5.7 cm of ct1.north west, text width = 3.8 cm,anchor = north west]{\mylist[3]};
+  }
+}
+
+
+% 添加入学时间
+\def\addedudate#1{
+    \node[ur,right = 4.13 cm of cr1]{#1};
+}
+% 添加教育背景信息,以逗号隔开
+\def\addeduItem#1{
+    \node [inner sep =0pt , below = 5 mm of g.south west ,name = g,anchor = north west] {\daa{#1}};
+}
+% 添加教育背景信息,以逗号隔开
+\def\addpaperItem#1{
+    \node [inner sep =0pt ,
+        text width = 13 cm,
+        font = {\fontsize{12 pt}{10.8 pt}\selectfont},
+        below = 5 mm of paper.south west ,
+        name = paper,
+        anchor = north west,
+        ] {\begin{itemize}[noitemsep,leftmargin= 1 em]#1\end{itemize}};
+}
+% 添加教育背景信息,以逗号隔开
+\def\addprojectItem#1{
+    \node [inner sep =0pt ,
+        text width = 13 cm,
+        font = {\fontsize{12 pt}{10.8 pt}\selectfont},
+        below = 5 mm of project.south west ,
+        name = paper,
+        anchor = north west,
+        ] {\begin{itemize}[noitemsep,leftmargin= 1 em]#1\end{itemize}};
+}
+
+
+
+
+ 
+% 定义文件目录与位置
+\def\cvfilepath{\resourcePath ML04.pdf}
+\newif\ifcvfile\cvfiletrue
+\def\opac{1}
+\IfFileExists{\cvfilepath}{\cvfiletrue}{\cvfilefalse\def\opac{0}}
+
+% # 定义命令
+\newenvironment{addcvpage}{
+    \clearpage
+    \chapter*{個人簡歷}
+    \markboth{個人簡歷}{}
+    \addcontentsline{toc}{chapter}{\hspace{-3.38 em}個人簡歷}
+    % 定义左边距
+    \def\l{3.8}
+    % 如果文档选项参数print 为 true的话,
+    \ifprint
+        % 判断为偶数页的话 设置\l 变量值为2.5
+        \ifodd\numexpr\value{page}+1\relax
+           \def\l{2.5}
+        \fi
+    \fi
+    \begin{tikzpicture}[remember picture,overlay,opacity=\opac]
+        % 根据奇偶数不一样自动捕捉的版心左上角坐标点
+        \coordinate (o) at ($(current page.north west) + (\l,-5.5cm )$);
+        % 在此坐标点插入简历
+        \node[inner sep = 0,anchor = north west] at (o) {\includegraphics[width=\textwidth]{\cvfilepath}};
+        % 自动填写简历个人名称
+        \node[ur,shift={(4.7 cm,-0.567 cm)} ] at(o) {\Name};
+        % 添加教育信息的基准坐标点
+        \coordinate (e) at ($(o) + (1 cm, - 1.7 cm)$);
+        \node [anchor = north west,inner sep =0 pt , name = g,opacity=0] at (e) {\daa{ test, test, test}};
+        % 添加文献发表的基准坐标点
+        \coordinate (r) at ($(o) + (1.2 cm, - 7.627 cm)$);
+        \node [inner sep =0 pt , name = paper,opacity=0,anchor = north west] at (r) {test};
+        % 添加项目的基准坐标点
+        \coordinate (t) at ($(o) + (1.2 cm, - 13.6 cm)$);
+        \node [anchor = north west,inner sep =0 pt , name = project,opacity=0] at (t) {test};
+}{
+    \end{tikzpicture}
+}
