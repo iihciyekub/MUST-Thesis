@@ -1,18 +1,42 @@
 #  A $\LaTeX$ template for <font face="verdana" color="green">MUST-Thesis</font> 
 [![LICENSE](https://img.shields.io/badge/license-LaTeX%20Project%20Public%20License%20either%20version%201.3-blue.svg?style=flat-square)](http://www.latex-project.org/lppl.txt)
 
-> 😆💬:献给喜欢 <font face="verdana" color="red">***码字三分钟,排版10小时,第二天不满意又双叒叕..再重新排版***</font>   的小伙伴们
+> **献给澳门科技大学的各位学子们.**
+---
 
-> ##  Ver 2.30.3 (2023.03.08)
+> ##  Ver 2.30.3 (2023.03.20)
 
-- [overleaf online Ver](https://www.overleaf.com/read/mjzpcxztzqzv)
-- 项目(只读)地址: _https://www.overleaf.com/read/mjzpcxztzqzv_
-- 增加原创申明页,个人简历页
-- 解决澳科大要求提交奇偶数页边距要一致问题. 用户可以通过文档类选项进行不同的选择: 打印版(奇偶页边距对称);提交版(奇偶页边距一致)
+提供
+- overleaf (只读) 地址: _https://www.overleaf.com/read/mjzpcxztzqzv_
+
+更新内容:
+- cls,sty重构,参考澳门科技大学提供的论文排版要求:
+- 增加原创申明页
+- 增加个人简历页
+- 修正澳门科技大学校徽(学校提供的低分辨率校徽,未来期待美工加入,绘制一个100%一致的矢量图)
+- 解决奇偶数页边距要一致问题.用户可以通过文档类选项进行不同的选择: 打印版(奇偶页边距对称);或者提交版(奇偶页边距一致);
 - 解决其它一系列与排版要求一致的问题.
-- 提供[澳门科技大学特殊文献排版格式, bbl 文件在线转换工具,有效期至2024-03](http://pychat.online/must-bbl-converter.html)
-- overleaf 项目上, 已添加 myfun.js + must-bbl-converter.html ,可本地运行
-- [说明]最新版本目前没更新在github上, 暂时以 overleaf + 工具 http://pychat.online/must-bbl-converter.html 测试使用
+- 提供[澳门科技大学特殊文献排版格式, bbl 文件在线转换工具,
+- - online版 有效期至2024-03 地址:  http://pychat.online/must-bbl-converter
+- - 本地版: 目录.tool/must-bbl-converter.html
+
+- 备注参考文件,以下网址截止 2023-03-07 可访问.
+
+| NO.  | 文件名                                                       | URL                                                          |              |
+| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------ |
+| 1    | [扉頁格式](https://www.must.edu.mo/images/GSO/files/sgsdocument/GS004.pdf) | https://www.must.edu.mo/images/GSO/files/sgsdocument/GS004.pdf | $\checkmark$ |
+| 2    | [學位論文原創性聲明](https://www.must.edu.mo/images/GSO/files/S023學位論文原創性聲明BI.pdf) | https://www.must.edu.mo/images/GSO/files/S023學位論文原創性聲明BI.pdf | $\checkmark$ |
+| 3    | [論文寫作指導](https://www.must.edu.mo/images/GSO/files/sgsdocument/GS002.pdf) | https://www.must.edu.mo/images/GSO/files/sgsdocument/GS002.pdf | $\checkmark$ |
+| 4    | [研究生論文格式參考資料(APA)](http://www.must.edu.mo/images/SGS/files/APA_7th_0710.pdf) | http://www.must.edu.mo/images/SGS/files/APA_7th_0710.pdf     | $\checkmark$ |
+| 5    | [校徽水印](https://lib.must.edu.mo/sites/default/files/must-logo.jpg) | https://lib.must.edu.mo/sites/default/files/must-logo.jpg    | $\checkmark$ |
+| 6    | [國家文後參考文獻著錄規則](http://www.must.edu.mo/images/SGS/files/GBT7714_2015.pdf) | http://www.must.edu.mo/images/SGS/files/GBT7714_2015.pdf     | $\checkmark$ |
+| 7    | [MLA參考文獻格式](https://www.must.edu.mo/images/SGS/files/MLA參考文獻格式.pdf) | https://www.must.edu.mo/images/SGS/files/MLA參考文獻格式.pdf | $\checkmark$ |
+
+
+
+
+---
+
 
 > ##  Ver 0.1.1.2 (2020.03.29)
 
