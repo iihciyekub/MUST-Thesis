@@ -1,4 +1,13 @@
+\let\oldquote\quote % 保存旧的 quote 环境
+\let\endoldquote\endquote % 保存旧的 endquote 环境
+\renewenvironment{quote}
+  {\oldquote\fontsize{10}{12}\selectfont} % 设置字体为 10pt，行间距为 12pt
+  {\endoldquote}
 
+
+
+
+  
 
 % 全文加水印
 \RequirePackage{eso-pic}
@@ -17,7 +26,7 @@
 
 
  
-% 设置全文字体
+% 設置全文字體
 \AtBeginDocument{
     \renewcommand\arraystretch{0.5}
     \large\linespread{1.625}\selectfont
@@ -25,6 +34,6 @@
     \ifwm\addBackgroundPic{\resourcePath mustlogo.jpg}\fi
     % 增加封面
     \iftp\addtitlepage\fi
-    % 增加原创声明页
+    % 增加原創聲明頁
     \ifdp\adddeclarepage\fi
 }

@@ -1,8 +1,8 @@
 
-% 超链接 目录 交叉引用的等高亮显示
+% 超鏈接 目錄 交叉引用的等高亮顯示
 \usepackage[colorlinks]{hyperref}
 \definecolor{bluecite}{HTML}{1c1c1c}
-% 定义一个设置超连接颜色的命令 go line
+% 定義一個設置超連接顏色的命令 go line
 \newcommand{\sethypcolor}[1]{
     \hypersetup{
         breaklinks  =   true,
@@ -24,31 +24,30 @@
 
 
 
-% % 参考文献设置重要代码
+% 參考文獻設置重要代碼
 \makeatletter
-
-\renewenvironment{thebibliography}[1]{
+\renewenvironment{thebibliography}[1]{%
     \list{\@biblabel{\@arabic\c@enumiv}}%
-    {\settowidth\labelwidth{\@biblabel{#1}}%
-        \leftmargin\labelwidth
-        \advance\leftmargin\labelsep
-        % 所有参考文献向右偏移0.5em
-        \advance\leftmargin by  -0.5 em%
-        % 参考文献的第一行向左移-1.5 em
-        \itemindent  0 em%
-        \@openbib@code
+    {\settowidth\labelwidth{\@biblabel{#1}}
+        \ifri
+        \advance\leftmargin -2em
+        \itemindent 0 pt
+        \else
+        \itemindent -2 em%
+        \fi
+        \@openbib@code%
         \usecounter{enumiv}%
-        \let\p@enumiv\@empty
+        \let\p@enumiv\@empty%
         \renewcommand\theenumiv{\@arabic\c@enumiv}}%
-    \sloppy
-    \clubpenalty4000
-    \@clubpenalty \clubpenalty
-    \widowpenalty4000%
-    \sfcode`\.\@m
-}{
-    \def\@noitemerr
+    \sloppy%
+    \clubpenalty4000%
+    \@clubpenalty \clubpenalty%
+    \widowpenalty4000%%
+    \sfcode`\.\@m%
+}{%
+    \def\@noitemerr%
     {\@latex@warning{Empty `thebibliography' environment}}%
-    \endlist
+    \endlist%
 }
 \makeatother
-% 
+

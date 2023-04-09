@@ -1,28 +1,28 @@
 % 作者:Yongjian.Li & chatGPT-3.5 
 % 日期:2023-03-19
 
-% 该行指定LaTeX版本为LaTeX2e
+% 該行指定LaTeX版本為LaTeX2e
 \NeedsTeXFormat{LaTeX2e}
-% 颜色色彩库,需在最开始的时候加载
+% 顏色色彩庫,需在最開始的時候加載
 \RequirePackage[dvipsnames, svgnames, x11names]{xcolor}
 
-% 该行声明该文件为一个类文件，并给出文件名.def/must
+% 該行聲明該文件為一個類文件，並給出文件名.def/must
 \ProvidesClass{.def/must}
 
-%定义所有资源文件所在目录
+%定義所有資源文件所在目錄
 \def\resourcePath{.def/.resource/}
 
-% 控制奇偶页的边距
+% 控制奇偶頁的邊距
 \newif\ifprint\printfalse
-\DeclareOption{奇偶页邊距對稱=是}{\printtrue}
-\DeclareOption{奇偶页邊距對稱=不}{\printfalse}
+\DeclareOption{奇偶頁邊距對稱=是}{\printtrue}
+\DeclareOption{奇偶頁邊距對稱=不}{\printfalse}
 
-%控制是否加扉页
+%控制是否加扉頁
 \newif\iftp\tpfalse
-\DeclareOption{添加扉页=是}{\tptrue}
-\DeclareOption{添加扉页=不}{\tpfalse}
+\DeclareOption{添加扉頁=是}{\tptrue}
+\DeclareOption{添加扉頁=不}{\tpfalse}
 
-%控制是否加原创声明页
+%控制是否加原創聲明頁
 \newif\ifdp\dpfalse
 \DeclareOption{添加原創聲明頁=是}{\dptrue}
 \DeclareOption{添加原創聲明頁=不}{\dpfalse}
@@ -30,13 +30,19 @@
 %控制是否加水印
 \newif\ifwm\wmfalse
 \DeclareOption{添加校徽水印=是}{\wmtrue}
-\DeclareOption{添加校徽水印=不}{\wmtrue}
+\DeclareOption{添加校徽水印=不}{\wmfalse}
 
-% 处理选项
+%控制參考文獻是否頂格
+\newif\ifri\ritrue
+\DeclareOption{參考文獻頂格=是}{\ritrue}
+\DeclareOption{參考文獻頂格=不}{\rifalse}
+
+
+% 處理選項
 \ProcessOptions\relax
 
 
-% 打印模式为双边对称, 非打印模式为单边一致(提交论文时要求)
+% 打印模式為雙邊對稱, 非打印模式為單邊一致(提交論文時要求)
 \ifprint
 \LoadClass[12pt,twoside,openany]{book}
 \else
@@ -47,7 +53,7 @@
 
 
 
-% 加载宏包
+% 加載宏包
 \input{.def/.sty/I1.pack.base.sty}
 \input{.def/.sty/I2.pack.math.sty}
 \input{.def/.sty/I3.pack.tikz.sty}
@@ -58,7 +64,7 @@
 
 
 
-% 加载设置类的样式文件
+% 加載設置類的樣式文件
 \input{.def/.sty/II1.set.font.sty}
 \input{.def/.sty/II2.set.layout.sty}
 \input{.def/.sty/II3.set.caption.sty}
@@ -71,7 +77,7 @@
 
 
 
-% 加载定义命令类型的样式文件
+% 加載定義命令類型的樣式文件
 \input{.def/.sty/III1.comm.title.sty}
 \input{.def/.sty/III2.comm.abstract.sty}
 \input{.def/.sty/III3.comm.toc.sty}
@@ -84,5 +90,5 @@
 
 
 
-% 声明该文件结束
+% 聲明該文件結束
 \endinput

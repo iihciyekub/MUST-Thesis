@@ -1,19 +1,28 @@
 % !TeX encoding = UTF-8
 % 
-% 作者: 李永建 澳门科技大学-毕业论文latex模板-2023
+% 作者: @yongjian.li 澳門科技大學-畢業論文latex模板-2023
 % Github: https://github.com/iihciyekub/MUST-Thesis
 % Overleaf(read): https://www.overleaf.com/read/mjzpcxztzqzv
-% 最后更新: 2023-03-19
+% 
+% 最後更新: 2023-04-09
+% 更新內容: 
+% 1. 增加 bib2bbl 工具, 將bib 直接轉換成符合must 關於畢業論文文獻排版要求的格式,
+%   - .tool/bib2bbl.html (本地運行)
+%   - https://pychat.online/bib2bbl (網址2024/03/01 之前有效)
+%   - chrom 插件,內測中未發佈, 可從 github 下載自行安裝 https://github.com/iihciyekub/must-thesis-tools. 
+
 
 \documentclass[
-    添加扉页=是,
-    添加原創聲明頁=是,
-    添加校徽水印=是,
-    奇偶页邊距對稱=不,
+    添加扉頁=是,
+    添加原創聲明頁=不,
+    添加校徽水印=不,
+    奇偶頁邊距對稱=不,
+    參考文獻頂格=是,
 ]{.def/must}
 
 
-% 论文基本信息,必填不能删除
+
+% 論文基本信息,必填不能刪除
 \def\shool              {澳門科技大學}
 \def\cntitle            {XXX 銀行(澳門分行)與 XXX 銀行合併之研究}
 \def\entitle            {The Study of XXX Bank (Macau Branch) Merged the XXX Bank in Macao}
@@ -26,16 +35,14 @@
 \def\DateofWriting		{\datea\today}% 設置論文寫作完成時間
 \def\DateofDeclaration	{\dateb\today}% 設置論文原創聲明時間
 \def\DateofSignature	{2023/06/30}% 設置簽署論文原創聲明的時間
-\def\PublicAfterYears   {0}% 設置論文幾年后公開
+\def\PublicAfterYears   {0}% 設置論文幾年後公開
 
 
-\def\测试{eeee}
 
  
 \begin{document}
-
-\begin{abstract@cn}{關鍵字1、關鍵字1、關鍵字1、關鍵字1、}
-\测试 本研究採用2009 年至2014 年首度上市的公司279 家為研究
+\begin{abstract@cn}{關鍵字1、關鍵字1、關鍵字1、關鍵字1}
+本研究採用2009 年至2014 年首度上市的公司279 家為研究
 樣本，檢驗公司治理與財務績效之關聯性。利用樣本公司上市時
 的公司治理變數，檢驗公司治理對上市後的會計績效影響與上市
 後30 天的市場報酬，再進而依據過去文獻對公司治理變數的論
@@ -133,14 +140,15 @@ examine three hypotheses. Findings include:
 \end{abstract@en}
 
 
-% 添加目录 
+% 添加目錄 
 \addtableofcontents
 
 
 
-
-
 \chapter{緒論}
+
+
+
 
 
 \section{研究動機與目的}
@@ -153,6 +161,8 @@ Means(1932)指出，美國企業存在著股權分散的必要性，因為隨著
 收錄以公司治理為主題的文章(Weston, Siu \& Johnson; 2002)。
 
 \noindent 公式：式子置中，編號靠右，如
+
+
 \begin{equation}
 V_0=X_0(1-T)(1-b) \sum_{t=1}^n \frac{(1+g)^t}{(1+k)^t}+\frac{X_0(1-T)(1-g)^{n+1}}{k(1+k)^n}
 \end{equation}
@@ -166,15 +176,15 @@ $V_0=X_0(1-T)(1-b) \sum_{t=1}^n \frac{(1+g)^t}{(1+k)^t}+\frac{X_0(1-T)(1-g)^{n+1
 有系統地討論此一問題者為Jensen，在1988 年Jensen 首度有系統地
 收錄以公司治理為主題的文章(Weston, Siu \& Johnson; 2002)。
 \begin{enumerate}
-\item 第一个枚举第一个枚举第一个枚举第一个枚举第一个枚举第一个枚举第一个枚举第一个枚举第一个枚举第一个枚举第一个枚举第一个枚举第一个枚举 
-\item 第二个枚举 
-\item 第三个枚举 
+\item 第一個枚舉\\ 第一個枚舉換行
+\item 第二個枚舉 
+\item 第三個枚舉 
 \end{enumerate}
 
 % 添加表格
 \begin{table}[htbp]
     \centering
-    \caption{My Table}
+    \caption{讀取 csv 數據}
     \label{tab:mytable}
     \csvautobooktabular{data.csv} 
 \end{table}
@@ -210,8 +220,6 @@ $V_0=X_0(1-T)(1-b) \sum_{t=1}^n \frac{(1+g)^t}{(1+k)^t}+\frac{X_0(1-T)(1-g)^{n+1
 
 
 
-
-
 \section{函數圖}
 
 \begin{figure}[H]
@@ -234,7 +242,7 @@ $V_0=X_0(1-T)(1-b) \sum_{t=1}^n \frac{(1+g)^t}{(1+k)^t}+\frac{X_0(1-T)(1-g)^{n+1
 
 
 
-\section{多图}
+\section{多圖}
 \tikzstyle{every pin}=[fill=white,draw=black,font=\small,]
 \begin{figure}[H]
 	\centering
@@ -319,18 +327,10 @@ $V_0=X_0(1-T)(1-b) \sum_{t=1}^n \frac{(1+g)^t}{(1+k)^t}+\frac{X_0(1-T)(1-g)^{n+1
 
 
 
-\subsubsection{研究動機}
-文獻\cite{article,book,cho,chapter,conference,patent}
-中文文獻\cite{cnarticle,cnbook,cncho,cnchapter,cnconference,cnpatent}
-
-
-
-
-
-
-
+\subsubsection{文獻引用}
+%  \cite{wang2004, wen2009, qiu2014b, qiu2017, qiu9999, he2019, lin2014, lin2018, lin12018, chen9999, wen2015, qiu2014a, abdoh2019, bourdieu1990, bordwell2013, cole1992, harvey2007, johnson2018, luey2013, manguel2009b, macdonald2020, milliot9999, poff2019, villazón-terrazas2011, manguel2009a}
  
-\chapter{数学公式}
+\chapter{數學公式}
 \begin{equation}
 \label{eq1}
 e^{\pi i}+1=0
@@ -348,11 +348,10 @@ e^{\pi i}+1=0
 4 1 & \textrm{if }B=\ldots\\
 5 x & \textrm{this run  text.}\end
 {array}\right.
-\end{equation}        
+\end{equation}       
 
-
-
-有系統\cite{article}地討論此一問題者為Jensen，在1988 年Jensen 首度有系統地
+ 
+有門有系統地討論此一問題者為Jensen，在1988 年Jensen 首度有系統地我
 收錄以公司治理為主題的文章(Weston, Siu \& Johnson; 2002)。
 
 美國學者對公司治理的討論可追溯自1930 年代，Berle \&
@@ -368,7 +367,7 @@ Means(1932)指出，美國企業存在著股權分散的必要性，因為隨著
 \subsection{算法表}
 \begin{algorithm}[H]
     \fz[10][0.25]
-	\SetAlgoVlined %设置带水平线的连线
+	\SetAlgoVlined %設置帶水平線的連線
 	\PrintSemicolon
 	\KwData{document set $D :=\{d_1,d_2,\cdots,d_i\}$, term vector $d_1 =\{t_1,t_2,\cdots,t_j\}$
 	}
@@ -417,11 +416,11 @@ Means(1932)指出，美國企業存在著股權分散的必要性，因為隨著
 
 
 
-% 请确保bib 文件名称为 ref.bib, 利用js文件处理后的bbl文件名称为 ref.bbl
+% 請確保bib 文件名稱為 ref.bib, 利用js文件處理後的bbl文件名稱為 ref.bbl
 \addreference
 
 
-
+% \input{ref.bbl}
 
 
 
@@ -448,7 +447,7 @@ Means(1932)指出，美國企業存在著股權分散的必要性，因為隨著
 
 
 \begin{acknowpage}
-谢谢各位
+謝謝各位
 \end{acknowpage}
 
 
@@ -461,23 +460,23 @@ Means(1932)指出，美國企業存在著股權分散的必要性，因為隨著
 
  
 \begin{addcvpage}
-% 設置入學時間
+% 設置門入學時間 
 \addedudate{2019 年 7 月}
 
 
 
 
-% 填寫教育經歷,注意內容以逗号作分隔,
-\addeduItem{2009.16-2012.13,中国澳门氹仔岛澳门科技大学,商學院}
-\addeduItem{2009.16-2012.13,澳门科技大学,商学院}
-\addeduItem{2009.16-2012.13,澳门科技大学,商学院}
+% 填寫教育經歷,注意內容以逗號作分隔,
+\addeduItem{2009.16-2012.13,中國澳門氹仔島澳門科技大學,商學院}
+\addeduItem{2009.16-2012.13,澳門科技大學,商學院}
+\addeduItem{2009.16-2012.13,澳門科技大學,商學院}
 
 
 
 %增加學術文章
 \addpaperItem{ 
-    \item 中国澳门氹仔岛澳门科技大学1中国澳门氹仔岛澳门科技大学1中国澳门氹仔岛澳门科技大学1中国澳门氹仔岛澳门科技大学1中国澳门氹仔岛澳门科技大学1中国澳门氹仔岛澳门科技大学1中国澳门氹仔岛澳门科技大学1中国澳门氹仔岛澳门科技大学,
-    \item 中国澳门氹仔岛澳门科技大学,
+    \item 中國澳門氹仔島澳門科技大學1中國澳門氹仔島澳門科技大學1中國澳門氹仔島澳門科技大學1中國澳門氹仔島澳門科技大學1中國澳門氹仔島澳門科技大學1中國澳門氹仔島澳門科技大學1中國澳門氹仔島澳門科技大學1中國澳門氹仔島澳門科技大學,
+    \item 中國澳門氹仔島澳門科技大學,
 }
 
 
@@ -485,12 +484,10 @@ Means(1932)指出，美國企業存在著股權分散的必要性，因為隨著
 
 % 增加項目
 \addprojectItem{
-    \item 中国澳门氹仔岛澳门科技大学,商学院商学院
-    \item  商学院商学院商学院中国澳门氹仔岛澳门科技大学,商学院商学院商学院商学院商学院中国澳门氹仔岛澳门科技大学,商学院商学院商学院商学院商学院
+    \item 中國澳門氹仔島澳門科技大學,商學院商學院
+    \item  商學院商學院商學院中國澳門氹仔島澳門科技大學,商學院商學院商學院商學院商學院中國澳門氹仔島澳門科技大學,商學院商學院商學院商學院商學院 
 }
 \end{addcvpage}
-
-
 
 
 

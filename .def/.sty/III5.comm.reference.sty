@@ -11,28 +11,19 @@
         \input{ref.bbl}
     }{%
         \IfFileExists{ref.bib}{
-        {\small\noindent \textcolor{magenta}{\Large\faWarning} \textbf{为符合澳门科技大学研究生毕业论文参考文献的特殊格式要求，我们使用 *.bib 文件编写文献列表编译后得到 *.bbl 文件，再通过工具转换为符合排版要求的参考文献。。}\\
-        \textcolor{Dandelion}{\Large\faQuestionCircle}\textbf{ bbl 文件有什么用？}\\
-        \rule[1 em]{\linewidth}{0.5pt}\\[-1.5em]
-        \textcolor{Emerald}{\faMailReply} 有了 bbl 文件,我们只需要将中英混合文献内容进行自动分类排序,就能得到符合澳门科技大学毕业论文要求的排版格式. \\
-        \textcolor{Dandelion}{\Large\faQuestionCircle} \textbf{在哪里可以找到 bbl 文件？}\\
-        \rule[1 em]{\linewidth}{0.5pt}\\[-1.5em]
-        \textcolor{Emerald}{\faMailReply} 有2种模式:
+        {\small\noindent \textcolor{magenta}{\Large\faWarning} 
+         \textcolor{Emerald}{\faMailReply} 如果看到这个提醒, 说明你的文献排版并不符合澳科大要求,
+         
+         通過以下操作:
         \begin{itemize}
-        \item 本地模式：您可以在项目根目录下找到最新的 *.bbl 文件。
-        \item Overleaf online模式：tex 编译成功后，点击旁边的“logs and outfiles”图标，然后在右下角找到“others logs and files”，单击即可找到 bbl 文件。
-        \end{itemize}
-        \textcolor{Dandelion}{\Large\faQuestionCircle}\textbf{ 有 bbl 之后？}\\
-        \rule[1 em]{\linewidth}{0.5pt}\\[-1.5em]
-        \textcolor{Emerald}{\faMailReply} 通过以下操作:
-        \begin{itemize}
-        \item 本地转换工具: 目录 ".tool/must-bbl-converter.html"下载后浏览打开使用;
-        \item 在线转换工具,有效期至2024-03 地址: \textit{http://pychat.online/must-bbl-converter}
-        \item 将格式化后的 bbl 文件更名为“ref.bbl”，放入根目录即可
-        \item 请注意目录下存在“ref.bbl”文件时，参考文献内容往后将不会改变; 如果想重新添加新文献，删除 ref.bbl 文件后重复以上步骤即可。
+        \item 本地轉換工具: 目錄 ".tool/bib2bbl.html" 下載後瀏覽打開使用;
+        \item 在線轉換工具,有效期至2024-03 地址: \textit{\url{http://pychat.online/bib2bbl}}
+        \item 打开上面提到的网页后,将 ref.bib 文件内容复制到左边,点击转换,右边会生成合要求的bbl文件,
+        \item 将转换后 bbl 文件内容复制到本地目录下的 ref.bbl 文件(若文件没有则自行创建)
+        \item 再次点击编译,完成
         \end{itemize}
         }
-            \bibliographystyle{.def/.sty/apa5}
+            \bibliographystyle{.def/.sty/apa5.bst}
             \bibliography{ref.bib}
         }{%
             不存在 ref.bib 或 ref.bbl 文件.
