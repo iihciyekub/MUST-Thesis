@@ -4,6 +4,7 @@
 [![LICENSE](https://img.shields.io/badge/license-LaTeX%20Project%20Public%20License%20either%20version%201.3-blue.svg? )](http://www.latex-project.org/lppl.txt)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/iihciyekub/MUST-Thesis?color=%23ff22&logo=github)
 ![GitHub repo file count](https://img.shields.io/github/directory-file-count/iihciyekub/MUST-Thesis?color=%239035&logo=github)
+![GitHub all releases](https://img.shields.io/github/downloads/iihciyekub/MUST-Thesis/total?color=%23&logo=github)
 
 [![Chromium HSTS preload](https://img.shields.io/hsts/preload/github.com?label=overleaf%20project%20%28online%20share%29%20&logo=overleaf)](https://www.overleaf.com/read/mjzpcxztzqzv)
 
