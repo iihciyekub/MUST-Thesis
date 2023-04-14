@@ -3,36 +3,36 @@
 
 % 該行指定LaTeX版本為LaTeX2e
 \NeedsTeXFormat{LaTeX2e}
-% 顏色色彩庫,需在最開始的時候加載
+% 顏色色綵庫,需在最開始的時候加載
 \RequirePackage[dvipsnames, svgnames, x11names]{xcolor}
 
-% 該行聲明該文件為一個類文件，並給出文件名.def/must
+% 該行聲明該文件為一個類文件，並給齣文件名.def/must
 \ProvidesClass{.def/must}
 
 %定義所有資源文件所在目錄
 \def\resourcePath{.def/.resource/}
 
-% 控制奇偶頁的邊距
+% 控製奇偶頁的邊距
 \newif\ifprint\printfalse
 \DeclareOption{奇偶頁邊距對稱=是}{\printtrue}
 \DeclareOption{奇偶頁邊距對稱=不}{\printfalse}
 
-%控制是否加扉頁
+%控製是否加扉頁
 \newif\iftp\tpfalse
 \DeclareOption{添加扉頁=是}{\tptrue}
 \DeclareOption{添加扉頁=不}{\tpfalse}
 
-%控制是否加原創聲明頁
+%控製是否加原創聲明頁
 \newif\ifdp\dpfalse
 \DeclareOption{添加原創聲明頁=是}{\dptrue}
 \DeclareOption{添加原創聲明頁=不}{\dpfalse}
 
-%控制是否加水印
+%控製是否加水印
 \newif\ifwm\wmfalse
 \DeclareOption{添加校徽水印=是}{\wmtrue}
 \DeclareOption{添加校徽水印=不}{\wmfalse}
 
-%控制參考文獻是否頂格
+%控製參考文獻是否頂格
 \newif\ifri\ritrue
 \DeclareOption{參考文獻頂格=是}{\ritrue}
 \DeclareOption{參考文獻頂格=不}{\rifalse}
@@ -42,7 +42,7 @@
 \ProcessOptions\relax
 
 
-% 打印模式為雙邊對稱, 非打印模式為單邊一致(提交論文時要求)
+% 打印糢式為雙邊對稱, 非打印糢式為單邊一緻(提交論文時要求)
 \ifprint
 \LoadClass[12pt,twoside,openany]{book}
 \else
