@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 342f4cea5d3de4d3dc79c2c844fdbd28e75f3be6
 #  a $\LaTeX$ template for MUST-Thesis
 [![LICENSE](https://img.shields.io/badge/license-LaTeX%20Project%20Public%20License%20either%20version%201.3-blue.svg? )](http://www.latex-project.org/lppl.txt)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/iihciyekub/MUST-Thesis?color=%23ff22&logo=github)
