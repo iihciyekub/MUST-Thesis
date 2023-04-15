@@ -9,13 +9,23 @@
 [![Chromium HSTS preload](https://img.shields.io/hsts/preload/github.com?label=Join%20overleaf%20MUST-Thesis%20project%20%28share%20read%29&logo=overleaf&logoColor=%23ffff)](https://www.overleaf.com/read/mjzpcxztzqzv)
 
 更新説明:
+## ![Relative date](https://img.shields.io/date/1681586263?color=%23ff33&label=version%202.30.4&logo=github)
+- Ver 2.30.4 (2023.04.09)
+- [x] @iihciyekub
+- 通过文档声明 `writingLanguage=english` 切换至支持英文排版; 
+- 通过文档声明 `writingLanguage=chinese` 切换至支持中文排版; 
+
 ## ![Relative date](https://img.shields.io/date/1680969600?color=%23ff33&label=version%202.30.3&logo=github)
 - Ver 2.30.3 (2023.04.09)
 - [x] @iihciyekub 重構所有 *.cls *.sty *.tex 宏命令;
 更新內容:
 - 嚴格參考澳門科技大學提供的論文排版要求(見文件表);
-- 增加文檔類選項,以供用户選擇選擇是否顯示: 原創申明頁/個人簡歷頁/校徽logo/邊距調整/參考文獻頂板等;
-- 解決奇偶數頁邊距要一致問題.用户可以通過文檔類選項進行不同的選擇: 打印版(奇偶頁邊距對稱);或者提交版(奇偶頁邊距一致);
+- 增加文檔類選項,以解決奇偶數頁邊距要一致問題;用户可以通過文檔類選項進行不同的選擇: ; 
+- - `addPageTitle=yes` or `addPageTitle=no` 显示或不显示個人簡歷頁; 
+- - `addMUSTlog=yes` or `addMUSTlog=no` 显示或不显示校徽logo;
+- - `AddDeclaration=yes` or `AddDeclaration=no` 显示或不显示原創申明頁;
+- - `printing=yes`即打印用途(奇偶頁左右邊距對稱);或者 `printing=no` 电子档提交给学校用(奇偶頁左右邊距一致);
+- - `refUnindent=yes` 设置參考文獻頂格;
 - 修正澳門科技大學校徽（嚴格使用學校提供的低分辨率校徽,未來期待美工加入,繪製一個嚴格一致的矢量圖）;
 - 解決其它一系列bug問題;
 - 提供自動工具 [s2t/bib2bbl](https://github.com/iihciyekub/must-thesis-tools/blob/master/bib2bbl.html), 供用户解決簡體轉繁體及澳門科技大學研究生畢業論文關於文獻 apa7 特殊排版格式要求問題;
