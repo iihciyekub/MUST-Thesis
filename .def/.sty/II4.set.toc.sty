@@ -4,23 +4,37 @@
 
 
 %\titlecontents{標題名}[左間距]{標題格式}{標題前綴}{無序號標題}{指引線與頁碼}[下間距]
-\titlecontents{chapter}
-    [3.4 em] %\bfseries
-    {\fontsize{14pt}{18 pt}\selectfont}
-    {\contentslabel[第\thecontentslabel 章]{3.5 em}}
-    {}
-    { \titlerule*[0.5pc]{$\cdot$}\contentspage}
-    []
-%
-\titlecontents{section}
-    [4.8 em]
-    {\fontsize{14 pt}{16 pt}\selectfont}
-    {\contentslabel[第\thecontentslabel 節]{3.5 em}}
-    {}
-    {\titlerule*[0.5pc]{$\cdot$}\contentspage}
-    []
- 
-
+\ifwriteqEn
+    \titlecontents{chapter}
+        [8.4 em] %\bfseries
+        {\fontsize{14pt}{18 pt}\selectfont}
+        {\contentslabel[\bfseries Chapter \thecontentslabel]{7em}}
+        {}
+        {\titlerule*[0.5pc]{$\cdot$}\contentspage}
+        []
+    \titlecontents{section}
+        [4 em]
+        {\fontsize{14 pt}{16 pt}\selectfont}
+        {\contentslabel[\thecontentslabel]{2 em}}
+        {}
+        {\titlerule*[0.5pc]{$\cdot$}\contentspage}
+        []
+\else
+    \titlecontents{chapter}
+        [3.4 em] %\bfseries
+        {\fontsize{14pt}{18 pt}\selectfont}
+        {\contentslabel[第\thecontentslabel 章]{3.5 em}}
+        {}
+        { \titlerule*[0.5pc]{$\cdot$}\contentspage}
+        []
+    \titlecontents{section}
+        [4.8 em]
+        {\fontsize{14 pt}{16 pt}\selectfont}
+        {\contentslabel[第\thecontentslabel 節]{3.5 em}}
+        {}
+        {\titlerule*[0.5pc]{$\cdot$}\contentspage}
+        []
+\fi
 
 
 

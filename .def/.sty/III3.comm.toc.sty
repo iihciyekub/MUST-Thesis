@@ -1,10 +1,16 @@
 
 
 \newcommand{\addtableofcontents}{
-        \clearpage    
-        \renewcommand{\contentsname}{目錄}
-        \markboth{目錄}{}
-        \tableofcontents
+        \clearpage
+        \ifwriteqEn
+            \renewcommand{\contentsname}{CONTENT}
+            \markboth{CONTENT}{}
+            \tableofcontents
+        \else
+            \renewcommand{\contentsname}{目錄}
+            \markboth{目錄}{}
+            \tableofcontents
+        \fi
 
         % 正文
         \clearpage

@@ -4,8 +4,11 @@
 % 設置段落之間間距
 \setlength{\parskip}{10pt}
 % 設定段落首行縮進2字符
+\ifwriteqEn
+\setlength{\parindent}{0 em}
+\else
 \setlength{\parindent}{2 em}
-
+\fi
 
 
 
@@ -26,19 +29,21 @@
 
 
 %%%% 定理類環境的定義 %%%%
-\newtheorem{example}{例}             % 整體編號
-\newtheorem{theorem}{定理}[chapter]  % 按 section 編號
-\newtheorem{definition}{定義}[chapter]
-\newtheorem{axiom}{公理}
-\newtheorem{property}{性質}[chapter]
-\newtheorem{proposition}{命題}[chapter]
-\newtheorem{lemma}{引理}[chapter]
-\newtheorem{corollary}{推論}[chapter]
-\newtheorem{remark}{註解}
-\newtheorem{condition}{條件}
-\newtheorem{conclusion}{結論}[chapter]
-\newtheorem{assumption}{假設}[chapter]
-
+\ifwriteqEn
+\else
+    \newtheorem{example}{例}             % 整體編號
+    \newtheorem{theorem}{定理}[chapter]  % 按 section 編號
+    \newtheorem{definition}{定義}[chapter]
+    \newtheorem{axiom}{公理}
+    \newtheorem{property}{性質}[chapter]
+    \newtheorem{proposition}{命題}[chapter]
+    \newtheorem{lemma}{引理}[chapter]
+    \newtheorem{corollary}{推論}[chapter]
+    \newtheorem{remark}{註解}
+    \newtheorem{condition}{條件}
+    \newtheorem{conclusion}{結論}[chapter]
+    \newtheorem{assumption}{假設}[chapter]
+\fi
 
 
  

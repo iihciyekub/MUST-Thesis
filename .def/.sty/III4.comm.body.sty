@@ -29,7 +29,11 @@
 % 設置全文字體
 \AtBeginDocument{
     \renewcommand\arraystretch{0.5}
-    \large\linespread{1.625}\selectfont
+        \ifwriteqEn
+            \fz[14pt][1]
+        \else
+            \large\linespread{1.625}\selectfont
+        \fi
     % 是否加水印  
     \ifwm\addBackgroundPic{\resourcePath mustlogo.jpg}\fi
     % 增加封面

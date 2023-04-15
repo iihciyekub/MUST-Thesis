@@ -1,10 +1,30 @@
+\ifwriteqEn
+    \def\hdis{-6.9}
+\else
+    \def\hdis{-3.38}
+\fi
+
+
+\newcommand{\setenchapter}[1]{
+    \chapter*{\fontsize{18 pt}{\baselineskip}\selectfont #1}
+    \markboth{#1}{}
+    \addcontentsline{toc}{chapter}{\hspace{\hdis em}#1} 
+}
+\newcommand{\setcnchapter}[1]{
+    \chapter*{#1}
+    \markboth{#1}{}
+    \addcontentsline{toc}{chapter}{\hspace{\hdis em}#1} 
+}
+
+
+
+
+
 \newenvironment{abstract@cn}[1]{
     \clearpage
     \pagenumbering{Roman}
     \setcounter{page}{1}
-    \chapter*{摘~要}
-    \markboth{摘要}{}
-    \addcontentsline{toc}{chapter}{\hspace{-3.38 em}摘要} 
+    \setcnchapter{摘~要}
     \def\ii{#1}
     }{
     \par\noindent \textbf{關鍵字：} \ii
@@ -12,11 +32,13 @@
 
 
 
-
 \newenvironment{abstract@en}[1]{
-    \chapter*{\fontsize{18 pt}{\baselineskip}\selectfont Abstract}%
-    \markboth{Abstract}{}%
-    \addcontentsline{toc}{chapter}{\hspace{-3.35 em}Abstract}%
+\ifwriteqEn
+    \clearpage
+    \pagenumbering{Roman}
+    \setcounter{page}{1}
+\fi
+    \setenchapter{Abstract}%
     \setlength{\parindent}{0 em}
     \def\ii{\normalsize\linespread{1.08333333333333}\selectfont #1}%
     \normalsize\linespread{1.08333333333333}\selectfont%

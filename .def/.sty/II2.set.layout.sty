@@ -7,8 +7,6 @@
 \geometry{
     % showframe,
     papersize={21cm,29.7cm},
-    % marginparwidth =2.8 cm,
-    % marginparsep=0.8 cm,
     left= \ileft cm, 
     right= \iright cm, 
     top= 2.5 cm, 
@@ -25,17 +23,27 @@
 
 % 加載 fancyhdr 宏包，用於定義頁面樣式
 \RequirePackage{fancyhdr}
-\renewcommand{\headrulewidth}{0.4 pt}
+\ifwriteqEn
+    \renewcommand{\headrulewidth}{0 pt}
+\else
+    \renewcommand{\headrulewidth}{0.4 pt}
+\fi
 \renewcommand{\footrulewidth}{0pt}
 \pagestyle{fancy}
 \fancyhf{}
-
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
-% 定義右頁眉的內容，顯示當前章節的標題
-\fancyhead[R]{\fontsize{10pt}{10 pt}\selectfont\leftmark}
-\fancyhead[L]{\fontsize{10pt}{10 pt}\selectfont\cntitle}
-\fancyfoot[C]{\fontsize{10pt}{10 pt}\selectfont\thepage}
 
+
+% 定義右頁眉的內容，顯示當前章節的標題
+\ifwriteqEn
+    \fancyhead[L]{}
+    \fancyhead[R]{\fontsize{10pt}{10 pt}\selectfont Chapter~\thechapter~\leftmark}
+\else
+    \fancyhead[L]{\fontsize{10pt}{10 pt}\selectfont\cnShortTitle}
+    \fancyhead[R]{\fontsize{10pt}{10 pt}\selectfont\leftmark}
+\fi
+
+\fancyfoot[C]{\fontsize{10pt}{10 pt}\selectfont\thepage}
 
 
 

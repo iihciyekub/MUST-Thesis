@@ -12,31 +12,35 @@
 %定義所有資源文件所在目錄
 \def\resourcePath{.def/.resource/}
 
-% 控製奇偶頁的邊距
+% 控製奇偶頁的邊距 奇偶頁邊距對稱=是
 \newif\ifprint\printfalse
-\DeclareOption{奇偶頁邊距對稱=是}{\printtrue}
-\DeclareOption{奇偶頁邊距對稱=不}{\printfalse}
+\DeclareOption{printing=yes}{\printtrue}
+\DeclareOption{printing=no}{\printfalse}
 
 %控製是否加扉頁
 \newif\iftp\tpfalse
-\DeclareOption{添加扉頁=是}{\tptrue}
-\DeclareOption{添加扉頁=不}{\tpfalse}
+\DeclareOption{addPageTitle=yes}{\tptrue}
+\DeclareOption{addPageTitle=no}{\tpfalse}
 
 %控製是否加原創聲明頁
 \newif\ifdp\dpfalse
-\DeclareOption{添加原創聲明頁=是}{\dptrue}
-\DeclareOption{添加原創聲明頁=不}{\dpfalse}
+\DeclareOption{AddDeclaration=yes}{\dptrue}
+\DeclareOption{AddDeclaration=no}{\dpfalse}
 
 %控製是否加水印
 \newif\ifwm\wmfalse
-\DeclareOption{添加校徽水印=是}{\wmtrue}
-\DeclareOption{添加校徽水印=不}{\wmfalse}
+\DeclareOption{addMUSTlog=yes}{\wmtrue}
+\DeclareOption{addMUSTlog=no}{\wmfalse}
 
 %控製參考文獻是否頂格
 \newif\ifri\ritrue
-\DeclareOption{參考文獻頂格=是}{\ritrue}
-\DeclareOption{參考文獻頂格=不}{\rifalse}
+\DeclareOption{refUnindent=yes}{\ritrue}
+\DeclareOption{refUnindent=no}{\rifalse}
 
+%控製參考文獻是否頂格
+\newif\ifwriteqEn\writeqEntrue
+\DeclareOption{writingLanguage=english}{\writeqEntrue}
+\DeclareOption{writingLanguage=chinese}{\writeqEnfalse}
 
 % 處理選項
 \ProcessOptions\relax
@@ -84,7 +88,7 @@
 \input{.def/.sty/III4.comm.body.sty}
 \input{.def/.sty/III5.comm.reference.sty}
 \input{.def/.sty/III6.comm.appendix.sty}
-\input{.def/.sty/III7.comm.ackknow.sty}
+\input{.def/.sty/III7.comm.acknow.sty}
 \input{.def/.sty/III8.comm.cv.sty}
 
 

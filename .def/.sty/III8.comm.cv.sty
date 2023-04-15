@@ -68,17 +68,24 @@ ut/.style={
 
  
 % 定義文件目錄與位置
-\def\cvfilepath{\resourcePath ML04.pdf}
+\ifwriteqEn
+    \def\cvfilepath{\resourcePath ML04en.pdf}
+\else
+    \def\cvfilepath{\resourcePath ML04.pdf}
+\fi
 \newif\ifcvfile\cvfiletrue
 \def\opac{1}
 \IfFileExists{\cvfilepath}{\cvfiletrue}{\cvfilefalse\def\opac{0}}
 
 % # 定義命令
 \newenvironment{addcvpage}{
-    \clearpage
-    \chapter*{個人簡歷}
-    \markboth{個人簡歷}{}
-    \addcontentsline{toc}{chapter}{\hspace{-3.38 em}個人簡歷}
+    \clearpage 
+    \chapter*{}
+    \ifwriteqEn
+        \setenchapter{Personal Resume}
+    \else
+        \setcnchapter{個人簡歷}
+    \fi
     % 定義左邊距
     \def\l{3.8}
     % 如果文檔選項參數print 為 true的話,

@@ -3,30 +3,39 @@
 \RequirePackage{fontawesome}
 \newcommand{\addreference}{
     \clearpage
-    \chapter*{\fontsize{18 pt}{18 pt}\selectfont 參考文獻}
-    \markboth{參考文獻}{}
-    \addcontentsline{toc}{chapter}{\hspace{-3.35 em}參考文獻}
+    \ifwriteqEn
+    \setenchapter{Reference List}
+    \pagestyle{fancy}
+    \fancyhf{}
+    \else
+    \setcnchapter{參考文獻}
+    \fi
     \addtolength{\itemsep}{4em}
+    
     \IfFileExists{ref.bbl}{%
         \input{ref.bbl}
     }{%
         \IfFileExists{ref.bib}{
-        {\small\noindent \textcolor{magenta}{\Large\faWarning} 
-         \textcolor{Emerald}{\faMailReply} 如果看到这个提醒, 说明你的文献排版并不符合澳科大要求,
-         
-         通過以下操作:
-        \begin{itemize}
-        \item 本地轉換工具: 目錄 ".tool/bib2bbl.html" 下載後瀏覽打開使用;
-        \item 在線轉換工具,有效期至2024-03 地址: \textit{\url{http://pychat.online/bib2bbl}}
-        \item 打开上面提到的网页后,将 ref.bib 文件内容复制到左边,点击转换,右边会生成合要求的bbl文件,
-        \item 将转换后 bbl 文件内容复制到本地目录下的 ref.bbl 文件(若文件没有则自行创建)
-        \item 再次点击编译,完成
-        \end{itemize}
-        }
+            \ifwriteqEn\else
+            {\small\noindent \textcolor{magenta}{\Large\faWarning} 
+             \textcolor{Emerald}{\faMailReply} 如果看到這個提醒, 説明你的文獻排版並不符合澳科大要求,
+             
+             通過以下操作:
+            \begin{itemize}
+            \item 本地轉換工具: 目錄 ".tool/bib2bbl.html" 下載後瀏覽打開使用;
+            \item 在線轉換工具,有效期至2024-03 地址: \textit{\url{http://pychat.online/bib2bbl}}
+            \item 打開上面提到的網頁後,將 ref.bib 文件內容複製到左邊,點擊轉換,右邊會生成合要求的bbl文件,
+            \item 將轉換後 bbl 文件內容複製到本地目錄下的 ref.bbl 文件(若文件沒有則自行創建)
+            \item 再次點擊編譯,完成
+            \end{itemize}
+            }
+            \fi
             \bibliographystyle{.def/.sty/apa5.bst}
             \bibliography{ref.bib}
         }{%
             不存在 ref.bib 或 ref.bbl 文件.
         }
     }
+
+    
 }

@@ -1,8 +1,10 @@
 \renewenvironment{appendix}{
     \clearpage
-    \chapter*{附錄}
-    \markboth{附錄}{}
-    \addcontentsline{toc}{chapter}{\hspace{-3.38 em}附錄} 
+    \ifwriteqEn
+    \setenchapter{Appendix}
+    \else
+    \setcnchapter{附錄}
+    \fi
     }{
 }
 

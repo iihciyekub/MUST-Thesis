@@ -1,7 +1,11 @@
 % 日期管理
 \RequirePackage[yyyymmdd]{datetime}
 % \renewcommand{\dateseparator}{-}
-\newdateformat{datea}{\THEYEAR 年\THEMONTH 月}
+\ifwriteqEn
+    \newdateformat{datea}{\monthname, \THEYEAR}
+\else
+    \newdateformat{datea}{\THEYEAR 年\THEMONTH 月}
+\fi
 \newdateformat{dateb}{\THEYEAR/\THEMONTH/\THEDAY}
 
 
@@ -15,10 +19,13 @@
 }
 
 
-
-
-
-
+\ifwriteqEn
+\RequirePackage{lipsum}
+\def\txtHere#1{\lipsum[#1]}
+\else
+% \RequirePackage{xcjk2uni}
+\def\txtHere#1{随机生成一些中文}
+\fi
 
 
 % 浮動宏包放置圖表
