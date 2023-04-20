@@ -1,7 +1,4 @@
-% 加載 geometry 宏包，用於設置頁面佈局
 \RequirePackage {geometry}
-
-% 設置頁面大小為 A4 紙張大小，即 21cm x 29.7cm % 設置邊注寬度為 2.8cm，邊注與正文之間的距離為 0.8cm % 設置左邊距為 3.8cm，右邊距為 2.5cm，上邊距為 2.5cm，下邊距為 3cm % 設置腳註與正文之間的距離為 2em，頁眉高度為 0.6cm，頁眉與正文之間的距離為 0.6cm，頁腳與正文之間的距離為 25pt
 \def\ileft{3.8}
 \def\iright{2.5}
 \geometry{
@@ -16,12 +13,6 @@
     headsep = 0.5 em,
     footskip = 25 pt
 }
-
-
-
-
-
-% 加載 fancyhdr 宏包，用於定義頁面樣式
 \RequirePackage{fancyhdr}
 \ifwriteqEn
     \renewcommand{\headrulewidth}{0 pt}
@@ -33,8 +24,6 @@
 \fancyhf{}
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
 
-
-% 定義右頁眉的內容，顯示當前章節的標題
 \ifwriteqEn
     \fancyhead[L]{}
     \fancyhead[R]{\fontsize{10pt}{10 pt}\selectfont Chapter~\thechapter~\leftmark}
@@ -44,22 +33,7 @@
 \fi
 
 \fancyfoot[C]{\fontsize{10pt}{10 pt}\selectfont\thepage}
-
-
-
-
-
-% 免去版心底部對齊,  
-% \flushbottom 底部版心對齊
 \raggedbottom
-
-
-
-
-
-
-
-% 調整版心寬度的環境 adjustwidth
 \RequirePackage{changepage}
 
 

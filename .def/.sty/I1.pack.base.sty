@@ -1,6 +1,4 @@
-% 日期管理
 \RequirePackage[yyyymmdd]{datetime}
-% \renewcommand{\dateseparator}{-}
 \ifwriteqEn
     \newdateformat{datea}{\monthname, \THEYEAR}
 \else
@@ -12,42 +10,19 @@
 \RequirePackage{ifthen}
 \RequirePackage{xparse}
 \NewDocumentCommand{\fz}{O{14pt} O{1.85}}{
-    % 設置字體
     \fontsize{#1}{\baselineskip}\selectfont
-    % 設置行間距,一般1.5*1.5/1.2 = 1.85
     \linespread{#2}\selectfont
 }
 
 
 \ifwriteqEn
-\RequirePackage{lipsum}
-\def\txtHere#1{\lipsum[#1]}
+    \RequirePackage{lipsum}
+    \def\txtHere#1{\lipsum[#1]}
 \else
-% \RequirePackage{xcjk2uni}
-\def\txtHere#1{随机生成一些中文}
+    \def\txtHere#1{#1}
 \fi
 
 
-% 浮動宏包放置圖表
 \RequirePackage{float}
-
-
-
-
-
-
-
-
-
-
-
-% [pdf相關]
-\RequirePackage{pdfpages}           % 插入指定頁碼 pdf的宏包
-
-
-
-
-
-
-
-
+\RequirePackage{pdfpages}
+ 

@@ -1,11 +1,5 @@
-% [數學公式支持]
-% amsmath：提供了一些額外的數學命令和環境，例如 align、gather、cases 等，還提供了一些數學符號和字體。
-% amssymb：提供了一些額外的數學符號，例如 \leqslant、\geqslant、 subseteq 等。
-% amsthm：提供了一些額外的定理環境和命令，例如 theorem、proof、definition 等。
-% mathtools：提供了一些額外的數學命令和符號，例如 \DeclarePairedDelimiter、\prescript、\sideset 等。
-% mathrsfs：提供了一些額外的數學字體，例如 \mathscr 命令用於在數學公式中使用花體字母。
-\RequirePackage{amsmath,amssymb,amsthm,mathtools,mathrsfs}            % 數學公式 
-\RequirePackage{wasysym}    % 數學符號
+\RequirePackage{amsmath,amssymb,amsthm,mathtools,mathrsfs} 
+\RequirePackage{wasysym}
 
 \newcommand{\selmathtype}[1]{
 \ifcase #1%
@@ -13,19 +7,14 @@
 \or euler%2
 \or newpxmath%3
 \or mathpazo%4
-\or mathptmx%5 *****
+\or mathptmx%5
 \or palatino%6
 \or anttor%7
 \or iwona%8
-\or kmath%9 *****
+\or kmath%9
 \or pxfonts%10
 \else%
 newpxmath
 \fi
 }
-% 通過序號控制加載不同數學公式字體宏包
 \RequirePackage{\selmathtype{5}}
-
-
-
-

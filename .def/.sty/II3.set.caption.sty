@@ -1,35 +1,21 @@
 \ifwriteqEn
 \RequirePackage{fmtcount}
 \RequirePackage{zhnumber}
-% 转换章节序列为汉字
 \renewcommand{\thechapter}{\Numberstring{chapter}}
 \renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
 \else
-% zhnumber 宏包来将章节的序列转为汉字数字
 \RequirePackage{zhnumber}
-% 转换章节序列为汉字
 \renewcommand{\thechapter}{\zhnum{chapter}}
 \renewcommand{\thesection}{\zhnum{section}}
 \renewcommand{\thesubsection}{\zhnum{subsection}}
 \renewcommand{\thesubsubsection}{\arabic{subsubsection}}
 \fi
 
-% 設置章節標題
 \RequirePackage{titlesec}
 
-% 設置chapter、section、subsection三級計數器
 \setcounter{secnumdepth}{4}
 
-% \titleformat{command}[shape]{format}{label}{sep}{before-code}{after-code}
-% 各個參數的含義如下：
-% command：需要設置格式的標題命令，例如 \chapter、\section、\subsection 等。
-% shape：標題的形狀，可以是 hang（懸掛式）、block（塊狀）、display（顯示式）等，默認為 hang。
-% format：標題的格式，可以包含字體大小、字體顏色、加粗、斜體等設置。
-% label：標題的標籤，例如章節號碼。
-% sep：標題標籤和標題文字之間的距離。
-% before-code：標題前的代碼，例如設置標題前的垂直間距、插入圖片等。
-% after-code：標題後的代碼，例如設置標題後的垂直間距、插入分隔線等。
-% \titlespacing{command}{left}{before-sep}{after-sep}[right-sep]
+
 \ifwriteqEn
     \titleformat{\chapter}[hang]
         {\centering\bfseries\fontsize{22 pt}{22 pt}\selectfont}
@@ -96,7 +82,6 @@
 
 
 
-% 圖表標題
 \RequirePackage{caption}
 \RequirePackage{subcaption}
 \captionsetup{
@@ -120,8 +105,6 @@
 \renewcommand\thefigure{\arabic{chapter}-\arabic{figure}}
 \renewcommand\thetable{\arabic{chapter}-\arabic{table}}
 \renewcommand\thealgocf{\arabic{chapter}-\arabic{algocf}}
-
-%  更改數學公式編號
 \renewcommand\theequation{\arabic{chapter}.\arabic{equation}}
 
 

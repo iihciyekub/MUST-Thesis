@@ -1,8 +1,5 @@
-
-% 超鏈接 目錄 交叉引用的等高亮顯示
 \usepackage[colorlinks]{hyperref}
 \definecolor{bluecite}{HTML}{1c1c1c}
-% 定義一個設置超連接顏色的命令 go line
 \newcommand{\sethypcolor}[1]{
     \hypersetup{
         breaklinks  =   true,
@@ -18,13 +15,6 @@
 \RequirePackage{natbib}
 \setcitestyle{round, square,aysep={,}, yysep={,}, notesep={,}}
 
-
-
-
-
-
-
-% 參考文獻設置重要代碼
 \makeatletter
 \renewenvironment{thebibliography}[1]{%
     \list{\@biblabel{\@arabic\c@enumiv}}%

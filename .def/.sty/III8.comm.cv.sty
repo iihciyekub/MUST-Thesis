@@ -15,15 +15,12 @@ ut/.style={
     text width = 3.5 cm,
     name = ct1,
     align = left, 
-    % draw
     },
 }
 
 
-% 用於讀取list 的宏包
 \RequirePackage{listofitems}% \readlist\mylist{#1}
 
-% # 定義一個形狀
 \def\daa#1{
     \readlist\mylist{#1}
     \tikz{\path 
@@ -62,9 +59,6 @@ ut/.style={
         anchor = north west,
         ] {\begin{itemize}[noitemsep,leftmargin= 1 em]#1\end{itemize}};
 }
-
-
-
 
  
 % 定義文件目錄與位置

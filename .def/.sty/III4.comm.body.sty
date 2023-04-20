@@ -1,43 +1,32 @@
-\let\oldquote\quote % 保存旧的 quote 环境
-\let\endoldquote\endquote % 保存旧的 endquote 环境
+\let\oldquote\quote
+\let\endoldquote\endquote
 \renewenvironment{quote}
-  {\oldquote\fontsize{10}{12}\selectfont} % 设置字体为 10pt，行间距为 12pt
-  {\endoldquote}
+{\oldquote\fontsize{10}{12}\selectfont}
+{\endoldquote}
 
 
-
-
-  
-
-% 全文加水印
 \RequirePackage{eso-pic}
 \newcommand\addBackgroundPic[1]{%
     \AddToShipoutPicture{
-    	\put(0,0){%
-    		\parbox[b][\paperheight]{\paperwidth}{%
-    			\vfill
-    			\centering
-    			\includegraphics[width=9.9cm,keepaspectratio]{#1}%
-    			\vfill}
-       }
+        \put(0,0){%
+            \parbox[b][\paperheight]{\paperwidth}{%
+                \vfill
+                \centering
+                \includegraphics[width=9.9cm,keepaspectratio]{#1}%
+                \vfill}
+        }
     }
 }
 
 
-
- 
-% 設置全文字體
 \AtBeginDocument{
     \renewcommand\arraystretch{0.5}
-        \ifwriteqEn
-            \fz[14pt][1]
-        \else
-            \large\linespread{1.625}\selectfont
-        \fi
-    % 是否加水印  
+    \ifwriteqEn
+        \fz[14pt][1]
+    \else
+        \large\linespread{1.625}\selectfont
+    \fi
     \ifwm\addBackgroundPic{\resourcePath mustlogo.jpg}\fi
-    % 增加封面
     \iftp\addtitlepage\fi
-    % 增加原創聲明頁
     \ifdp\adddeclarepage\fi
 }

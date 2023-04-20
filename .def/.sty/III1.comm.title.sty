@@ -1,11 +1,9 @@
-
 \tikzset{
-tl/.style={inner sep = 0,anchor = north west, align = left},
-ul/.style={inner sep = 0,anchor = base, font = {\fontsize{14 pt}{14 pt}\selectfont},align = center, text width = 8 cm,name = c1},
+tl/.style={inner sep = 0, anchor = north west, align = left},
+ul/.style={inner sep = 0, anchor = center, font = {\fontsize{14 pt}{14 pt}\selectfont}, minimum height, name = c1},
 ul2/.style={inner sep = 0,anchor = base, font = {\fontsize{11 pt}{12 pt}\selectfont},align = center, text width = 8 cm,name = c1}
 }
 
-% 增加首頁
 \ifwriteqEn
     \def\titlefilepath{\resourcePath GS004en.pdf}
 \else
@@ -23,20 +21,20 @@ ul2/.style={inner sep = 0,anchor = base, font = {\fontsize{11 pt}{12 pt}\selectf
                 \coordinate (tpos) at (8.5cm,-9.75cm);
                 \node[tl,font = {\fontsize{18 pt}{18 pt}\selectfont},text width = 13.5 cm] at (0.4 cm,-2.25 cm)  {\enTitle};
             \else
-                \def\vdis{0.9}
-                \coordinate (tpos) at (8cm,-13.2cm);
+                \def\vdis{0.86}
+                \coordinate (tpos) at (8cm,-13cm);
                 \coordinate (entitlepos) at (0.82 cm,-6.1 cm);
                 \node[tl,font = {\fontsize{22 pt}{18 pt}\selectfont},text width = 12.5 cm] at (1.5 cm,-3.23 cm) {\cnTitle};
                 \node[tl,font = {\fontsize{18 pt}{14 pt}\selectfont},text width = 13.5 cm] at (0.82 cm,-6.1 cm)  {\enTitle};
             \fi
             
             \node[ul] at (tpos) {\Name };
-            \node[ul,below = \vdis cm of c1]{\StudentNo};
-            \node[ul,below = \vdis cm of c1]{\Faculty};
-            \node[ul,below = \vdis cm of c1]{\Program};
-            \node[ul,below = \vdis cm of c1]{\Major};
-            \node[ul,below = \vdis cm of c1]{\Supervisor};
-            \node[ul,below = \vdis cm of c1]{\DateofWriting};
+            \node[ul,below = \vdis cm of c1.south]{\StudentNo};
+            \node[ul,below = \vdis cm of c1.south]{\Faculty};
+            \node[ul,below = \vdis cm of c1.south]{\Program};
+            \node[ul,below = \vdis cm of c1.south]{\Major};
+            \node[ul,below = \vdis cm of c1.south]{\Supervisor};
+            \node[ul,below = \vdis cm of c1.south]{\DateofWriting};
         \end{tikzpicture}
         }{
         不存在,\titlefilepath,文件欠缺!
@@ -44,9 +42,6 @@ ul2/.style={inner sep = 0,anchor = base, font = {\fontsize{11 pt}{12 pt}\selectf
 }
 
 
-
-
-% 增加原創聲明文件
 \def\declarefilepath{\resourcePath S023.pdf}
 \newcommand{\adddeclarepage}{
     \IfFileExists{\declarefilepath}{

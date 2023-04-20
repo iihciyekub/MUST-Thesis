@@ -1,9 +1,5 @@
-
-% 關聯宏包
 \RequirePackage{parskip} 
-% 設置段落之間間距
 \setlength{\parskip}{10pt}
-% 設定段落首行縮進2字符
 \ifwriteqEn
 \setlength{\parindent}{0 em}
 \else
@@ -12,11 +8,8 @@
 
 
 
-% [枚舉]
 \RequirePackage{enumitem}
-% 枚舉設置
 \setitemize{
-% / 第條item之間的間距
     itemsep=-0em,
     partopsep=0pt,
     parsep=0pt,
@@ -28,11 +21,10 @@
 
 
 
-%%%% 定理類環境的定義 %%%%
 \ifwriteqEn
 \else
-    \newtheorem{example}{例}             % 整體編號
-    \newtheorem{theorem}{定理}[chapter]  % 按 section 編號
+    \newtheorem{example}{例}
+    \newtheorem{theorem}{定理}[chapter]
     \newtheorem{definition}{定義}[chapter]
     \newtheorem{axiom}{公理}
     \newtheorem{property}{性質}[chapter]

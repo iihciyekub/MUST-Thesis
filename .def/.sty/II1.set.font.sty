@@ -1,4 +1,3 @@
-% 導入 xeCJK 宏包，編譯方式設定為 xelatex
 \RequirePackage[T1]{fontenc}
 \RequirePackage{fontspec}
 \setmainfont{Times New Roman}
@@ -7,33 +6,20 @@
 
 
 \RequirePackage{xeCJK}
-% 設置中文主要字體為 KaiTi，並指定字體文件路徑，同時設置自動偽斜體和偽粗體
 \setCJKmainfont[
     Path = \resourcePath,
     AutoFakeSlant = 0.2,
     AutoFakeBold = 2.17
 ]{KaiTi}
 
-% % 設置中文等寬字體為 KaiTi，並指定字體文件路徑，同時設置自動偽斜體和偽粗體
 \setCJKmonofont[
     Path = \resourcePath,
     AutoFakeSlant = 0.2,
     AutoFakeBold = 2.17
 ]{KaiTi}
 
-% % 設置中文無襯線字體為 KaiTi，並指定字體文件路徑，同時設置自動偽斜體和偽粗體
 \setCJKsansfont[
     Path = \resourcePath,
     AutoFakeSlant = 0.2,
     AutoFakeBold = 2.17
 ]{KaiTi}
-
-% 設置英文主要字體為 Times New Roman，並指定字體文件路徑，同時設置自動偽斜體和偽粗體
-% \setmainfont[
-%     Path = .def/,
-%     AutoFakeSlant = 0.42,
-%     AutoFakeBold = 2.17
-% ]{Times New Roman}
-
-% \CJKsetecglue{\hskip 0.2em plus 0.1em minus 0.05em}
-
