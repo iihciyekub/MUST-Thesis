@@ -20,20 +20,15 @@
 - [x] @iihciyekub 重構所有 *.cls *.sty *.tex 宏命令;
 更新內容:
 - 嚴格參考澳門科技大學提供的論文排版要求(見文件表);
-- 增加文檔類選項,以解決奇偶數頁邊距要一致問題;用户可以通過文檔類選項進行不同的選擇: ; 
-- - `addPageTitle=yes` or `addPageTitle=no` 显示或不显示個人簡歷頁; 
-- - `addMUSTlog=yes` or `addMUSTlog=no` 显示或不显示校徽logo;
-- - `AddDeclaration=yes` or `AddDeclaration=no` 显示或不显示原創申明頁;
-- - `printing=yes`即打印用途(奇偶頁左右邊距對稱);或者 `printing=no` 电子档提交给学校用(奇偶頁左右邊距一致);
-- - `refUnindent=yes` 设置參考文獻頂格;
+- 增加文檔類選項,詳細見([使用幫助文檔](https://iihciyekub.github.io/must-thesis-manual/))
 - 修正澳門科技大學校徽（嚴格使用學校提供的低分辨率校徽,未來期待美工加入,繪製一個嚴格一致的矢量圖）;
 - 解決其它一系列bug問題;
 - 提供自動工具 [s2t/bib2bbl](https://github.com/iihciyekub/must-thesis-tools/blob/master/bib2bbl.html), 供用户解決簡體轉繁體及澳門科技大學研究生畢業論文關於文獻 apa7 特殊排版格式要求問題;
 - |            方法 | 網址/文件名/安裝包                                           | 狀態                                                         | 位置                    |
   | --------------: | :----------------------------------------------------------- | :----------------------------------------------------------- | :---------------------- |
-  |        本地版本 | bib2bbl.html [@GitHub](https://github.com/iihciyekub/must-thesis-tools/blob/master/bib2bbl.html) | 直接獨立運行                                                 | 項目路徑 `.tool` 目錄下 |
-  |          online | http://pychat.online/bib2bbl                                 | 在線訪問                                                     | 2024年3月前有效         |
-  | chrome 擴展程序 | Overleaf s2t/bib2bbl  1.50.5                                 | chrome 瀏覽器下載安裝,訪問 [overleaf ](https://www.overleaf.com/read/mjzpcxztzqzv)上使用 | Chrome 應用商店下載     |
+  |        離線版 | bib2bbl.html [@GitHub](https://github.com/iihciyekub/must-thesis-tools/blob/master/bib2bbl.html) | 直接獨立運行                                                 | 項目路徑 `.tool` 目錄下 |
+  |          在線版 | http://pychat.online/bib2bbl                                 | 在線訪問                                                     | 2024年3月前有效         |
+  | chrome 擴展程序(已發布) | [Overleaf s2t/bib2bbl 1.52.5](https://chrome.google.com/webstore/detail/overleaf-s2tbib2bbl/icekiliecbhnockmfkehoebbkmhmapmo?hl=zh-CN)                                 | 安裝成功后, 使用 chrome 瀏覽器在訪問 [overleaf](https://www.overleaf.com/read/mjzpcxztzqzv)上自動加載啟用 | [Chrome 瀏覽器應用商店下載](https://chrome.google.com/webstore/detail/overleaf-s2tbib2bbl/icekiliecbhnockmfkehoebbkmhmapmo?hl=zh-CN)     |
 
 
 
