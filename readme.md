@@ -1,8 +1,10 @@
 
 https://user-images.githubusercontent.com/30061185/233447600-a9ec4138-d73c-4914-84c3-600431556016.mp4
 
+视屏演示如何通过安装 chrome 扩展程序 overleaf s2t/bbi2bbl, 解决特殊文献格式问题
 
-[使用幫助文檔](https://iihciyekub.github.io/must-thesis-manual/)
+[must-thesis latex template 使用幫助文檔](https://iihciyekub.github.io/must-thesis-manual/)
+
 [Chrome 瀏覽器應用商店 overleaf s2t/bib2bbl](https://chrome.google.com/webstore/detail/overleaf-s2tbib2bbl/icekiliecbhnockmfkehoebbkmhmapmo?hl=zh-CN)
 
 #  a $\LaTeX$ template for MUST-Thesis
