@@ -1,3 +1,5 @@
+[使用幫助文檔](https://iihciyekub.github.io/must-thesis-manual/)
+
 #  a $\LaTeX$ template for MUST-Thesis
 [![LICENSE](https://img.shields.io/badge/license-LaTeX%20Project%20Public%20License%20either%20version%201.3-blue.svg? )](http://www.latex-project.org/lppl.txt)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/iihciyekub/MUST-Thesis?color=%23ff22&logo=github)
