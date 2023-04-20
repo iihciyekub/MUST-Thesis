@@ -10,13 +10,13 @@
 
 更新説明:
 ## ![Relative date](https://img.shields.io/date/1681586263?color=%23ff33&label=version%202.30.4&logo=github)
-- Ver 2.30.4 (2023.04.09)
+- Ver 2.30.4 (2023.04.16)
 - [x] @iihciyekub
 - 通过文档声明 `writingLanguage=english` 切换至支持英文排版; 
 - 通过文档声明 `writingLanguage=chinese` 切换至支持中文排版; 
 
 ## ![Relative date](https://img.shields.io/date/1680969600?color=%23ff33&label=version%202.30.3&logo=github)
-- Ver 2.30.3 (2023.04.16)
+- Ver 2.30.3 (2023.04.09)
 - [x] @iihciyekub 重構所有 *.cls *.sty *.tex 宏命令;
 更新內容:
 - 嚴格參考澳門科技大學提供的論文排版要求(見文件表);
