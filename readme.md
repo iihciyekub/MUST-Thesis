@@ -31,7 +31,7 @@ https://user-images.githubusercontent.com/30061185/233447600-a9ec4138-d73c-4914-
 - 修正澳門科技大學校徽（嚴格使用學校提供的低分辨率校徽,未來期待美工加入,繪製一個嚴格一致的矢量圖）;
 - 解決其它一系列bug問題;
 - 提供自動工具 [s2t/bib2bbl](https://github.com/iihciyekub/must-thesis-tools/blob/master/bib2bbl.html), 供用户解決簡體轉繁體及澳門科技大學研究生畢業論文關於文獻 apa7 特殊排版格式要求問題;
-- |            方法 | 網址/文件名/安裝包                                           | 狀態                                                         | 位置                    |
+|            方法 | 網址/文件名/安裝包                                           | 狀態                                                         | 位置                    |
   | --------------: | :----------------------------------------------------------- | :----------------------------------------------------------- | :---------------------- |
   |        離線版 | bib2bbl.html [@GitHub](https://github.com/iihciyekub/must-thesis-tools/blob/master/bib2bbl.html) | 直接獨立運行                                                 | 項目路徑 `.tool` 目錄下 |
   |          在線版 | http://pychat.online/bib2bbl                                 | 在線訪問                                                     | 2024年3月前有效         |
@@ -42,7 +42,7 @@ https://user-images.githubusercontent.com/30061185/233447600-a9ec4138-d73c-4914-
 
 
 - 以下是學校提供的關於論文排版所有細節要求的附件(截止 2023-04-15 可訪問).
-- |  NO. | 文件名                                                       | 本項目參考或使用 | 嚴格      |
+|  NO. | 文件名                                                       | 本項目參考或使用 | 嚴格      |
   | ---: | :----------------------------------------------------------- | ---------------- | ---- |
   |    1 | [扉頁格式](https://www.must.edu.mo/images/GSO/files/sgsdocument/GS004.pdf) | 使用             | ✓    |
   |    2 | [學位論文原創性聲明](https://www.must.edu.mo/images/GSO/files/S023學位論文原創性聲明BI.pdf) | 使用             | ✓    |
@@ -58,17 +58,17 @@ https://user-images.githubusercontent.com/30061185/233447600-a9ec4138-d73c-4914-
 
 歷史版本:
 ## ![Relative date](https://img.shields.io/date/1585411200?color=%23ff33&label=version%200.1.1.2&logo=github)
-- Ver 0.1.1.2 (2020.03.29) [已不再使用此功能]
+- Ver 0.1.1.2 (2020.03.29) [不推荐使用此旧版本,已停止维护]
 - ~~請使用 Texlive 2019-20190410 編譯環境, 官方鏡像下載地址: [Texlive 2019-20190410](https://mirror.bjtu.edu.cn/CTAN/systems/texlive/Images/)~~
 - ~~修正編譯錯誤問題~~
 - ~~修正中英文文獻格式問題,詳細可請看  [GIt 地址 iitool.exe](https://github.com/iihciyekub/MUST-iitool)~~
 
 ## ![Relative date](https://img.shields.io/date/1562342400?color=%23ff33&label=version%200.1.0.9&logo=github)
-- Ver 0.1.0.9 (2019.07.06) [已不再使用此功能]
+- Ver 0.1.0.9 (2019.07.06) [不推荐使用此旧版本,已停止维护]
 - ~~項目路徑下所有 `tex` 文件文本自動簡轉繁~~
 
 ## ![Relative date](https://img.shields.io/date/1560182400?color=%23ff33&label=version%200.1.0.8&logo=github)
-- Ver 0.1.0.8 (2019.06.11) [已不再使用此功能]
+- Ver 0.1.0.8 (2019.06.11) [不推荐使用此旧版本,已停止维护]
 - ~~添加 自動化程序: [iitool.exe](https://github.com/iihciyekub/MUST-iitool) (自動化編譯:生成 refTex --> xelatex --> xelatex :: PDF)~~
 - ~~[GitHub地址]: https://github.com/iihciyekub/MUST-iitool	"iitool.exe",該工具用於自動處理特殊格式要求下的(MUST-APA)參考文獻文本;~~
 
