@@ -1,11 +1,11 @@
 
 https://user-images.githubusercontent.com/30061185/233447600-a9ec4138-d73c-4914-84c3-600431556016.mp4
 
-视屏演示如何通过安装 chrome 扩展程序 overleaf s2t/bbi2bbl, 解决特殊文献格式问题
+视屏演示如何通过安装 chrome 浏览器扩展程序: ***overleaf s2t/bbi2bbl***, 解决特殊文献格式问题
 
-[must-thesis latex template 使用幫助文檔](https://iihciyekub.github.io/must-thesis-manual/)
+[must-thesis latex template ***User's Guide***](https://iihciyekub.github.io/must-thesis-manual/)
 
-[Chrome 瀏覽器應用商店 overleaf s2t/bib2bbl](https://chrome.google.com/webstore/detail/overleaf-s2tbib2bbl/icekiliecbhnockmfkehoebbkmhmapmo?hl=zh-CN)
+[Chrome extensions: ***overleaf s2t/bib2bbl***](https://chrome.google.com/webstore/detail/overleaf-s2tbib2bbl/icekiliecbhnockmfkehoebbkmhmapmo?hl=zh-CN)
 
 #  a $\LaTeX$ template for MUST-Thesis
 [![LICENSE](https://img.shields.io/badge/license-LaTeX%20Project%20Public%20License%20either%20version%201.3-blue.svg? )](http://www.latex-project.org/lppl.txt)
