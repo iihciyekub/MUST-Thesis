@@ -1,7 +1,7 @@
 \tikzset{
 tl/.style={inner sep = 0, anchor = north west, align = left},
-ul/.style={inner sep = 0, anchor = center, font = {\fontsize{14 pt}{14 pt}\selectfont}, minimum height, name = c1},
-ul2/.style={inner sep = 0,anchor = base, font = {\fontsize{11 pt}{12 pt}\selectfont},align = center, text width = 8 cm,name = c1}
+ul/.style={inner sep = 0, anchor = center, font = {\fontsize{14 pt}{\baselineskip}\selectfont}, minimum height, name = c1},
+ul2/.style={inner sep = 0,anchor = base, font = {\fontsize{11 pt}{\baselineskip}\selectfont},align = center, text width = 8 cm,name = c1}
 }
 
 \ifwriteqEn
@@ -19,13 +19,13 @@ ul2/.style={inner sep = 0,anchor = base, font = {\fontsize{11 pt}{12 pt}\selectf
             \ifwriteqEn
                 \def\vdis{0.66}
                 \coordinate (tpos) at (8.5cm,-9.75cm);
-                \node[tl,font = {\fontsize{18 pt}{18 pt}\selectfont},text width = 13.5 cm] at (0.4 cm,-2.25 cm)  {\enTitle};
+                \node[tl,font = {\fontsize{18 pt}{1.8\baselineskip}\selectfont},text width = 13.5 cm] at (0.44 cm,-2.35 cm)  {\enTitle};
             \else
                 \def\vdis{0.86}
                 \coordinate (tpos) at (8cm,-13cm);
                 \coordinate (entitlepos) at (0.82 cm,-6.1 cm);
-                \node[tl,font = {\fontsize{22 pt}{18 pt}\selectfont},text width = 12.5 cm] at (1.5 cm,-3.23 cm) {\cnTitle};
-                \node[tl,font = {\fontsize{18 pt}{14 pt}\selectfont},text width = 13.5 cm] at (0.82 cm,-6.1 cm)  {\enTitle};
+                \node[tl,font = {\fontsize{22 pt}{\baselineskip}\selectfont},text width = 12.5 cm] at (1.58 cm,-3.29 cm) {\cnTitle};
+                \node[tl,font = {\fontsize{18 pt}{\baselineskip}\selectfont},text width = 13.5 cm] at (0.9 cm,-6.16 cm)  {\enTitle};
             \fi
             
             \node[ul] at (tpos) {\Name };

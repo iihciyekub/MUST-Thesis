@@ -1,15 +1,15 @@
 % !TeX encoding = UTF-8
-% 
-% 作者: Yongjian.Li 澳門科技大學-畢業論文 LaTeX template-2023
-% help: https://iihciyekub.github.io/must-thesis-manual
+% @Yongjian.Li 澳門科技大學-畢業論文 LaTeX template-2023
+
+% User's Guide: https://iihciyekub.github.io/must-thesis-manual
 % Github: https://github.com/iihciyekub/MUST-Thesis
 % Overleaf: https://www.overleaf.com/read/mjzpcxztzqzv
 % Overleaf project 使用的 chrome 浏览器扩展程序 overleaf s2t/bib2bbl, 下载地址:
 % https://chrome.google.com/webstore/detail/overleaf-s2tbib2bbl/icekiliecbhnockmfkehoebbkmhmapmo?hl=zh-CN
-% 最後更新: 2023-04-20
+
+% 最後更新: 2023-04-23
 
 \documentclass[
-    % writingLanguage=english, 
     writingLanguage=chinese,
     addPageTitle=yes,
     AddDeclaration=yes,
@@ -27,7 +27,7 @@
 \def\enShortTitle       {\enTitle}% 頁眉顯示的英文論文短題目
 \def\Name               {我的姓名}% 名稱
 \def\StudentNo          {1809853G-BM30-0053}% 學號
-\def\Faculty 	        {商学院}% 所在學院
+\def\Faculty 	        {商學院}% 所在學院
 \def\Program 	        {管理學博士學位}% 學位名稱
 \def\Major              {商業量化}% 專業名稱
 \def\Supervisor	        {李新 副教授}% 指導老師
@@ -36,27 +36,65 @@
 \def\DateofSignature	{2023/06/30}% 設置簽署論文原創聲明的時間
 \def\PublicAfterYears   {0}% 設置論文幾年後公開
 
-
-
 \begin{document}
 
 \begin{abstract@cn}{關鍵字1、關鍵字1、關鍵字1、關鍵字1、}
-這裏填寫中文摘要
+本研究採用2009 年至2014 年首度上市的公司279 家為研究樣本，檢驗公司治理與財務績效之關聯性。利用樣本公司上市時的公司治理變數，檢驗公司治理對上市後的會計績效影響與上市後 30 天的市場報酬，再進而依據過去文獻對公司治理變數的論述，以單一指標衡量，依研究對象中位數區分公司治理程度，以及公司治理變數給予不同分數，驗證對財務績效之影響，並比較「有價證券上市審查準則」強化公司治理制度前後之上市公司，在公司治理與財務績效上是否有差異。透過相關分析、T 檢定、迴歸分析，檢驗三大研究假說，實證結果獲得以下主要結論： 
+\the\baselineskip
 \end{abstract@cn}
 
 \begin{abstract@en}{keyword1、keyword1、keyword1、keyword1、}
-\txtHere{1-3}
+This research used 279 companies established between 2009 and 2014 as the
+sample, examining the relationship between corporate governance and financial
+performance. Corporate governance variable during the time when company
+gets started is used to examine the effect of corporate governance on accounting
+effectiveness after the company has been on the market, as well as the effect on
+the return rate during the first 30 days of the company’s opening. Further
+analysis from literature review on corporate governance, using single
+measurement, is according to the median of the level of corporate governance
+and the rating of corporate governance variable, to cross examine its effect on
+financial performance. Also, a comparison of the effect on strengthening
+corporate governance using “Stock Exchange Listing Standards” before and
+after the company was listed on the stock market on corporate governance and
+financial performance. Correlation, T-test, and Regression analysis were used to
+examine three hypotheses. Findings include:
+
+1) Company characteristics
+High Tech industry has better corporate governance mechanism than traditional
+industries.
+
+2) Characteristic of corporate governance level
+High corporate governance companies have better accounting effectiveness and
+market performance.
 \end{abstract@en}
 
 % 添加目錄 
 \addtableofcontents
 
-\section{介紹}
+\chapter{緒論}
 
-本章將介紹本文的研究背景和目的，概述研究方法和主要貢獻。
+\section{研究動機與目的}
+\citep{luey2013, turabian2015, WangZhenWu2004, WenZaoWai2009, QiuZiHeng2017, HeDingZhao2019, WuPeiHua2020, QiuJiongYou2014, QiuJiongYou2016, QiuJiongYou2019, LinDongTai2008, LinJing2018, LinWenYao2018, LinXHui2014, HongWenQi2019, HongZhenZhou2018, ChenYaNing9999, ChenXiaMin2019, ZhangYan2016, GuoJiaTu2019, WenDaMao2015, JianYiLing2019, bourdieu1990, cohen2007, harvey2007, manguel2009, šteger2010, Villazón2011, bordwell2013, cole2013, deliot2014, foster2017, paige2017, johnson2018, wipawin2018, poff2019, giles2019, TaiwanNews2019, abdoh2019, macdonald2020, Milliot2020, OrganisationforEconomicCo2020, rothfeld2020, crotty2020, melero2021}
 
-\subsection{研究背景}
-
+\subsection{研究動機}
+美 國 學 者 對 公 司 治 理 的 討 論 可 追 溯 自 1930 年代， Berle \&
+Means(1932)指出，美國企業存在著股權分散的必要性，因為隨著企業
+規模不斷的擴大，使得多數的中大型公司皆需將經營權與所有權加以
+分離來經營，以期達到專業化的目的。
+有系統地討論此一問題者為Jensen，在1988年Jensen首度有系統地
+收錄以公司治理為主題的文章(Weston, Siu \& Johnson; 2002)。亞洲金融
+風暴以降，企業美化財務報表、操縱盈餘管理及掏空資產事件層出不
+窮，強化公司治理機制遂成為各界關心與注重的現象。公司治理機制
+可謂制度面與市場面兩者間所形成的一種組合，被用來作為導引公司
+的決策者，在做決策時，能面面俱到地考量各個利害關係人之利益並
+且以公司價值之最大化為目標(Denis \& McConnell;2003)。
+「公司治理」（Corporate Governance），臺灣學者譯法不一，基於
+監督、防弊觀念者有稱之為「公司管控」或「公司監理」，強調興利功
+能者則稱之為「公司管理」或「公司統理」；或許各種名詞所界定的意
+義與範圍不盡相同，但其主要的內涵均係使企業體透過法律的制衡管
+控與設計，在企業所有權與企業經營權分離的組織體系中，能有效監
+督組織活動，並且健全組織運作，以防止脫法行為之經營弊端出現，
+以實現企業社會責任的目標。
 \txtHere[1]
 
 \subsection{研究目的}
@@ -73,7 +111,7 @@
 
 \section{相關工作}
 
-本章將介紹相關領域的研究現狀，總結前人的工作成果，分析其不足之處，為後續研究提供理論和實踐基礎。\citep{wangzhenwu2004, wenzaowai2009, qiuziheng2017, hedingzhao2019, qiujiongyou2014b, qiujiongyou9999, linjing2018, linwenyao2018, linxhui2014, chenyaning9999, luey2013, wendamao2015, qiujiongyou2014a, abdoh2019, bordwell2013, bourdieu1990, cole1992, harvey2007, johnson2018, macdonald2020, manguel2009b, milliot9999, poff2019, villazón2011, manguel2009a}
+本章將介紹相關領域的研究現狀，總結前人的工作成果，分析其不足之處，為後續研究提供理論和實踐基礎。
 
 \subsection{前人工作總結}
 

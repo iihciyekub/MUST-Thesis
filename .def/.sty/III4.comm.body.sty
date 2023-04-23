@@ -1,7 +1,7 @@
 \let\oldquote\quote
 \let\endoldquote\endquote
 \renewenvironment{quote}
-{\oldquote\fontsize{10}{12}\selectfont}
+{\oldquote\fontsize{10}{\baselineskip}\selectfont}
 {\endoldquote}
 
 
@@ -20,12 +20,19 @@
 
 
 \AtBeginDocument{
-    \renewcommand\arraystretch{0.5}
+    \usepackage{ragged2e} % 引入宏包
+    \justifying % 设定为两端对齐
     \ifwriteqEn
-        \fz[14pt][1]
+        % \setlength{\baselineskip}{1.088\baselineskip}
+        % \fontsize{12 pt}{\baselineskip}\selectfont
+        \enfz
     \else
-        \large\linespread{1.625}\selectfont
+        % word 的基准因子是1.3, 因此 1.5/1.2*1.3
+        % \setlength{\baselineskip}{2.45733228173131\baselineskip}
+        % \fontsize{14 pt}{\baselineskip}\selectfont
+        \cnfz
     \fi
+    \renewcommand\arraystretch{0.5}
     \ifwm\addBackgroundPic{\resourcePath mustlogo.jpg}\fi
     \iftp\addtitlepage\fi
     \ifdp\adddeclarepage\fi

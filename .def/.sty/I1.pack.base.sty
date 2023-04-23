@@ -1,17 +1,29 @@
 \RequirePackage[yyyymmdd]{datetime}
+\newdateformat{dateb}{\THEYEAR/\THEMONTH/\THEDAY}
 \ifwriteqEn
     \newdateformat{datea}{\monthname, \THEYEAR}
 \else
     \newdateformat{datea}{\THEYEAR 年\THEMONTH 月}
 \fi
-\newdateformat{dateb}{\THEYEAR/\THEMONTH/\THEDAY}
 
 
 \RequirePackage{ifthen}
 \RequirePackage{xparse}
-\NewDocumentCommand{\fz}{O{14pt} O{1.85}}{
-    \fontsize{#1}{\baselineskip}\selectfont
-    \linespread{#2}\selectfont
+
+\NewDocumentCommand{\fz}{O{14pt} O{1.625}}{
+\fontsize{#1}{\baselineskip}\selectfont
+\linespread{#2}\selectfont #1
+}
+
+\newcommand{\enfz}{
+\setlength{\baselineskip}{13.7931034482759 pt}
+\fontsize{12 pt}{\baselineskip}\selectfont
+}
+
+
+\newcommand{\cnfz}{
+\setlength{\baselineskip}{29.48804 pt}
+\fontsize{14 pt}{\baselineskip}\selectfont
 }
 
 

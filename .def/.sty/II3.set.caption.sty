@@ -18,7 +18,7 @@
 
 \ifwriteqEn
     \titleformat{\chapter}[hang]
-        {\centering\bfseries\fontsize{22 pt}{22 pt}\selectfont}
+        {\centering\bfseries\fontsize{22 pt}{1.8\baselineskip}\selectfont}
         {Chapter \thechapter}
         {1 em}
         {\thispagestyle{fancy}}
@@ -26,28 +26,28 @@
     \titlespacing{\chapter}{0 pt}{0 pt}{12 pt}[0 pt]
     % 2
     \titleformat{\section}[hang]
-        {\centering\bfseries\fontsize{18 pt}{18 pt}\selectfont}
+        {\centering\bfseries\fontsize{18 pt}{1.8\baselineskip}\selectfont}
         {\thesection}
         {0.5 em}
         {}
     \titlespacing{\section}{0 pt}{10 pt}{10 pt}[0 pt]
     %3
     \titleformat{\subsection}[hang]
-        {\fontsize{16 pt}{16 pt}\selectfont}
+        {\fontsize{16 pt}{1.8\baselineskip}\selectfont}
         {\thesubsection}
         {0.5 em}
         {}
     \titlespacing{\subsection}{0 pt}{5 pt}{5 pt}[0 pt]
     % 4
     \titleformat{\subsubsection}[hang]
-        {\bfseries\fontsize{14pt}{14 pt}\selectfont}
+        {\bfseries\fontsize{14pt}{1.8\baselineskip}\selectfont}
         {\thesubsubsection}
         {1 em}
         {}
     \titlespacing{\subsubsection}{0 pt}{5 pt}{5 pt}[0 pt]
 \else
     \titleformat{\chapter}[hang]
-        {\centering\bfseries\fontsize{22 pt}{22 pt}\selectfont}
+        {\centering\bfseries\fontsize{22 pt}{\baselineskip}\selectfont}
         {第\thechapter 章}
         {22 pt}
         {\thispagestyle{fancy}}
@@ -55,21 +55,21 @@
     \titlespacing{\chapter}{0 pt}{0 pt}{12 pt}[0 pt]
     % 2
     \titleformat{\section}[hang]
-        {\centering\bfseries\fontsize{18 pt}{18 pt}\selectfont}
+        {\centering\bfseries\fontsize{18 pt}{\baselineskip}\selectfont}
         {第\thesection 節}
         {18 pt}
         {}
     \titlespacing{\section}{0 pt}{9 pt}{10 pt}[0 pt]
     %3
     \titleformat{\subsection}[hang]
-        {\itshape\fontsize{16 pt}{16 pt}\selectfont}
+        {\itshape\fontsize{16 pt}{\baselineskip}\selectfont}
         {\thesubsection 、}
         {0 em}
         {}
     \titlespacing{\subsection}{0 pt}{5 pt}{5 pt}[0 pt]
     % 4
     \titleformat{\subsubsection}[hang]
-        {\bfseries\fontsize{14pt}{14 pt}\selectfont}
+        {\bfseries\fontsize{14pt}{\baselineskip}\selectfont}
         {\thesubsubsection.}
         {0.2 em}
         {}

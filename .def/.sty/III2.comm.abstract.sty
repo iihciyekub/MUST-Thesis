@@ -39,8 +39,10 @@
     \setcounter{page}{1}
 \fi
     \setenchapter{Abstract}%
+    \enfz
     \setlength{\parindent}{0 em}
-    \def\ii{\normalsize\linespread{1.08333333333333}\selectfont #1}%
-    \normalsize\linespread{1.08333333333333}\selectfont%
-    }{\par\noindent \textbf{\normalsize\linespread{1.08333333333333}\selectfont Key words:} \ii \setlength{\parindent}{2 em}
+    \def\ii{#1}%
+ 
+    }{\par\noindent \textbf{ Key words:} \ii
+    \setlength{\parindent}{2 em}
 }

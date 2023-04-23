@@ -1,5 +1,5 @@
 % 作者:Yongjian.Li & chatGPT-3.5 
-% 日期:2023-03-19
+% 日期:2023-04-19
 
 % 該行指定LaTeX版本為LaTeX2e
 \NeedsTeXFormat{LaTeX2e}
@@ -48,9 +48,9 @@
 
 % 打印糢式為雙邊對稱, 非打印糢式為單邊一緻(提交論文時要求)
 \ifprint
-\LoadClass[12pt,twoside,openany]{book}
+\LoadClass[twoside,openany]{book}
 \else
-\LoadClass[12pt,oneside,openany]{book}
+\LoadClass[oneside,openany]{book}
 \fi
 
 
