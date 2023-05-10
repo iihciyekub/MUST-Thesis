@@ -1,21 +1,28 @@
 % !TeX encoding = UTF-8
 % @Yongjian.Li 澳門科技大學-畢業論文 LaTeX template-2023
 
-% User's Guide: https://iihciyekub.github.io/must-thesis-manual
-% Github: https://github.com/iihciyekub/MUST-Thesis
-% Overleaf: https://www.overleaf.com/read/mjzpcxztzqzv
+% User's Guide: 
+    % https://iihciyekub.github.io/must-thesis-manual
+% Github: 
+    % https://github.com/iihciyekub/MUST-Thesis
+% Overleaf: 
+    % https://www.overleaf.com/read/mjzpcxztzqzv
 % Overleaf project 使用的 chrome 浏览器扩展程序 overleaf s2t/bib2bbl, 下载地址:
-% https://chrome.google.com/webstore/detail/overleaf-s2tbib2bbl/icekiliecbhnockmfkehoebbkmhmapmo?hl=zh-CN
+    % https://chrome.google.com/webstore/detail/overleaf-s2tbib2bbl/icekiliecbhnockmfkehoebbkmhmapmo?hl=zh-CN
+% bib2bbl online: 
+    % https://pychat.online/bib2bbl
 
-% 最後更新: 2023-04-23
+% 最後更新: 2023-5-08
 
 \documentclass[
     writingLanguage=english, 
-    addPageTitle=yes,
-    AddDeclaration=yes,
-    addMUSTlog=no,
-    refUnindent=yes,
-    printing=no,
+    addPageTitle=on,
+    addDeclaration=on,
+    addMUSTlog=off,
+    printing=off,
+    refIndent=on,
+    addFigTOC=on,
+    addTabTOC=on,
 ]{.def/must}
 
 
@@ -56,7 +63,108 @@
 \chapter{Introduction}
 \txtHere{1}
 \section{Research Aim and Objectives}
-\txtHere{1-2}
+\section{fig}
+\captionsetup[figure]{singlelinecheck=off,justification=raggedright}
+\captionsetup[subfigure]{singlelinecheck=on}
+\tikzstyle{every pin}=[fill=white,draw=black,font=\small,]
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}{0.49\textwidth}
+	  	\centering
+		\begin{tikzpicture}[scale = 0.63276]
+			\begin{loglogaxis}[
+				%xlabel={\textsc{Dof}},
+				ylabel={$L_2$ Error},
+				]
+				\addplot coordinates {
+					(11, 6.887e-02)
+					(71, 3.177e-02)
+					(351, 1.341e-02)
+					(1471, 5.334e-03)
+					(5503, 2.027e-03)
+					(18943, 7.415e-04)
+					(61183, 2.628e-04)
+					(187903, 9.063e-05)
+					(553983, 3.053e-05)
+				};
+				\node [coordinate,pin=above:{Bad!}]
+				at (axis cs:5503,2.027e-03) {};
+				\node [coordinate,pin=left:{Good!}]
+				at (axis cs:187903,9.063e-05) {};
+			\end{loglogaxis}
+		\end{tikzpicture}
+		\caption{A subfigure}
+		\label{fig:sub1}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{.49\textwidth}
+		\centering
+		\begin{tikzpicture}[scale = 0.63276]
+			\begin{loglogaxis}[
+				ylabel=$L_2$ Error,
+				]
+				\draw
+				(1793,4.442e-05)
+				|- (4097,1.207e-05)
+				node [near start,left]
+				{$\frac{dy}{dx} = -1.58$};
+				\addplot coordinates {
+					(5, 8.312e-02)
+					(17, 2.547e-02)
+					(49, 7.407e-03)
+					(129, 2.102e-03)
+					(321, 5.874e-04)
+					(769, 1.623e-04)
+					(1793, 4.442e-05)
+					(4097, 1.207e-05)
+					(9217, 3.261e-06)
+				};
+			\end{loglogaxis}
+		\end{tikzpicture}
+		\caption{A subfigure}
+	  	\label{fig:sub2}
+	\end{subfigure}\\
+
+	\begin{subfigure}{.49\textwidth}
+		\centering
+		\includegraphics[width=.5\linewidth]{.def/.resource/eg05.png}
+		\caption{A subfigure}
+		\label{fig:sub3}
+	\end{subfigure}
+	\begin{subfigure}{.49\textwidth}
+		\centering
+		\includegraphics[width=.5\linewidth]{.def/.resource/eg06.png}
+		\caption{A subfigure}
+		\label{fig:sub4}
+	\end{subfigure}
+	\caption{A figure with two subfigures}
+	\label{fig:sub}
+\end{figure}
+ 
+subfig\ref{fig:sub1}subfig\ref{fig:sub2}subfig\ref{fig:sub3}subfig\ref{fig:sub4}
+
+
+
+\section{table}
+
+\captionsetup[table]{singlelinecheck=off,justification=raggedright}
+\begin{table}
+\caption{this is table data}
+\centering
+\begin{tabularx}{\textwidth}{XXX} % 表格寬度為網頁的一半
+\toprule
+content & content & content \\
+\midrule
+row1 & row1 & row1\footnote{footnote} \\
+row2 & row2 & row2 \\
+\bottomrule
+\end{tabularx}
+\caption*{this is footnote}
+\end{table}
+
+
+
+
 \subsection{Background}
 \txtHere{1}\citep{cohen2007, harvey2007, manguel2009, šteger2010, Villazón2011, bordwell2013, cole2013, deliot2014, foster2017, paige2017, johnson2018, wipawin2018, poff2019, giles2019, TaiwanNews2019, abdoh2019, macdonald2020, Milliot2020, OrganisationforEconomicCo2020, rothfeld2020, crotty2020, melero2021}
 
@@ -81,7 +189,70 @@ V_0=X_0(1-T)(1-b) \sum_{t=1}^n \frac{(1+g)^t}{(1+k)^t}+\frac{X_0(1-T)(1-g)^{n+1}
 \end{equation}
 
 
+\begin{axiom}
+Theorem 4.1. Let $F(\Lambda)=(R-v-r-c) \Lambda-2 \sqrt{h c \Lambda}$. The social welfare solution is to set $\mu_1=\mu_2=\lambda_1=\lambda_2=0$ if $F(\Lambda)<\sigma$; otherwise, to set $\lambda_i=\Lambda, \mu_i=\Lambda+\sqrt{h \Lambda / c}$, $\mu_j=\lambda_j=0$, for either $i=1$ or 2 with corresponding $j \neq i$.
+\end{axiom}
 
+
+\begin{theorem}
+For the capacity choice problem, four
+cases may arise.
+\begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,leftmargin=*,label=\emph{(\roman*)}]
+    \item If $F(\Lambda)<\sigma$, then the unique equilibrium is such that none of the firms would operate in the market, i.e., $p_1=p_2=0$ and $\mu_1=\mu_2=0$, and the corresponding $\lambda_1=\lambda_2=0$.
+    \item If $F(\Lambda / 2)<\sigma \leqslant F(\Lambda)$, then there are two equilibria, each corresponding to one of the firms to operate in the market. The firm enters the market captures the whole market and sets monopoly capacity and price, i.e.,
+\end{enumerate}
+
+\end{theorem}
+
+
+\begin{definition}
+ definition。
+\end{definition}
+
+
+\begin{example}
+ example。
+\end{example}
+
+
+
+\begin{property}
+ property。
+\end{property}
+
+\begin{proposition}
+ proposition。
+\end{proposition}
+
+
+\begin{lemma}
+ lemma。
+\end{lemma}
+
+\begin{corollary}
+ corollary。
+\end{corollary}
+
+\begin{remark}
+ remark。
+\end{remark}
+
+
+
+\begin{condition}
+ condition。
+\end{condition}
+
+
+
+\begin{conclusion}
+ conclusion。
+\end{conclusion}
+
+
+\begin{assumption}
+ assumption。
+\end{assumption}
 
 
 
@@ -178,7 +349,6 @@ e^{\pi i}+1=0
 \txtHere{1}
 \subsection{Recommendations for Future Research}
 \txtHere{1}
-
 \chapter{Conclusion}
 \txtHere{1}
 \section{Summary of Findings}
@@ -197,7 +367,6 @@ e^{\pi i}+1=0
 % 請確保bib 文件名稱為 ref.bib, 利用js文件處理後的bbl文件名稱為 ref.bbl
 \addreference
 
-
 \begin{appendix}
 
 \end{appendix}
@@ -210,7 +379,14 @@ e^{\pi i}+1=0
 
 
 
-% 填寫個人簡歷
+
+
+
+
+
+
+
+% ---- >>start
 \begin{addcvpage}
 % 設置入學時間
 \addedudate{Sept, 2019}
@@ -220,21 +396,19 @@ e^{\pi i}+1=0
 \addeduItem{2009.16-2012.13,Macau University of Science and Technology, Faculty of Business, Taipa Island, Macau, China.}
 \addeduItem{2009.16-2012.13,Macau University of Science and Technology, Faculty of Business, Taipa Island, Macau, China.}
 
-
 %增加學術文章
 \addpaperItem{ 
     \item  Macau University of Science and Technology, Taipa Island, Macau, China.,
     \item Macau University of Science and Technology, Taipa Island, Macau, China.,
 }
 
-
 % 增加項目
 \addprojectItem{
     \item 中國澳門氹仔島澳門科技大學,商學院商學院
-    \item  商學院商學院商學院中國澳門氹仔島澳門科技大學,商學院商學院商學院商學院商學院中國澳門氹仔島澳門科技大學,商學院商學院商學院商學院商學院
+    \item 商學院商學院商學院中國澳門氹仔島澳門科技大學,商學院商學院商學院商學院商學院中國澳門氹仔島澳門科技大學,商學院商學院商學院商學院商學院
 }
 \end{addcvpage}
-
+% << ----end
 
 
 

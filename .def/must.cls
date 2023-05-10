@@ -14,33 +14,44 @@
 
 % 控製奇偶頁的邊距 奇偶頁邊距對稱=是
 \newif\ifprint\printfalse
-\DeclareOption{printing=yes}{\printtrue}
-\DeclareOption{printing=no}{\printfalse}
+\DeclareOption{printing=on}{\printtrue}
+\DeclareOption{printing=off}{\printfalse}
 
 %控製是否加扉頁
 \newif\iftp\tpfalse
-\DeclareOption{addPageTitle=yes}{\tptrue}
-\DeclareOption{addPageTitle=no}{\tpfalse}
+\DeclareOption{addPageTitle=on}{\tptrue}
+\DeclareOption{addPageTitle=off}{\tpfalse}
 
 %控製是否加原創聲明頁
 \newif\ifdp\dpfalse
-\DeclareOption{AddDeclaration=yes}{\dptrue}
-\DeclareOption{AddDeclaration=no}{\dpfalse}
+\DeclareOption{addDeclaration=on}{\dptrue}
+\DeclareOption{addDeclaration=off}{\dpfalse}
 
 %控製是否加水印
 \newif\ifwm\wmfalse
-\DeclareOption{addMUSTlog=yes}{\wmtrue}
-\DeclareOption{addMUSTlog=no}{\wmfalse}
+\DeclareOption{addMUSTlog=on}{\wmtrue}
+\DeclareOption{addMUSTlog=off}{\wmfalse}
 
 %控製參考文獻是否頂格
 \newif\ifri\ritrue
-\DeclareOption{refUnindent=yes}{\ritrue}
-\DeclareOption{refUnindent=no}{\rifalse}
+\DeclareOption{refIndent=on}{\ritrue}
+\DeclareOption{refIndent=off}{\rifalse}
 
 %控製參考文獻是否頂格
 \newif\ifwriteqEn\writeqEntrue
 \DeclareOption{writingLanguage=english}{\writeqEntrue}
 \DeclareOption{writingLanguage=chinese}{\writeqEnfalse}
+
+%控製是否添加圖目錄
+\newif\iffigt\figttrue
+\DeclareOption{addFigTOC=on}{\figttrue}
+\DeclareOption{addFigTOC=off}{\figtfalse}
+
+%控製是否添加圖目錄
+\newif\iftabt\tabttrue
+\DeclareOption{addTabTOC=on}{\tabttrue}
+\DeclareOption{addTabTOC=off}{\tabtfalse}
+
 
 % 處理選項
 \ProcessOptions\relax

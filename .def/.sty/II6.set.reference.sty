@@ -30,10 +30,10 @@
     \list{\@biblabel{\@arabic\c@enumiv}}%
     {\settowidth\labelwidth{\@biblabel{#1}}
         \ifri
-        \advance\leftmargin -2em
-        \itemindent 0 pt
+            \itemindent -2 em%  
         \else
-        \itemindent -2 em%
+            \advance\leftmargin -2em
+            \itemindent 0 pt
         \fi
         \@openbib@code%
         \usecounter{enumiv}%
