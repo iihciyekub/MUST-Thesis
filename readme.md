@@ -1,5 +1,4 @@
-
-https://user-images.githubusercontent.com/30061185/233447600-a9ec4138-d73c-4914-84c3-600431556016.mp4
+https://github.com/iihciyekub/MUST-Thesis/assets/30061185/55eb3d9f-1e83-4015-9de0-b124ce18ca6c
 
 视屏演示如何通过安装 chrome 浏览器扩展程序: [***overleaf s2t/bbi2bbl***](https://chrome.google.com/webstore/detail/overleaf-s2tbib2bbl/icekiliecbhnockmfkehoebbkmhmapmo?hl=zh-CN), 解决澳科大文献排版的特殊格式问题。
 
