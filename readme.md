@@ -7,21 +7,18 @@ https://github.com/iihciyekub/MUST-Thesis/assets/30061185/55eb3d9f-1e83-4015-9de
 [Chrome extensions: ***overleaf s2t/bib2bbl***](https://chrome.google.com/webstore/detail/overleaf-s2tbib2bbl/icekiliecbhnockmfkehoebbkmhmapmo?hl=zh-CN)
 
 #  a $\LaTeX$ template for MUST-Thesis
-[![LICENSE](https://img.shields.io/badge/license-LaTeX%20Project%20Public%20License%20either%20version%201.3-blue.svg? )](http://www.latex-project.org/lppl.txt)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/iihciyekub/MUST-Thesis?color=%23ff22&logo=github)
-![GitHub repo file count](https://img.shields.io/github/directory-file-count/iihciyekub/MUST-Thesis?color=%239035&logo=github)
-![GitHub all releases](https://img.shields.io/github/downloads/iihciyekub/MUST-Thesis/total?color=%23&logo=github)
 
-[![Chromium HSTS preload](https://img.shields.io/hsts/preload/github.com?label=Join%20overleaf%20MUST-Thesis%20project%20%28share%20read%29&logo=overleaf&logoColor=%23ffff)](https://www.overleaf.com/read/mjzpcxztzqzv)
+[LICENSE](http://www.latex-project.org/lppl.txt)
+
 
 更新説明:
-## ![Relative date](https://img.shields.io/date/1681586263?color=%23ff33&label=version%202.30.4&logo=github)
+## 2023.04.16
 - Ver 2.30.4 (2023.04.16)
 - [x] @iihciyekub
 - 通过文档声明 `writingLanguage=english` 切换至支持英文排版; 
 - 通过文档声明 `writingLanguage=chinese` 切换至支持中文排版; 
 
-## ![Relative date](https://img.shields.io/date/1680969600?color=%23ff33&label=version%202.30.3&logo=github)
+## 2023.04.09
 - Ver 2.30.3 (2023.04.09)
 - [x] @iihciyekub 重構所有 *.cls *.sty *.tex 宏命令;
 更新內容:
@@ -56,34 +53,34 @@ https://github.com/iihciyekub/MUST-Thesis/assets/30061185/55eb3d9f-1e83-4015-9de
 
 
 歷史版本:
-## ![Relative date](https://img.shields.io/date/1585411200?color=%23ff33&label=version%200.1.1.2&logo=github)
+## 2020.03.29
 - Ver 0.1.1.2 (2020.03.29) [不推荐使用此旧版本,已停止维护]
 - ~~請使用 Texlive 2019-20190410 編譯環境, 官方鏡像下載地址: [Texlive 2019-20190410](https://mirror.bjtu.edu.cn/CTAN/systems/texlive/Images/)~~
 - ~~修正編譯錯誤問題~~
 - ~~修正中英文文獻格式問題,詳細可請看  [GIt 地址 iitool.exe](https://github.com/iihciyekub/MUST-iitool)~~
 
-## ![Relative date](https://img.shields.io/date/1562342400?color=%23ff33&label=version%200.1.0.9&logo=github)
+## 2019.07.06
 - Ver 0.1.0.9 (2019.07.06) [不推荐使用此旧版本,已停止维护]
 - ~~項目路徑下所有 `tex` 文件文本自動簡轉繁~~
 
-## ![Relative date](https://img.shields.io/date/1560182400?color=%23ff33&label=version%200.1.0.8&logo=github)
+## 2019.06.11
 - Ver 0.1.0.8 (2019.06.11) [不推荐使用此旧版本,已停止维护]
 - ~~添加 自動化程序: [iitool.exe](https://github.com/iihciyekub/MUST-iitool) (自動化編譯:生成 refTex --> xelatex --> xelatex :: PDF)~~
 - ~~[GitHub地址]: https://github.com/iihciyekub/MUST-iitool	"iitool.exe",該工具用於自動處理特殊格式要求下的(MUST-APA)參考文獻文本;~~
 
-## ![Relative date](https://img.shields.io/date/1558886400?color=%23ff33&label=version%200.1.0.7&logo=github)
+## 2019.05.27
 - Ver 0.1.0.7 (2019.05.27)
 - [x] @iihciyekub 修改發佈
 - 命令與tex分離,創建 *.cls, *.sty, *.exe 等;
 - 添加 TikZ 繪製的版本説明封面;
 
-## ![Relative date](https://img.shields.io/date/1538323200?color=%23ff33&label=version%200.1.0.4&logo=github)
+## 2018.10.01
 - Ver 0.1.0.4 (2018.10.01)
 - [x] @Fan, p 創建 *.tex 
 - [x] @Fang, yl 修改發佈
 
 
-## ![Relative date](https://img.shields.io/date/1472659200?color=%23ff33&label=version%200.0.0.1&logo=github)
+## 2016
 - Ver 0.0.0.1 (2016)
 - [x] @Prof.Jenny Init
 
