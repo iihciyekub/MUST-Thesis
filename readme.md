@@ -31,6 +31,7 @@ https://github.com/iihciyekub/MUST-Thesis/assets/30061185/f00ab6eb-6f1d-472f-8bc
 - 修正澳門科技大學校徽（嚴格使用學校提供的低分辨率校徽,未來期待美工加入,繪製一個嚴格一致的矢量圖）;
 - 解決其它一系列bug問題;
 - 提供自動工具 [s2t/bib2bbl](https://github.com/iihciyekub/must-thesis-tools/blob/master/bib2bbl.html), 供用户解決簡體轉繁體及澳門科技大學研究生畢業論文關於文獻 apa7 特殊排版格式要求問題;
+
 |            方法 | 網址/文件名/安裝包                                           | 狀態                                                         | 位置                    |
 | --------------: | :----------------------------------------------------------- | :----------------------------------------------------------- | :---------------------- |
 |        離線版 | bib2bbl.html [@GitHub](https://github.com/iihciyekub/must-thesis-tools/blob/master/bib2bbl.html) | 直接獨立運行                                                 | 項目路徑 `.tool` 目錄下 |
@@ -42,6 +43,7 @@ https://github.com/iihciyekub/MUST-Thesis/assets/30061185/f00ab6eb-6f1d-472f-8bc
 
 
 - 以下是學校提供的關於論文排版所有細節要求的附件(截止 2023-04-15 可訪問).
+
 |  NO. | 文件名                                                       | 本項目參考或使用 | 嚴格      |
 | ---: | :----------------------------------------------------------- | ---------------- | ---- |
 |    1 | [扉頁格式](https://www.must.edu.mo/images/GSO/files/sgsdocument/GS004.pdf) | 使用             | ✓    |
