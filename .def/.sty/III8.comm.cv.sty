@@ -2,7 +2,7 @@
 \tikzset{
 ur/.style={
     inner sep = 0,
-    font = {\fontsize{12 pt}{8 pt}\selectfont},
+    font = {\fontsize{12 pt}{14 pt}\selectfont},
     text width = 3.5 cm,
     name = cr1,
     align = left, 
@@ -11,7 +11,7 @@ ur/.style={
     },
 ut/.style={
     inner sep = 0,
-    font = {\fontsize{12 pt}{8 pt}\selectfont},
+    font = {\fontsize{12 pt}{14 pt}\selectfont},
     text width = 3.5 cm,
     name = ct1,
     align = left, 
@@ -19,9 +19,9 @@ ut/.style={
 }
 
 
-\RequirePackage{listofitems}% \readlist\mylist{#1}
 
 \def\daa#1{
+    % 从宏包中 \RequirePackage{listofitems} 调用的命令
     \readlist\mylist{#1}
     \tikz{\path 
             node[ut,text width = 3.5 cm,anchor = north west] at (0,0) {$\ast$ \mylist[1]}
@@ -43,7 +43,7 @@ ut/.style={
 \def\addpaperItem#1{
     \node [inner sep =0pt ,
         text width = 13 cm,
-        font = {\fontsize{12 pt}{10.8 pt}\selectfont},
+        font = {\fontsize{12 pt}{14 pt}\selectfont},
         below = 5 mm of paper.south west ,
         name = paper,
         anchor = north west,
@@ -53,7 +53,7 @@ ut/.style={
 \def\addprojectItem#1{
     \node [inner sep =0pt ,
         text width = 13 cm,
-        font = {\fontsize{12 pt}{10.8 pt}\selectfont},
+        font = {\fontsize{12 pt}{14 pt}\selectfont},
         below = 5 mm of project.south west ,
         name = paper,
         anchor = north west,
@@ -73,8 +73,8 @@ ut/.style={
 
 % # 定義命令
 \newenvironment{addcvpage}{
-    \clearpage 
-    \chapter*{}
+    % \clearpage 
+    % \chapter*{}
     \ifwriteqEn
         \setenchapter{Personal Resume}
     \else

@@ -1,11 +1,12 @@
 \newenvironment{acknowpage}{
-    \clearpage
     \ifwriteqEn
         \setenchapter{Acknowledgement}
     \else
         \setcnchapter{致謝}
     \fi
     }{
+    \par \hfill \Name
+    \vspace{-1em}\par \hfill \datek\today
 }
 
 

@@ -1,0 +1,55 @@
+
+\RequirePackage{listofitems}% \readlist\mylist{#1}
+\ifwriteqEn
+    % 调用 listofitems 宏包,读取list
+    \readlist\MA{Axiom,Theorem,Proposition,Property,Lemma,Corollary,Definition,Example,Remark,Condition,Conclusion,Assumption}
+\else
+    \readlist\MA{公理,定理,命題,性質,引理,推論,定義,例,註解,條件,結論,假設}
+\fi
+
+\ifwriteqEn
+% todo
+\else
+    \newtheoremstyle{mytheoremstyle}% 定理样式名称
+        {1em}% 定理上方的间距
+        {1em}% 定理下方的间距
+        {\upshape}% 标题字体样式（斜体）
+        {}% 缩进量（如果需要的话）
+        {\bfseries}% 标题的字体样式（黑体）
+        {}% 标题后的标点符号
+        {0.5em}% 标题后的水平空白量
+        {}% 定理头部规定（如果需要的话，例如定理编号的格式）
+    \theoremstyle{mytheoremstyle}% 应用自定义的定理样式
+\fi
+
+
+\newtheorem{axiom}{\MA[1]}[chapter]
+\newtheorem{theorem}{\MA[2]}[chapter]
+\newtheorem{proposition}{\MA[3]}[chapter]
+\newtheorem{property}{\MA[4]}[chapter]
+\newtheorem{lemma}{\MA[5]}[chapter]
+\newtheorem{corollary}{\MA[6]}[chapter]
+\newtheorem{definition}{\MA[7]}[chapter]
+\newtheorem{example}{\MA[8]}[chapter]
+\newtheorem{remark}{\MA[9]}
+\newtheorem{condition}{\MA[10]}
+\newtheorem{conclusion}{\MA[11]}[chapter]
+\newtheorem{assumption}{\MA[12]}[chapter]
+
+
+
+% 数学环境序号的设置(中英文采用一致设置)
+\renewcommand{\theexample}{\arabic{chapter}.\arabic{example}}
+\renewcommand{\thetheorem}{\arabic{chapter}.\arabic{theorem}}
+\renewcommand{\thedefinition}{\arabic{chapter}.\arabic{definition}}
+\renewcommand{\theaxiom}{\arabic{chapter}.\arabic{axiom}}
+\renewcommand{\theproperty}{\arabic{chapter}.\arabic{property}}
+\renewcommand{\theproposition}{\arabic{chapter}.\arabic{proposition}}
+\renewcommand{\thelemma}{\arabic{chapter}.\arabic{lemma}}
+\renewcommand{\thecorollary}{\arabic{chapter}.\arabic{corollary}}
+\renewcommand{\theremark}{\arabic{chapter}.\arabic{remark}}
+\renewcommand{\thecondition}{\arabic{chapter}.\arabic{condition}}
+\renewcommand{\theconclusion}{\arabic{chapter}.\arabic{conclusion}}
+\renewcommand{\theassumption}{\arabic{chapter}.\arabic{assumption}}
+
+ 

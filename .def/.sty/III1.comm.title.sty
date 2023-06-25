@@ -68,3 +68,43 @@ ul2/.style={inner sep = 0,anchor = base, font = {\fontsize{11 pt}{\baselineskip}
         }
          \pagestyle{fancy}
 }
+
+
+
+% 为页面添加尺寸说明
+\newcommand{\addinfo}{
+\begin{tikzpicture}[overlay,,remember picture]
+\def\el{\ileft}
+\def\er{\iright}
+\ifprint
+    \ifodd\numexpr\value{page}+1\relax
+        \def\el{\iright}
+        \def\er{\ileft}
+    \fi
+\fi
+\coordinate (nw) at (current page.north west);
+\coordinate (sw) at (current page.south west);
+\coordinate (ne) at (current page.north east);
+\coordinate (se) at (current page.south east);
+
+\newlength{\pagewidth}
+\newlength{\pageheight}
+\setlength{\pagewidth}{\paperwidth}
+\setlength{\pageheight}{\paperheight}
+\uselengthunit{cm}
+\tikzset{
+lines/.style={gray,line width=1.2pt, {<[length=6pt].<}-{>.>[length=6pt]}},
+linenoa/.style={gray,opacity=0.5,line width=1.2pt },
+ptxt/.style={pos=0.53,sloped,fill=white,text=black,font=\Large}
+}
+\draw [lines] ($(nw)+(\el cm,0)$) -- ($(sw)+(\el cm,0)$) node [ptxt] {\printlength{\pageheight}};
+\draw [lines] ($(ne)+(-\er cm,0)$) -- ($(se)+(-\er cm,0)$) ;
+\draw [lines]($(nw)+(0,-22 cm)$) -- ($(ne)+(0, -22 cm)$) node [ptxt] {\printlength{\pagewidth}};
+\draw [lines] ($(nw)+(0 ,-20 cm)$) -- ($(nw)+(\el cm,-20 cm)$) node [ptxt] {\el cm};
+\draw [lines] ($(ne)+(0 ,-20cm)$) -- ($(ne)+(-\er cm,-20cm)$) node [ptxt,above] {\er cm};
+\draw [lines] ($(nw)+(2cm ,0)$) -- ($(nw)+(2 cm,-2.5 cm)$) node [ptxt,above] {2.5 cm};
+\draw [lines] ($(sw)+(2cm ,0)$) -- ($(sw)+(2 cm,2.5 cm)$) node [ptxt,above] {2.5 cm};
+\draw [linenoa]($(nw)+(0,-2.5cm)$) -- ($(ne)+(0, -2.5 cm)$);
+\draw [linenoa]($(sw)+(0,2.5cm)$) -- ($(se)+(0, 2.5 cm)$);
+\end{tikzpicture}
+}

@@ -1,6 +1,18 @@
-\RequirePackage{amsmath,amssymb,amsthm,mathtools,mathrsfs} 
-\RequirePackage{wasysym}
+% amsmath：提供了一系列增强的数学环境和命令，包括对齐、矩阵、分式、定理等。它是LaTeX中最常用的数学宏包之一。
+% amssymb：提供了一些额外的数学符号，如特殊的字母、箭头、二元运算符等。
+% amsthm是一个LaTeX宏包，提供了定义和排版定理、引理、证明等数学定理结构的功能。它是基于标准的amsmath宏包，并扩展了其功能。
+% mathtools：是对amsmath宏包的增强，提供了一些额外的数学命令和符号，如\DeclarePairedDelimiter用于定义自适应大小的定界符。
+% amsfonts：提供了一系列数学字体，包括黑板粗体、花体等。
+% wasysym是一个LaTeX宏包，提供了一系列额外的数学符号和特殊字符。该宏包主要用于在文档中插入各种数学符号和非常规的符号。
+\RequirePackage{amsmath,
+amssymb,
+amsthm,
+mathtools,
+mathrsfs,
+wasysym}
 
+
+% 各式数学公式宏包
 \newcommand{\selmathtype}[1]{
 \ifcase #1%
 \or pxfonts%1

@@ -1,12 +1,11 @@
-\RequirePackage{fontawesome}
 \newcommand{\addreference}{
     \clearpage
     \ifwriteqEn
-    \setenchapter{Reference List}
-    \pagestyle{fancy}
-    \fancyhf{}
+        \setenchapter{Reference List}
+        \pagestyle{fancy}
+        \fancyhf{}
     \else
-    \setcnchapter{參考文獻}
+        \setcnchapter{參考文獻}
     \fi
     \addtolength{\itemsep}{4em}
     
@@ -37,6 +36,4 @@
             不存在 ref.bib 或 ref.bbl 文件.
         }
     }
-
-    
 }

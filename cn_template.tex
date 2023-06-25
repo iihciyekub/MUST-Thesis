@@ -1,0 +1,112 @@
+% !TeX encoding = UTF-8
+% @Yongjian.Li 澳門科技大學-畢業論文 LaTeX template-2023.6.10
+% 使用手冊: https://iihciyekub.github.io/must-thesis-manual
+
+\documentclass[writingLanguage=chinese,
+    addPageTitle=on,
+    addDeclaration=on,
+    addMUSTlog=off,
+    addFigTOC=on,   
+    addTabTOC=on,
+    refIndent=on,
+    printMod=off,
+]{.def/must}
+   
+% 論文基本信息,必填不能刪除
+\def\shool              {Macau University of Science and Technology}
+\def\cnTitle            {XXX 銀行(澳門分行)與 XXX 銀行合併之研究}
+\def\cnShortTitle       {\cnTitle}% 頁眉顯示的中文論文短題目
+\def\enTitle            { }
+\def\enShortTitle       {\enTitle}% 頁眉顯示的英文論文短題目
+\def\Name               {模板}% 名稱
+\def\StudentNo          {1809853G-BM30-0053}% 學號
+\def\Faculty 	        {商學院}% 所在學院
+\def\Program 	        {管理學博士學位}% 學位名稱
+\def\Major              {商業量化}% 專業名稱
+\def\Supervisor	        {李新 副教授}% 指導老師
+\def\DateofWriting		{\datea\today}% 設置論文寫作完成時間
+\def\DateofDeclaration	{\dateb\today}% 設置論文原創聲明時間
+\def\DateofSignature	{2023/06/30}% 設置簽署論文原創聲明的時間
+\def\PublicAfterYears   {5}% 設置論文幾年後公開
+
+\usepackage{pgf}
+
+
+
+
+\begin{document}
+
+\begin{abstract@cn}{關鍵字1、關鍵字1、關鍵字1、關鍵字1}
+% 中文摘要
+
+\end{abstract@cn}
+
+\begin{abstract@en}{keyword1、keyword1、keyword1、keyword1、}
+% 英文摘要
+
+\end{abstract@en}
+
+%%%%%%%%% 添加目錄 
+\addtableofcontents
+
+
+%%%%%%%%% 正文部分
+\chapter{第一章}
+\section{...}
+\subsection{...}
+...
+
+
+%%%%%%%%% 参考文献页面
+% bib文件名必须为ref.bib; 請利用转换工具,将bib 转为 bbl 格式,文件名为 ref.bbl
+\addreference
+
+
+%%%%%%%%% 附录页面
+\begin{appendix}
+證明過程
+\end{appendix}
+
+
+
+%%%%%%%%% 致谢页面
+\begin{acknowpage}
+謝謝各位 
+
+省略
+\end{acknowpage}
+
+
+
+
+% 填寫個人簡歷
+\begin{addcvpage}
+% 設置入學時間
+\addedudate{2019 年 7 月}
+
+% 填寫教育經歷,注意內容以逗號作分隔,
+\addeduItem{2009.16-2012.13,中國澳門氹仔島澳門科技大學,商學院}
+\addeduItem{2009.16-2012.13,澳門科技大學,商學院}
+\addeduItem{2009.16-2012.13,澳門科技大學,商學院}
+
+
+%增加學術文章
+\addpaperItem{ 
+    \item 中國澳門氹仔島澳門科技大學1中國澳門氹仔島澳門科技大學1中國澳門氹仔島澳門科技大學1中國澳門氹仔島澳門科技大學1中國澳門氹仔島澳門科技大學1中國澳門氹仔島澳門科技大學1中國澳門氹仔島澳門科技大學1中國澳門氹仔島澳門科技大學,
+    \item 中國澳門氹仔島澳門科技大學,
+}
+
+
+% 增加項目
+\addprojectItem{
+    \item 中國澳門氹仔島澳門科技大學,商學院商學院
+    \item  商學院商學院商學院中國澳門氹仔島澳門科技大學,商學院商學院商學院商學院商學院中國澳門氹仔島澳門科技大學,商學院商學院商學院商學院商學院
+}
+\end{addcvpage}
+
+
+
+
+
+
+\end{document}

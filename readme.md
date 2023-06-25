@@ -12,7 +12,7 @@ https://github.com/iihciyekub/MUST-Thesis/assets/30061185/f00ab6eb-6f1d-472f-8bc
 
 
 更新説明:
-## 2023.046.25
+## 2023.06.25
 - Ver 2.36.25 (2023.06.25)
 - [x] 修正细节,更新 texAide 辅助 texing 工具;
   
@@ -32,10 +32,10 @@ https://github.com/iihciyekub/MUST-Thesis/assets/30061185/f00ab6eb-6f1d-472f-8bc
 - 解決其它一系列bug問題;
 - 提供自動工具 [s2t/bib2bbl](https://github.com/iihciyekub/must-thesis-tools/blob/master/bib2bbl.html), 供用户解決簡體轉繁體及澳門科技大學研究生畢業論文關於文獻 apa7 特殊排版格式要求問題;
 |            方法 | 網址/文件名/安裝包                                           | 狀態                                                         | 位置                    |
-  | --------------: | :----------------------------------------------------------- | :----------------------------------------------------------- | :---------------------- |
-  |        離線版 | bib2bbl.html [@GitHub](https://github.com/iihciyekub/must-thesis-tools/blob/master/bib2bbl.html) | 直接獨立運行                                                 | 項目路徑 `.tool` 目錄下 |
-  |          在線版 | http://pychat.online/bib2bbl                                 | 在線訪問                                                     | 2024年3月前有效         |
-  | chrome 擴展程序(已發布) | [Overleaf texAide](https://chrome.google.com/webstore/detail/overleaf-s2tbib2bbl/icekiliecbhnockmfkehoebbkmhmapmo?hl=zh-CN)                                 | 安裝成功后, 使用 chrome 瀏覽器在訪問 [overleaf](https://www.overleaf.com/read/mjzpcxztzqzv)上自動加載啟用 | [Chrome 瀏覽器應用商店下載](https://chrome.google.com/webstore/detail/overleaf-s2tbib2bbl/icekiliecbhnockmfkehoebbkmhmapmo?hl=zh-CN)     |
+| --------------: | :----------------------------------------------------------- | :----------------------------------------------------------- | :---------------------- |
+|        離線版 | bib2bbl.html [@GitHub](https://github.com/iihciyekub/must-thesis-tools/blob/master/bib2bbl.html) | 直接獨立運行                                                 | 項目路徑 `.tool` 目錄下 |
+|          在線版 | http://pychat.online/bib2bbl                                 | 在線訪問                                                     | 2024年3月前有效         |
+| chrome 擴展程序(已發布) | [Overleaf texAide](https://chrome.google.com/webstore/detail/overleaf-s2tbib2bbl/icekiliecbhnockmfkehoebbkmhmapmo?hl=zh-CN)                                 | 安裝成功后, 使用 chrome 瀏覽器在訪問 [overleaf](https://www.overleaf.com/read/mjzpcxztzqzv)上自動加載啟用 | [Chrome 瀏覽器應用商店下載](https://chrome.google.com/webstore/detail/overleaf-s2tbib2bbl/icekiliecbhnockmfkehoebbkmhmapmo?hl=zh-CN)     |
 
 
 
@@ -43,16 +43,16 @@ https://github.com/iihciyekub/MUST-Thesis/assets/30061185/f00ab6eb-6f1d-472f-8bc
 
 - 以下是學校提供的關於論文排版所有細節要求的附件(截止 2023-04-15 可訪問).
 |  NO. | 文件名                                                       | 本項目參考或使用 | 嚴格      |
-  | ---: | :----------------------------------------------------------- | ---------------- | ---- |
-  |    1 | [扉頁格式](https://www.must.edu.mo/images/GSO/files/sgsdocument/GS004.pdf) | 使用             | ✓    |
-  |    2 | [學位論文原創性聲明](https://www.must.edu.mo/images/GSO/files/S023學位論文原創性聲明BI.pdf) | 使用             | ✓    |
-  |    3 | [論文寫作指導](https://www.must.edu.mo/images/GSO/files/sgsdocument/GS002.pdf) | 參考             | ✓    |
-  |    4 | [學位論文統一格式範例(Chinese)](https://www.must.edu.mo/images/GSO/files/sgsdocument/GS001.pdf) | 參考             | ✓    |
-  |     | [學位論文統一格式範例(English)](https://www.must.edu.mo/images/GSO/files/sgsdocument/Thesis-sample-Eng.pdf) | 參考             | ✓    |
-  |    5 | [研究生論文格式參考資料(APA)](http://www.must.edu.mo/images/SGS/files/APA_7th_0710.pdf) | 參考             | ✓    |
-  |    6 | [校徽水印](https://lib.must.edu.mo/sites/default/files/must-logo.jpg) | 使用             | ✓    |
-  |    7 | [國家文後參考文獻著錄規則](http://www.must.edu.mo/images/SGS/files/GBT7714_2015.pdf) | 無               | ✘    |
-  |    8 | [MLA參考文獻格式](https://www.must.edu.mo/images/SGS/files/MLA參考文獻格式.pdf) | 無               | ✘    |
+| ---: | :----------------------------------------------------------- | ---------------- | ---- |
+|    1 | [扉頁格式](https://www.must.edu.mo/images/GSO/files/sgsdocument/GS004.pdf) | 使用             | ✓    |
+|    2 | [學位論文原創性聲明](https://www.must.edu.mo/images/GSO/files/S023學位論文原創性聲明BI.pdf) | 使用             | ✓    |
+|    3 | [論文寫作指導](https://www.must.edu.mo/images/GSO/files/sgsdocument/GS002.pdf) | 參考             | ✓    |
+|    4 | [學位論文統一格式範例(Chinese)](https://www.must.edu.mo/images/GSO/files/sgsdocument/GS001.pdf) | 參考             | ✓    |
+|     | [學位論文統一格式範例(English)](https://www.must.edu.mo/images/GSO/files/sgsdocument/Thesis-sample-Eng.pdf) | 參考             | ✓    |
+|    5 | [研究生論文格式參考資料(APA)](http://www.must.edu.mo/images/SGS/files/APA_7th_0710.pdf) | 參考             | ✓    |
+|    6 | [校徽水印](https://lib.must.edu.mo/sites/default/files/must-logo.jpg) | 使用             | ✓    |
+|    7 | [國家文後參考文獻著錄規則](http://www.must.edu.mo/images/SGS/files/GBT7714_2015.pdf) | 無               | ✘    |
+|    8 | [MLA參考文獻格式](https://www.must.edu.mo/images/SGS/files/MLA參考文獻格式.pdf) | 無               | ✘    |
 
 
 

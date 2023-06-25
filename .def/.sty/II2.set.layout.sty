@@ -1,5 +1,5 @@
 \RequirePackage {geometry}
-\def\ileft{3.8}
+\def\ileft  {3.8}
 \def\iright{2.5}
 \geometry{
     % showframe,
@@ -8,9 +8,9 @@
     right= \iright cm, 
     top= 2.5 cm, 
     bottom= 2.5 cm,
-    footnotesep = 2 em,
     headheight = 0.6 cm,
-    headsep = 0.5 em,
+    headsep = 1 em,
+    footnotesep = 2 em,
     footskip = 25 pt
 }
 \RequirePackage{fancyhdr}
@@ -37,3 +37,6 @@
 \RequirePackage{changepage}
 
 
+% 显示页面布局：在你希望显示页面布局的位置，使用 \layout 命令即可。例如，在文档的某个位置插入 \layout 命令，它将生成一个显示页面布局的图形。
+\RequirePackage[silent]{layout}
+\RequirePackage{graphicx}

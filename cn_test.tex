@@ -1,38 +1,24 @@
 % !TeX encoding = UTF-8
-% @Yongjian.Li 澳門科技大學-畢業論文 LaTeX template-2023
+% @Yongjian.Li 澳門科技大學-畢業論文 LaTeX template-2023.6.25
+% 使用手冊: https://iihciyekub.github.io/must-thesis-manual
 
-% User's Guide: 
-    % https://iihciyekub.github.io/must-thesis-manual
-% Github : 
-    % https://github.com/iihciyekub/MUST-Thesis
-% Overleaf project: 
-    % https://www.overleaf.com/read/mjzpcxztzqzv
-% chrome 浏览器扩展程序 overleaf s2t/bib2bbl, 下载地址:
-    % https://chrome.google.com/webstore/detail/overleaf-s2tbib2bbl/icekiliecbhnockmfkehoebbkmhmapmo?hl=zh-CN
-% bib2bbl online: 
-    % https://pychat.online/bib2bbl
-
-% 最後更新: 2023-5-08
-
-\documentclass[
-    writingLanguage=chinese,
+\documentclass[writingLanguage=chinese,
     addPageTitle=on,
     addDeclaration=on,
     addMUSTlog=off,
-    printing=off,
-    refIndent=on,
-    addFigTOC=on,
+    addFigTOC=on,   
     addTabTOC=on,
+    refIndent=on,
+    printMod=off,
 ]{.def/must}
-
-
+   
 % 論文基本信息,必填不能刪除
 \def\shool              {Macau University of Science and Technology}
 \def\cnTitle            {XXX 銀行(澳門分行)與 XXX 銀行合併之研究}
 \def\cnShortTitle       {\cnTitle}% 頁眉顯示的中文論文短題目
 \def\enTitle            {The Study on the Relationship between Social Responsibility and Organizational Trust}
 \def\enShortTitle       {\enTitle}% 頁眉顯示的英文論文短題目
-\def\Name               {我的姓名}% 名稱
+\def\Name               {模板}% 名稱
 \def\StudentNo          {1809853G-BM30-0053}% 學號
 \def\Faculty 	        {商學院}% 所在學院
 \def\Program 	        {管理學博士學位}% 學位名稱
@@ -43,11 +29,19 @@
 \def\DateofSignature	{2023/06/30}% 設置簽署論文原創聲明的時間
 \def\PublicAfterYears   {5}% 設置論文幾年後公開
 
+\renewcommand{\arraystretch}{1.2}
+
+
+
+
 \begin{document}
 
 \begin{abstract@cn}{關鍵字1、關鍵字1、關鍵字1、關鍵字1、}
 本研究採用2009 年至2014 年首度上市的公司279 家為研究樣本，檢驗公司治理與財務績效之關聯性。利用樣本公司上市時的公司治理變數，檢驗公司治理對上市後的會計績效影響與上市後 30 天的市場報酬，再進而依據過去文獻對公司治理變數的論述，以單一指標衡量，依研究對象中位數區分公司治理程度，以及公司治理變數給予不同分數，驗證對財務績效之影響，並比較「有價證券上市審查準則」強化公司治理制度前後之上市公司，在公司治理與財務績效上是否有差異。透過相關分析、T 檢定、迴歸分析，檢驗三大研究假說，實證結果獲得以下主要結論： 
-
+\begin{enumerate}[label=\arabic*).]
+\item 結論1
+\item 結論2 
+\end{enumerate}
 \end{abstract@cn}
 
 \begin{abstract@en}{keyword1、keyword1、keyword1、keyword1、}
@@ -65,27 +59,57 @@ corporate governance using “Stock Exchange Listing Standards” before and
 after the company was listed on the stock market on corporate governance and
 financial performance. Correlation, T-test, and Regression analysis were used to
 examine three hypotheses. Findings include:
-
-1) Company characteristics
+\begin{enumerate}[label=\roman*).]
+    \item Company characteristics
 High Tech industry has better corporate governance mechanism than traditional
 industries.
-
-2) Characteristic of corporate governance level
+  \item Characteristic of corporate governance level
 High corporate governance companies have better accounting effectiveness and
 market performance.
+\end{enumerate}
 \end{abstract@en}
 
 % 添加目錄 
 \addtableofcontents
 
-\chapter{緒論}
 
+
+\chapter{論文排版説明}
+\section{格式參數}
+\subsection{排版要求規範文件}
+\begin{table}[H]
+\large
+\renewcommand\arraystretch{1}
+\centering
+\begin{tabular}{rl}
+\toprule
+序號 & 學校排版要求文件 (點擊查看) \\
+\midrule
+1& \faHandORight\; \href{https://www.must.edu.mo/images/GSO/files/sgsdocument/GS002.pdf}{研究生論文寫作指導(2019 年2 月修訂)}\\
+2& \faHandORight\; \href{https://www.must.edu.mo/images/GSO/files/sgsdocument/GS004.pdf}{扉頁格式}\\
+3& \faHandORight\; \href{https://www.must.edu.mo/images/GSO/files/S023學位論文原創性聲明BI.pdf}{學位論文原創性聲明}\\
+4& \faHandORight\; \href{http://www.must.edu.mo/images/SGS/files/APA_7th_0710.pdf}{研究生論文格式參考資料(APA)}\\
+5& \faHandORight\; \href{https://lib.must.edu.mo/sites/default/files/must-logo.jpg}{校徽水印}\\
+\bottomrule
+\end{tabular}
+\end{table}
+\subsection{版面設定}
+
+\begin{itemize}
+    \item A4 紙張，29.7 cm * 21 cm;
+    \item 邊界為上(2.5cm)、下(2.5cm)、左(3.8cm)，右(2.5cm);
+\end{itemize}
+
+\ifthenelse{\equal{\Name}{模板}}{\addinfo}{}
+
+\chapter{緒論}
 \section{研究動機與目的}
-\citep{luey2013, turabian2015, WangZhenWu2004, WenZaoWai2009, QiuZiHeng2017, HeDingZhao2019, WuPeiHua2020, QiuJiongYou2014, QiuJiongYou2016, QiuJiongYou2019, LinDongTai2008, LinJing2018, LinWenYao2018, LinXHui2014, HongWenQi2019, HongZhenZhou2018, ChenYaNing9999, ChenXiaMin2019, ZhangYan2016, GuoJiaTu2019, WenDaMao2015, JianYiLing2019, bourdieu1990, cohen2007, harvey2007, manguel2009, šteger2010, Villazón2011, bordwell2013, cole2013, deliot2014, foster2017, paige2017, johnson2018, wipawin2018, poff2019, giles2019, TaiwanNews2019, abdoh2019, macdonald2020, Milliot2020, OrganisationforEconomicCo2020, rothfeld2020, crotty2020, melero2021}
+\txtHere{[1]}
+\citep{luey2013, turabian2015, WangZhenWu2004, WenZaoWai2009, QiuZiHeng2017, HeDingZhao2019, WuPeiHua2020, QiuJiongYou2014, QiuJiongYou2016, QiuJiongYou2019, LinDongTai2008, LinJing2018, LinWenYao2018, LinXHui2014, HongWenQi2019, HongZhenZhou2018, ChenYaNing9999, ChenXiaMin2019, ZhangYan2016, GuoJiaTu2019, WenDaMao2015, JianYiLing2019, abdoh2019, bordwell2013, bourdieu1990, Co2020, cohen2007, cole2013, deliot2014, foster2017, giles2019, harvey2007, johnson2018, macdonald2020, manguel2009, Milliot2020, paige2017, poff2019, šteger2010, TaiwanNews2019, Villazon2011, wipawin2018}
 
 \subsection{研究動機}
 美 國 學 者 對 公 司 治 理 的 討 論 可 追 溯 自 1930 年代， Berle \&
-Means(1932)指出，美國企業存在著股權分散的必要性，因為隨著企業
+Means(1932)指出，美國企業存在著股權分散的必要性，\textit{因為隨著企業}
 規模不斷的擴大，使得多數的中大型公司皆需將經營權與所有權加以
 分離來經營，以期達到專業化的目的。
 有系統地討論此一問題者為Jensen，在1988年Jensen首度有系統地
@@ -95,52 +119,63 @@ Means(1932)指出，美國企業存在著股權分散的必要性，因為隨著
 可謂制度面與市場面兩者間所形成的一種組合，被用來作為導引公司
 的決策者，在做決策時，能面面俱到地考量各個利害關係人之利益並
 且以公司價值之最大化為目標(Denis \& McConnell;2003)。
-「公司治理」（Corporate Governance），臺灣學者譯法不一，基於
+「公司治理」（Corporate Governance），台灣學者譯法不一，基於
 監督、防弊觀念者有稱之為「公司管控」或「公司監理」，強調興利功
 能者則稱之為「公司管理」或「公司統理」；或許各種名詞所界定的意
 義與範圍不盡相同，但其主要的內涵均係使企業體透過法律的制衡管
 控與設計，在企業所有權與企業經營權分離的組織體系中，能有效監
-督組織活動，並且健全組織運作，以防止脫法行為之經營弊端出現，
+督組織活動，並且健全組織運作，以防止脱法行為之經營弊端出現，
 以實現企業社會責任的目標。
-\txtHere[1]
 
-\begin{axiom}
-这是公理。
+
+
+
+ 
+
+\begin{tikzpicture}[remember picture,overlay]
+\coordinate (O) at (current page.north west);
+\node[name=R,anchor = north west] at (O) {\textbf{$\checkmark$ }};
+\end{tikzpicture}
+
+
+\section{數學分析相關概念}
+
+\begin{axiom}[皮亞諾公理 1]
+maseeselect
+\begin{enumerate}[label=\Alph*.]
+\item 零是一個自然數：$0$ 是一個自然數。
+\item 每個自然數都有一個後繼：對於每個自然數 $n$，存在一個唯一的自然數 $n+1$，稱為 $n$ 的後繼。
+\item 不同的自然數具有不同的後繼：如果 $n$ 和 $m$ 是自然數，並且 $n+1 = m+1$，那麼 $n = m$。
+\item 零不是任何自然數的後繼：對於任何自然數 $n$，$n+1$ 不等於 $0$。
+\item 歸納原理（數學歸納法）：如果一個集合 $S$ 滿足以下兩個條件，即 (a) $0$ 屬於 $S$，並且 (b) 對於每個自然數 $n$，如果 $n$ 屬於 $S$，則 $n+1$ 也屬於 $S$。那麼，$S$ 包含了所有的自然數。
+\end{enumerate}
 \end{axiom}
 
-
-\begin{theorem}
-这是第二个定理。
+\begin{theorem}[費馬定理]
+對於任意大於2的整數$n$，方程 $a^n + b^n = c^n$ 沒有整數解。
 \end{theorem}
 
 
 
 \begin{definition}
-这是定義 definition。
+    一個素數是隻能被1和自身整除的正整數。
 \end{definition}
-
-
 \begin{example}
-这是例子 example。
+    設 $a$ 和 $b$ 是實數，那麼 $a+b=b+a$。
 \end{example}
 
-
-
 \begin{property}
-这是第二个性質 property。
+    任意實數 $x$ 的平方 $x^2$ 非負。
 \end{property}
-
 \begin{proposition}
-这是第二个命題 proposition。
+    對於任意實數 $x$，如果 $x > 0$，則 $x^2 > 0$。
 \end{proposition}
-
-
 \begin{lemma}
-这是第二个引理 lemma。
+這是第二個引理 lemma。
 \end{lemma}
 
 \begin{corollary}
-这是第二个推論 corollary。
+這是第二個推論 corollary。
 \end{corollary}
 
 \begin{remark}
@@ -150,104 +185,77 @@ Means(1932)指出，美國企業存在著股權分散的必要性，因為隨著
 
 
 \begin{condition}
-这是條件 condition。
+這是條件 condition。
 \end{condition}
 
-
-
-\begin{conclusion}
-这是結論 conclusion。
-\end{conclusion}
-
+ \begin{quote}
+     這是一段引用的段落
+ \end{quote}
 
 \begin{assumption}
-这是假設 assumption。
+這是假設 assumption。
 \end{assumption}
-\section{论文图例}
-\captionsetup[figure]{singlelinecheck=off,justification=raggedright}
-\captionsetup[subfigure]{singlelinecheck=on}
-\tikzstyle{every pin}=[fill=white,draw=black,font=\small,]
+
+
+
+\begin{sidewaystable}[!htp]
+    % 設置表格的列間距
+    \setlength{\tabcolsep}{10mm}
+    \centering
+    \caption{旋轉表標題}
+    % 下面一行代碼創建了一個左對齊的表格，並且具有 3 列。lcc 表示第一列左對齊，其餘 2 列都是居中對齊
+    \begin{tabular}[l]{lcc}
+    \toprule
+        % 這裏填寫表頭
+        col1 & col2 & col3 \\
+    \midrule
+        % 這裏填寫表格內容
+        value1 & value2 & value3 \\
+    \bottomrule
+    \end{tabular}
+\end{sidewaystable}
+
+
+% \captionsetup[figure]{singlelinecheck=off,justification=raggedright}
+% \captionsetup[subfigure]{singlelinecheck=on}
+% \tikzstyle{every pin}=[fill=white,draw=black,font=\small,]
 \begin{figure}[H]
 	\centering
 	\begin{subfigure}{0.49\textwidth}
 	  	\centering
-		\begin{tikzpicture}[scale = 0.63276]
-			\begin{loglogaxis}[
-				%xlabel={\textsc{Dof}},
-				ylabel={$L_2$ Error},
-				]
-				\addplot coordinates {
-					(11, 6.887e-02)
-					(71, 3.177e-02)
-					(351, 1.341e-02)
-					(1471, 5.334e-03)
-					(5503, 2.027e-03)
-					(18943, 7.415e-04)
-					(61183, 2.628e-04)
-					(187903, 9.063e-05)
-					(553983, 3.053e-05)
-				};
-				\node [coordinate,pin=above:{Bad!}]
-				at (axis cs:5503,2.027e-03) {};
-				\node [coordinate,pin=left:{Good!}]
-				at (axis cs:187903,9.063e-05) {};
-			\end{loglogaxis}
-		\end{tikzpicture}
+            \includegraphics[height=4cm]{example-image}
 		\caption{A subfigure}
 		\label{fig:sub1}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}{.49\textwidth}
 		\centering
-		\begin{tikzpicture}[scale = 0.63276]
-			\begin{loglogaxis}[
-				ylabel=$L_2$ Error,
-				]
-				\draw
-				(1793,4.442e-05)
-				|- (4097,1.207e-05)
-				node [near start,left]
-				{$\frac{dy}{dx} = -1.58$};
-				\addplot coordinates {
-					(5, 8.312e-02)
-					(17, 2.547e-02)
-					(49, 7.407e-03)
-					(129, 2.102e-03)
-					(321, 5.874e-04)
-					(769, 1.623e-04)
-					(1793, 4.442e-05)
-					(4097, 1.207e-05)
-					(9217, 3.261e-06)
-				};
-			\end{loglogaxis}
-		\end{tikzpicture}
+            \includegraphics[height=4cm]{example-image-a}
 		\caption{A subfigure}
 	  	\label{fig:sub2}
-	\end{subfigure}\\
-
+	\end{subfigure}
+        \newline
 	\begin{subfigure}{.49\textwidth}
 		\centering
-		\includegraphics[width=.5\linewidth]{.def/.resource/eg05.png}
+            \includegraphics[height=4cm]{example-image-plain}
 		\caption{A subfigure}
 		\label{fig:sub3}
 	\end{subfigure}
 	\begin{subfigure}{.49\textwidth}
 		\centering
-		\includegraphics[width=.5\linewidth]{.def/.resource/eg06.png}
+            \includegraphics[height=4cm]{example-image-empty}
 		\caption{A subfigure}
 		\label{fig:sub4}
 	\end{subfigure}
 	\caption{A figure with two subfigures}
 	\label{fig:sub}
 \end{figure}
- 
 上面示例中,子圖\ref{fig:sub1}、子圖\ref{fig:sub2}、子圖\ref{fig:sub3}、子圖\ref{fig:sub4}分別表示子圖
 
 
 
 \section{表}
 
-\captionsetup[table]{singlelinecheck=off,justification=raggedright}
 \begin{table}
 \caption{這是表的標題}
 \centering
@@ -255,11 +263,11 @@ Means(1932)指出，美國企業存在著股權分散的必要性，因為隨著
 \toprule
 內容1 & 內容2 & 內容3 \\
 \midrule
-行1 & 行1 & 行1\footnote{這是表格脚注的內容。} \\
+行1 & 行1 & 行1\footnote{這是表格腳註的內容。} \\
 行2 & 行2 & 行2 \\
 \bottomrule
 \end{tabularx}
-\caption*{這是表格脚注}
+\caption*{這是表格腳註}
 \end{table}
 
 
@@ -268,7 +276,7 @@ Means(1932)指出，美國企業存在著股權分散的必要性，因為隨著
 
 \subsection{研究目的}
 
-\txtHere[2]
+\txtHere{[1]}
 
 \subsection{研究方法}
 
@@ -276,7 +284,7 @@ Means(1932)指出，美國企業存在著股權分散的必要性，因為隨著
 
 \subsection{主要貢獻}
 
-\txtHere[3]
+\txtHere{[1]}
 
 \section{相關工作}
 
@@ -284,11 +292,11 @@ Means(1932)指出，美國企業存在著股權分散的必要性，因為隨著
 
 \subsection{前人工作總結}
 
-\txtHere[4]
+\txtHere{[1]}
 
 \subsection{前人工作不足}
 
-\txtHere[5]
+\txtHere{[1]}
 
 \section{研究內容}
 
@@ -296,27 +304,36 @@ Means(1932)指出，美國企業存在著股權分散的必要性，因為隨著
 
 \subsection{實驗設計}
 
-\txtHere[6]
+\txtHere{[1]}
 
 \subsection{實驗過程}
+下面是一些wasysym宏包提供的符號示例：
 
-\txtHere[7]
+二進制運算符：$\oplus$、$\ominus$、$\otimes$等。
+
+邏輯運算符：$\wedge$、$\vee$、$\neg$等。
+
+集合運算符：$\cup$、$\cap$、$\subset$、$\supset$等。
+
+幾何圖形：$\square$、$\triangle$、$\circ$等。
+
+天文符號：$\sun$、$\mercury$、$\venus$、$\earth$等。
+
+卡牌符號：$\heartsuit$、$\diamondsuit$、$\clubsuit$、$\spadesuit$等
 
 \subsection{實驗結果分析}
 
-\txtHere[8]
+\txtHere{[1]}
 
-\section{總結和展望}
 
-本章將對本文的研究內容和成果進行總結，並提出未來研究方向和建議。
-
+ 
 \subsection{研究總結}
 
-\txtHere[9]
+\txtHere{[1]}
 
 \subsection{未來研究方向}
 
-\txtHere[10]
+\txtHere{[1]}
 
 
 
@@ -330,7 +347,9 @@ Means(1932)指出，美國企業存在著股權分散的必要性，因為隨著
 
 
 \begin{acknowpage}
-謝謝各位
+謝謝各位 
+
+省略
 \end{acknowpage}
 
 
@@ -360,8 +379,6 @@ Means(1932)指出，美國企業存在著股權分散的必要性，因為隨著
     \item  商學院商學院商學院中國澳門氹仔島澳門科技大學,商學院商學院商學院商學院商學院中國澳門氹仔島澳門科技大學,商學院商學院商學院商學院商學院
 }
 \end{addcvpage}
-
-
 
 
 

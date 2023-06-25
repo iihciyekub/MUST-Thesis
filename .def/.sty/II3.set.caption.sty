@@ -1,20 +1,19 @@
 \ifwriteqEn
-\RequirePackage{fmtcount}
-\RequirePackage{zhnumber}
-\renewcommand{\thechapter}{\Numberstring{chapter}}
-\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
+    \RequirePackage{fmtcount}
+    % 转换英文的数值 one,two,...
+    \renewcommand{\thechapter}{\Numberstring{chapter}}
+    \renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
 \else
-\RequirePackage{zhnumber}
-\renewcommand{\thechapter}{\zhnum{chapter}}
-\renewcommand{\thesection}{\zhnum{section}}
-\renewcommand{\thesubsection}{\zhnum{subsection}}
-\renewcommand{\thesubsubsection}{\arabic{subsubsection}}
+    \RequirePackage{zhnumber}
+    \renewcommand{\thechapter}{\zhnum{chapter}}
+    \renewcommand{\thesection}{\zhnum{section}}
+    \renewcommand{\thesubsection}{\zhnum{subsection}}
+    \renewcommand{\thesubsubsection}{\arabic{subsubsection}}
 \fi
 
 \RequirePackage{titlesec}
-
+% 设置标题深度,章,节,小节,小小节
 \setcounter{secnumdepth}{4}
-
 
 \ifwriteqEn
     \titleformat{\chapter}[hang]
@@ -23,7 +22,7 @@
         {1 em}
         {\thispagestyle{fancy}}
         {}
-    \titlespacing{\chapter}{0 pt}{0 pt}{12 pt}[0 pt]
+    \titlespacing{\chapter}{0 pt}{12 pt}{12 pt}[0 pt]
     % 2
     \titleformat{\section}[hang]
         {\centering\bfseries\fontsize{18 pt}{1.8\baselineskip}\selectfont}
@@ -52,7 +51,7 @@
         {22 pt}
         {\thispagestyle{fancy}}
         {}
-    \titlespacing{\chapter}{0 pt}{0 pt}{12 pt}[0 pt]
+    \titlespacing{\chapter}{0 pt}{12 pt}{12 pt}[0 pt]
     % 2
     \titleformat{\section}[hang]
         {\centering\bfseries\fontsize{18 pt}{\baselineskip}\selectfont}
@@ -62,7 +61,7 @@
     \titlespacing{\section}{0 pt}{9 pt}{10 pt}[0 pt]
     %3
     \titleformat{\subsection}[hang]
-        {\itshape\fontsize{16 pt}{\baselineskip}\selectfont}
+        {\bfseries\itshape\fontsize{16 pt}{\baselineskip}\selectfont}
         {\thesubsection 、}
         {0 em}
         {}
@@ -78,20 +77,17 @@
 
 
 
-
-
-
-
 \RequirePackage{caption}
 \RequirePackage{subcaption}
 \captionsetup{
-    aboveskip   = 0.2 em, % 標題上下文距離
-    belowskip   = 0.2 em,
-    labelsep    = quad, % 設置標題分割符
-    labelfont   = bf,   % 設置標題樣式
-    font    = large,
+    aboveskip = 0.2 em, % 標題上下文距離
+    belowskip = 0.2 em,
+    labelsep  = quad, % 設置標題分割符
+    labelfont = bf,   % 設置標題樣式
+    font = large,
 }
 
+% 修改图表前缀
 \ifwriteqEn
     \renewcommand{\figurename}{Fig}
     \renewcommand{\tablename}{Table}
@@ -102,6 +98,7 @@
     \renewcommand{\algorithmcfname}{算法}
 \fi
 
+% 修改图表序号
 \renewcommand\thefigure{\arabic{chapter}-\arabic{figure}}
 \renewcommand\thetable{\arabic{chapter}-\arabic{table}}
 \renewcommand\thealgocf{\arabic{chapter}-\arabic{algocf}}

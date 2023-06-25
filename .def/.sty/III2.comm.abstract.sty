@@ -4,12 +4,14 @@
     \def\hdis{-3.38}
 \fi
 
-
+% 设置英文标题样式
 \newcommand{\setenchapter}[1]{
     \chapter*{\fontsize{18 pt}{\baselineskip}\selectfont #1}
     \markboth{#1}{}
     \addcontentsline{toc}{chapter}{\hspace{\hdis em}#1} 
 }
+
+% 设置中文标题样式
 \newcommand{\setcnchapter}[1]{
     \chapter*{#1}
     \markboth{#1}{}
@@ -17,9 +19,7 @@
 }
 
 
-
-
-
+% 中文摘要
 \newenvironment{abstract@cn}[1]{
     \clearpage
     \pagenumbering{Roman}
@@ -30,8 +30,7 @@
     \par\noindent \textbf{關鍵字：} \ii
 }
 
-
-
+% 英文摘要
 \newenvironment{abstract@en}[1]{
 \ifwriteqEn
     \clearpage
@@ -42,7 +41,6 @@
     \enfz
     \setlength{\parindent}{0 em}
     \def\ii{#1}%
- 
     }{\par\noindent \textbf{ Key words:} \ii
     \setlength{\parindent}{2 em}
 }

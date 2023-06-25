@@ -5,22 +5,35 @@
 {\endoldquote}
 
 
+% 添加校徽 logo 宏命令设置
 \RequirePackage{eso-pic}
 \newcommand\addBackgroundPic[1]{%
-    \AddToShipoutPicture{
-        \put(0,0){%
-            \parbox[b][\paperheight]{\paperwidth}{%
-                \vfill
-                \centering
-                \includegraphics[width=9.9cm,keepaspectratio]{#1}%
-                \vfill}
+\AddToShipoutPicture{
+    \put(0,0){%
+        \parbox[b][\paperheight]{\paperwidth}{%
+            \vfill
+            % 页面奇偶页边距对称的情况下
+            \centering
+            \ifprint
+                \ifodd\numexpr\value{page}+1\relax
+                   \hspace{-1.5cm}
+                \else
+                    \hspace{1.5cm}
+                \fi
+            \else
+                \hspace{1.5cm}
+            \fi
+            \includegraphics[width=9.9cm,keepaspectratio]{#1}%
+            \vfill
+            }
         }
     }
 }
+ 
 
 
 \AtBeginDocument{
-    \usepackage{ragged2e} % 引入宏包
+    \RequirePackage{ragged2e} % 引入宏包
     \justifying % 设定为两端对齐
     \ifwriteqEn
         % \setlength{\baselineskip}{1.088\baselineskip}
@@ -32,8 +45,12 @@
         % \fontsize{14 pt}{\baselineskip}\selectfont
         \cnfz
     \fi
+    % 将表格的行高缩小为原始高度的一半。
     \renewcommand\arraystretch{0.5}
+    % 插入 学校校徽 logo
     \ifwm\addBackgroundPic{\resourcePath mustlogo.jpg}\fi
+    % 插入扉页
     \iftp\addtitlepage\fi
+    % 插入声明原创页
     \ifdp\adddeclarepage\fi
 }

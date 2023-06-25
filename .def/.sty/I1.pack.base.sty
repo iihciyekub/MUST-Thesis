@@ -1,43 +1,77 @@
 \RequirePackage[yyyymmdd]{datetime}
+
+% 用于声明原创的日期时间格式
 \newdateformat{dateb}{\THEYEAR/\THEMONTH/\THEDAY}
+
 \ifwriteqEn
+    % 用于英文扉页日期的时间格式
     \newdateformat{datea}{\monthname, \THEYEAR}
+    % 用于英文致谢落款的时间格式
+    \newdateformat{datek}{\THEYEAR/\THEMONTH/\THEDAY}
 \else
+    % 用于中文扉页日期的时间格式
     \newdateformat{datea}{\THEYEAR 年\THEMONTH 月}
+    % 用于中文致谢落款的时间格式
+    \newdateformat{datek}{\THEYEAR 年\THEMONTH 月\THEDAY 日}
 \fi
 
-
+% 逻辑语句支持包
 \RequirePackage{ifthen}
-\RequirePackage{xparse}
 
-\NewDocumentCommand{\fz}{O{14pt} O{1.625}}{
+% 自定义命令支持包 （已经打包进 latex2e 格式，无需加载）
+% \RequirePackage{xparse}
+
+% 自定义字体大小命令 \fz
+\NewDocumentCommand{\fz}{O{14pt} O{1.625}}{%
 \fontsize{#1}{\baselineskip}\selectfont
 \linespread{#2}\selectfont #1
 }
 
+% 自定义英文字体大小命令 \enfz
 \newcommand{\enfz}{
 \setlength{\baselineskip}{13.7931034482759 pt}
 \fontsize{12 pt}{\baselineskip}\selectfont
 }
 
-
+% 自定义中文字体大小命令 \cnfz
 \newcommand{\cnfz}{
 \setlength{\baselineskip}{29.48804 pt}
 \fontsize{14 pt}{\baselineskip}\selectfont
 }
 
-
+% 如果写作语言是英文时,加载随机文字宏包
 \ifwriteqEn
+    % lipsum 宏包提供了一些命令和环境，用于生成英文占位符文本。
     \RequirePackage{lipsum}
-    \def\txtHere#1{\lipsum[#1]}
+    \edef\txtHere#1{\lipsum[#1]}
 \else
-    \def\txtHere#1{#1}
+    % zhlipsum 宏包提供了一些命令和环境，用于生成中文占位符文本。以下是一些常用的命令和环境：
+    % \zhlipsum：生成一段中文占位符文本。可以通过可选参数指定生成的段落数，默认为 1。例如，\zhlipsum[2] 将生成两个段落的占位符文本。
+    % zhpangram：生成一个中文的“打字练习句子”，包含所有常用的汉字。例如，\zhpangram 将生成一个打字练习句子。
+    \RequirePackage{zhlipsum}
+    \def\txtHere#1{\zhlipsum#1}
 \fi
 
 
 % 调整版心宽度的环境 adjustwidth
 \RequirePackage{changepage}
 
+% 图表放置宏包
 \RequirePackage{float}
+
+% 加载pdf文件支持包
 \RequirePackage{pdfpages}
- 
+
+% 加载 ico 小图标宏包
+\RequirePackage{fontawesome}
+
+
+\RequirePackage{printlen}
+% 使用 \newlength 命令来创建长度变量，并使用 \setlength 命令来设置长度的值。
+% \newlength{\mylength}
+% \setlength{\mylength}{35pt}
+% 使用 \uselengthunit 命令设置长度单位，并使用 \printlength 命令来打印长度的值
+% \uselengthunit{cm}
+% \printlength{\mylength}
+
+
