@@ -1,10 +1,10 @@
-https://github.com/iihciyekub/MUST-Thesis/assets/30061185/55eb3d9f-1e83-4015-9de0-b124ce18ca6c
+https://github.com/iihciyekub/MUST-Thesis/assets/30061185/f00ab6eb-6f1d-472f-8bc9-cdc4a1ca3e30
 
-视屏演示如何通过安装 chrome 浏览器扩展程序: [***overleaf s2t/bbi2bbl***](https://chrome.google.com/webstore/detail/overleaf-s2tbib2bbl/icekiliecbhnockmfkehoebbkmhmapmo?hl=zh-CN), 解决澳科大文献排版的特殊格式问题。
+视屏演示如何通过安装 chrome 浏览器扩展程序: [***overleaf texAide***](https://chrome.google.com/webstore/detail/overleaf-s2tbib2bbl/icekiliecbhnockmfkehoebbkmhmapmo?hl=zh-CN), 解决澳科大文献排版的特殊格式问题。
 
 [must-thesis latex template ***User's Guide***](https://iihciyekub.github.io/must-thesis-manual/)
 
-[Chrome extensions: ***overleaf s2t/bib2bbl***](https://chrome.google.com/webstore/detail/overleaf-s2tbib2bbl/icekiliecbhnockmfkehoebbkmhmapmo?hl=zh-CN)
+[Chrome extensions: ***overleaf texAide***](https://chrome.google.com/webstore/detail/overleaf-s2tbib2bbl/icekiliecbhnockmfkehoebbkmhmapmo?hl=zh-CN)
 
 #  a $\LaTeX$ template for MUST-Thesis
 
@@ -12,6 +12,10 @@ https://github.com/iihciyekub/MUST-Thesis/assets/30061185/55eb3d9f-1e83-4015-9de
 
 
 更新説明:
+## 2023.046.25
+- Ver 2.36.25 (2023.06.25)
+- [x] 修正细节,更新 texAide 辅助 texing 工具;
+  
 ## 2023.04.16
 - Ver 2.30.4 (2023.04.16)
 - [x] @iihciyekub
