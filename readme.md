@@ -1,3 +1,6 @@
+(推荐) 直接获取 **_overleaf_** 在线模板:
+**Join** [**_overleaf online project_**](https://www.overleaf.com/read/mjzpcxztzqzv#3b0b73)
+
 https://github.com/iihciyekub/MUST-Thesis/assets/30061185/f00ab6eb-6f1d-472f-8bc9-cdc4a1ca3e30
 
 视屏演示如何通过安装 chrome 浏览器扩展程序: [***overleaf texAide***](https://chrome.google.com/webstore/detail/overleaf-s2tbib2bbl/icekiliecbhnockmfkehoebbkmhmapmo?hl=zh-CN), 解决澳科大文献排版的特殊格式问题。
@@ -10,8 +13,12 @@ https://github.com/iihciyekub/MUST-Thesis/assets/30061185/f00ab6eb-6f1d-472f-8bc
 
 [LICENSE](http://www.latex-project.org/lppl.txt)
 
+**更新説明:**
+## 2024.02.20
+- Ver 2.42.20 (2024.02.20)
+- [x] 修正排版细节;
+  
 
-更新説明:
 ## 2023.06.25
 - Ver 2.36.25 (2023.06.25)
 - [x] 修正细节,更新 texAide 辅助 texing 工具;
