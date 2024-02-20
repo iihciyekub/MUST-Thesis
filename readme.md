@@ -95,5 +95,5 @@ https://github.com/iihciyekub/MUST-Thesis/assets/30061185/f00ab6eb-6f1d-472f-8bc
 
 ## 2016
 - Ver 0.0.0.1 (2016)
-- [x] @Prof.Jenny Init
+- [x] MUST 商學院 科學決策系 [@Prof.Jenny](https://www.must.edu.mo/images/MSB/files/ChenYan_TC.pdf) Init
 
