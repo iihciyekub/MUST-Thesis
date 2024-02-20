@@ -1,9 +1,9 @@
-(推荐) 直接获取 **_overleaf_** 在线模板:
+(推薦) 直接獲取 **_overleaf_** 在線模板:
 **Join** [**_overleaf online project_**](https://www.overleaf.com/read/mjzpcxztzqzv#3b0b73)
 
 https://github.com/iihciyekub/MUST-Thesis/assets/30061185/f00ab6eb-6f1d-472f-8bc9-cdc4a1ca3e30
 
-视屏演示如何通过安装 chrome 浏览器扩展程序: [***overleaf texAide***](https://chrome.google.com/webstore/detail/overleaf-s2tbib2bbl/icekiliecbhnockmfkehoebbkmhmapmo?hl=zh-CN), 解决澳科大文献排版的特殊格式问题。
+視屏演示如何通過安裝 chrome 瀏覽器擴展程序: [***overleaf texAide***](https://chrome.google.com/webstore/detail/overleaf-s2tbib2bbl/icekiliecbhnockmfkehoebbkmhmapmo?hl=zh-CN), 解決澳科大文獻排版的特殊格式問題。
 
 [must-thesis latex template ***User's Guide***](https://iihciyekub.github.io/must-thesis-manual/)
 
@@ -13,21 +13,26 @@ https://github.com/iihciyekub/MUST-Thesis/assets/30061185/f00ab6eb-6f1d-472f-8bc
 
 [LICENSE](http://www.latex-project.org/lppl.txt)
 
+|            項目獲取方法 | 編譯方式 |鏈接|
+| --------------: |  :---------------------- |:---------------------- |
+| 加入 overleaf 在線獲取最新版本| overleaf 在線編譯 | **Join** [**_Overleaf online project_**](https://www.overleaf.com/read/mjzpcxztzqzv#3b0b73)|
+| GitHub 克隆| 本地編譯 | [**_GitHub_**](https://github.com/iihciyekub/MUST-Thesis/assets/30061185/f00ab6eb-6f1d-472f-8bc9-cdc4a1ca3e30)|
+
 **更新説明:**
 ## 2024.02.20
 - Ver 2.42.20 (2024.02.20)
-- [x] 修正排版细节;
+- [x] 修正排版細節;
   
 
 ## 2023.06.25
 - Ver 2.36.25 (2023.06.25)
-- [x] 修正细节,更新 texAide 辅助 texing 工具;
+- [x] 修正細節,更新 texAide 輔助 texing 工具;
   
 ## 2023.04.16
 - Ver 2.30.4 (2023.04.16)
 - [x] @iihciyekub
-- 通过文档声明 `writingLanguage=english` 切换至支持英文排版; 
-- 通过文档声明 `writingLanguage=chinese` 切换至支持中文排版; 
+- 通過文檔聲明 `writingLanguage=english` 切換至支持英文排版; 
+- 通過文檔聲明 `writingLanguage=chinese` 切換至支持中文排版; 
 
 ## 2023.04.09
 - Ver 2.30.3 (2023.04.09)
@@ -43,7 +48,7 @@ https://github.com/iihciyekub/MUST-Thesis/assets/30061185/f00ab6eb-6f1d-472f-8bc
 | --------------: | :----------------------------------------------------------- | :----------------------------------------------------------- | :---------------------- |
 |        離線版 | bib2bbl.html [@GitHub](https://github.com/iihciyekub/must-thesis-tools/blob/master/bib2bbl.html) | 直接獨立運行                                                 | 項目路徑 `.tool` 目錄下 |
 |          在線版 | http://pychat.online/bib2bbl                                 | 在線訪問                                                     | 2024年3月前有效         |
-| chrome 擴展程序(已發布) | [Overleaf texAide](https://chrome.google.com/webstore/detail/overleaf-s2tbib2bbl/icekiliecbhnockmfkehoebbkmhmapmo?hl=zh-CN)                                 | 安裝成功后, 使用 chrome 瀏覽器在訪問 [overleaf](https://www.overleaf.com/read/mjzpcxztzqzv)上自動加載啟用 | [Chrome 瀏覽器應用商店下載](https://chrome.google.com/webstore/detail/overleaf-s2tbib2bbl/icekiliecbhnockmfkehoebbkmhmapmo?hl=zh-CN)     |
+| chrome 擴展程序(已發布) | [Overleaf texAide](https://chrome.google.com/webstore/detail/overleaf-s2tbib2bbl/icekiliecbhnockmfkehoebbkmhmapmo?hl=zh-CN)                                 | 安裝成功後, 使用 chrome 瀏覽器在訪問 [overleaf](https://www.overleaf.com/read/mjzpcxztzqzv)上自動加載啟用 | [Chrome 瀏覽器應用商店下載](https://chrome.google.com/webstore/detail/overleaf-s2tbib2bbl/icekiliecbhnockmfkehoebbkmhmapmo?hl=zh-CN)     |
 
 
 
@@ -67,17 +72,17 @@ https://github.com/iihciyekub/MUST-Thesis/assets/30061185/f00ab6eb-6f1d-472f-8bc
 
 歷史版本:
 ## 2020.03.29
-- Ver 0.1.1.2 (2020.03.29) [不推荐使用此旧版本,已停止维护]
+- Ver 0.1.1.2 (2020.03.29) [不推薦使用此舊版本,已停止維護]
 - ~~請使用 Texlive 2019-20190410 編譯環境, 官方鏡像下載地址: [Texlive 2019-20190410](https://mirror.bjtu.edu.cn/CTAN/systems/texlive/Images/)~~
 - ~~修正編譯錯誤問題~~
 - ~~修正中英文文獻格式問題,詳細可請看  [GIt 地址 iitool.exe](https://github.com/iihciyekub/MUST-iitool)~~
 
 ## 2019.07.06
-- Ver 0.1.0.9 (2019.07.06) [不推荐使用此旧版本,已停止维护]
+- Ver 0.1.0.9 (2019.07.06) [不推薦使用此舊版本,已停止維護]
 - ~~項目路徑下所有 `tex` 文件文本自動簡轉繁~~
 
 ## 2019.06.11
-- Ver 0.1.0.8 (2019.06.11) [不推荐使用此旧版本,已停止维护]
+- Ver 0.1.0.8 (2019.06.11) [不推薦使用此舊版本,已停止維護]
 - ~~添加 自動化程序: [iitool.exe](https://github.com/iihciyekub/MUST-iitool) (自動化編譯:生成 refTex --> xelatex --> xelatex :: PDF)~~
 - ~~[GitHub地址]: https://github.com/iihciyekub/MUST-iitool	"iitool.exe",該工具用於自動處理特殊格式要求下的(MUST-APA)參考文獻文本;~~
 
@@ -96,4 +101,3 @@ https://github.com/iihciyekub/MUST-Thesis/assets/30061185/f00ab6eb-6f1d-472f-8bc
 ## 2016
 - Ver 0.0.0.1 (2016)
 - [x] MUST 商學院 科學決策系 [@Prof.Jenny](https://www.must.edu.mo/images/MSB/files/ChenYan_TC.pdf) Init
-
