@@ -1,5 +1,5 @@
 % 作者:Yongjian.Li & chatGPT-3.5 
-% 日期:2023-06-23
+% 日期:2023-12-01
 
 % 该行指定LaTeX版本为LaTeX2e
 \NeedsTeXFormat{LaTeX2e}
@@ -31,22 +31,22 @@
 \DeclareOption{addMUSTlog=on}{\wmtrue}
 \DeclareOption{addMUSTlog=off}{\wmfalse}
 
-%控制参考文献是否顶格
+% 设置参考文献是否顶格
 \newif\ifri\ritrue
 \DeclareOption{refIndent=on}{\ritrue}
 \DeclareOption{refIndent=off}{\rifalse}
 
-%控制参考文献是否顶格
+% 设置中英文格式
 \newif\ifwriteqEn\writeqEntrue
 \DeclareOption{writingLanguage=english}{\writeqEntrue}
 \DeclareOption{writingLanguage=chinese}{\writeqEnfalse}
 
-%控制是否添加图目录
+% 设置是否添加图目录
 \newif\iffigt\figttrue
 \DeclareOption{addFigTOC=on}{\figttrue}
 \DeclareOption{addFigTOC=off}{\figtfalse}
 
-%控制是否添加图目录
+% 设置是否添加图目录
 \newif\iftabt\tabttrue
 \DeclareOption{addTabTOC=on}{\tabttrue}
 \DeclareOption{addTabTOC=off}{\tabtfalse}
@@ -55,41 +55,37 @@
 \ProcessOptions\relax
 
 
-% 打印糢式为双边对称, 非打印糢式为单边一致(提交论文时要求)
-\ifprint
-    \LoadClass[twoside,openany]{book}
-\else
-    \LoadClass[oneside,openany]{book}
-\fi
+% 打印糢式为双边对称, 非打印糢式为左边距奇偶页一致(提交论文时要求)
+\ifprint\LoadClass[twoside,openany]{book}\else\LoadClass[oneside,openany]{book}\fi
 
 
 % 加载宏包
-\input{.def/.sty/I1.pack.base.sty}
-\input{.def/.sty/I2.pack.math.sty}
-\input{.def/.sty/I3.pack.tikz.sty}
-\input{.def/.sty/I4.pack.fig.sty}
-\input{.def/.sty/I5.pack.table.sty}
+\input{.def/.sty/a.1.packBase.sty}
+\input{.def/.sty/a.2.packMath.sty}
+\input{.def/.sty/a.3.packTikz.sty}
+\input{.def/.sty/a.4.packFig.sty}
+\input{.def/.sty/a.5.packTable.sty}
 
 
 % 加载设置类的样式文件
-\input{.def/.sty/II1.set.font.sty}
-\input{.def/.sty/II2.set.layout.sty}
-\input{.def/.sty/II3.set.caption.sty}
-\input{.def/.sty/II4.set.toc.sty}
-\input{.def/.sty/II5.set.body.sty}
-\input{.def/.sty/II6.set.mathenv.sty}
-\input{.def/.sty/II7.set.reference.sty}
+\input{.def/.sty/b.1.setFont.sty}
+\input{.def/.sty/b.2.setLayout.sty}
+\input{.def/.sty/b.3.setCaption.sty}
+\input{.def/.sty/b.4.setToc.sty}
+\input{.def/.sty/b.5.setBody.sty}
+\input{.def/.sty/b.6.setMathenv.sty}
+\input{.def/.sty/b.7.setReference.sty}
 
 
 % 加载定义命令类型的样式文件
-\input{.def/.sty/III1.comm.title.sty}
-\input{.def/.sty/III2.comm.abstract.sty}
-\input{.def/.sty/III3.comm.toc.sty}
-\input{.def/.sty/III4.comm.body.sty}
-\input{.def/.sty/III5.comm.reference.sty}
-\input{.def/.sty/III6.comm.appendix.sty}
-\input{.def/.sty/III7.comm.acknow.sty}
-\input{.def/.sty/III8.comm.cv.sty}
+\input{.def/.sty/c.1.commTitle.sty}
+\input{.def/.sty/c.2.commAbstract.sty}
+\input{.def/.sty/c.3.commToc.sty}
+\input{.def/.sty/c.4.commBody.sty}
+\input{.def/.sty/c.5.commReference.sty}
+\input{.def/.sty/c.6.commAppendix.sty}
+\input{.def/.sty/c.7.commAcknow.sty}
+\input{.def/.sty/c.8.commCV.sty}
 
 
 % 声明该文件结束

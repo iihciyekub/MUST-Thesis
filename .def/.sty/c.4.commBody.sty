@@ -1,3 +1,4 @@
+% 重定義引用段落的環境
 \let\oldquote\quote
 \let\endoldquote\endquote
 \renewenvironment{quote}
@@ -23,7 +24,7 @@
             \else
                 \hspace{1.5cm}
             \fi
-            \includegraphics[width=9.9cm,keepaspectratio]{#1}%
+            \includegraphics[width=0.86\textwidth,keepaspectratio]{#1}%
             \vfill
             }
         }
@@ -35,6 +36,8 @@
 \AtBeginDocument{
     \RequirePackage{ragged2e} % 引入宏包
     \justifying % 设定为两端对齐
+    % 設置表格行高
+    \renewcommand{\arraystretch}{1.2}
     \ifwriteqEn
         % \setlength{\baselineskip}{1.088\baselineskip}
         % \fontsize{12 pt}{\baselineskip}\selectfont
@@ -46,7 +49,7 @@
         \cnfz
     \fi
     % 将表格的行高缩小为原始高度的一半。
-    \renewcommand\arraystretch{0.5}
+    % \renewcommand\arraystretch{0.5}
     % 插入 学校校徽 logo
     \ifwm\addBackgroundPic{\resourcePath mustlogo.jpg}\fi
     % 插入扉页

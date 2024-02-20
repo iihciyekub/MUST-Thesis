@@ -1,0 +1,80 @@
+\RequirePackage{titletoc}
+\setcounter{tocdepth}{1}
+
+% 英文寫作環境下,標題樣式設置,精調數值如無必要不要改動
+\ifwriteqEn
+    \titlecontents{chapter}
+        [8.4 em] %\bfseries
+        {\fontsize{14 pt}{24.1379310344828 pt}\selectfont}
+        {\contentslabel[\bfseries Chapter \thecontentslabel]{7em}}
+        {}
+        {\titlerule*[0.5pc]{$\cdot$}\contentspage}
+        []
+    \titlecontents{section}
+        [4 em]
+        {\fontsize{14 pt}{24.1379310344828 pt}\selectfont  }
+        {\contentslabel[\thecontentslabel]{2 em}}
+        {}
+        {\titlerule*[0.5pc]{$\cdot$}\contentspage}
+        []
+% 中文寫作環境下,標題樣式設置,精調數值如無必要不要改動
+\else
+    \titlecontents{chapter}
+        [3.4 em] %\bfseries
+        {\bfseries \fontsize{14pt}{\baselineskip}\selectfont}
+        {\contentslabel[第\thecontentslabel 章]{3.5 em}}
+        {}
+        { \titlerule*[0.5pc]{$\cdot$}\contentspage}
+        []
+    \titlecontents{section}
+        [4.8 em]
+        {\fontsize{14 pt}{\baselineskip}\selectfont}
+        {\contentslabel[第\thecontentslabel 節]{3.5 em}}
+        {}
+        {\titlerule*[0.5pc]{$\cdot$}\contentspage}
+        []
+\fi
+
+% 取消大章節圖表條目之間的垂直空白間距
+\renewcommand*{\addvspace}[1]{}
+
+\ifwriteqEn
+    % 修改圖目錄樣式
+    \titlecontents{figure} % 修改圖目錄條目格式
+        [0pt] % 左邊距
+        {\addvspace{0em}} % 行間距
+        {Fig \thecontentslabel\hspace{1em}}  % 標籤格式與寬度
+        {} % 無標題格式
+        {\titlerule*[8pt]{.}\contentspage} % 索引頁碼樣式
+\else
+    % 修改圖目錄樣式
+    \titlecontents{figure} % 修改圖目錄條目格式
+        [0pt] % 左邊距
+        {\addvspace{0em}} % 行間距
+        {圖\thecontentslabel\hspace{1em}} % 標籤格式與寬度
+        {} % 無標題格式
+        {\titlerule*[8pt]{.}\contentspage} % 填充符和頁碼
+\fi
+
+
+\ifwriteqEn
+    % 修改表目錄樣式
+    \titlecontents{table} % 修改表目錄條目格式
+        [0pt] % 左邊距
+        {\addvspace{0em}}  % 行間距
+        {Table \thecontentslabel\hspace{1em}} % 標籤格式與寬度
+        {} % 無標題格式
+        {\titlerule*[8pt]{.}\contentspage} % 索引頁碼樣式
+\else
+    % 修改表目錄樣式
+    \titlecontents{table} % 修改表目錄條目格式
+        [0pt] % 左邊距
+        {\addvspace{0em}} % 行間距
+        {表\thecontentslabel\hspace{1em}} % 標籤格式與寬度
+        {} % 無標題格式
+        {\titlerule*[8pt]{.}\contentspage} % 填充符和頁碼
+\fi
+
+
+
+

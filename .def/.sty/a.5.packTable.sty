@@ -2,8 +2,9 @@
 
 % 增加表脚注的宏包
 \RequirePackage{threeparttable}
+\RequirePackage{colortbl}
 
-
+ 
 %读取csv的表宏包
 \RequirePackage{csvsimple}
 
@@ -19,7 +20,15 @@
 \RequirePackage[boxed,
     ruled,
     shortend,
-    noline,
+    % noline,
     linesnumbered,
     commentsnumbered
 ]{algorithm2e}
+
+\RequirePackage{siunitx}
+
+
+
+\newcommand{\tcell}[2]{
+\begin{tabular}{@{}#1@{}}#2\end{tabular}
+}

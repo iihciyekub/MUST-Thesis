@@ -4,12 +4,7 @@
 % mathtools：是对amsmath宏包的增强，提供了一些额外的数学命令和符号，如\DeclarePairedDelimiter用于定义自适应大小的定界符。
 % amsfonts：提供了一系列数学字体，包括黑板粗体、花体等。
 % wasysym是一个LaTeX宏包，提供了一系列额外的数学符号和特殊字符。该宏包主要用于在文档中插入各种数学符号和非常规的符号。
-\RequirePackage{amsmath,
-amssymb,
-amsthm,
-mathtools,
-mathrsfs,
-wasysym}
+\RequirePackage{amsmath,amssymb,amsthm,mathtools,mathrsfs,wasysym}
 
 
 % 各式数学公式宏包
@@ -24,9 +19,21 @@ wasysym}
 \or anttor%7
 \or iwona%8
 \or kmath%9
-\or pxfonts%10
+\or mathtime%10
 \else%
 newpxmath
 \fi
 }
-\RequirePackage{\selmathtype{5}}
+
+% amsmath: 提供了許多增強的數學公式排版功能，是許多 LaTeX 用戶的標準選擇。
+% amsfonts 和 amssymb: 提供了一套額外的數學符號和字體。
+% mathptmx: 使用 Times Roman 字體的數學模式。
+% euler: 使用由 Hermann Zapf 設計的 Euler 數學字體。
+% fourier: 使用 Adobe Utopia 字體，包含許多數學符號和特殊字元。
+% txfonts 和 pxfonts: 提供了用於數學模式的 Times 和 Palatino 字體。
+% mathpazo: 使用 Palatino 字體的數學模式。
+% newtxmath 和 newpxmath: 提供了改進的 Times 和 Palatino 數學字體。
+% \RequirePackage{mathptmx}
+
+
+

@@ -1,8 +1,6 @@
 \RequirePackage[yyyymmdd]{datetime}
-
 % 用于声明原创的日期时间格式
 \newdateformat{dateb}{\THEYEAR/\THEMONTH/\THEDAY}
-
 \ifwriteqEn
     % 用于英文扉页日期的时间格式
     \newdateformat{datea}{\monthname, \THEYEAR}
@@ -19,7 +17,7 @@
 \RequirePackage{ifthen}
 
 % 自定义命令支持包 （已经打包进 latex2e 格式，无需加载）
-% \RequirePackage{xparse}
+\RequirePackage{xparse}
 
 % 自定义字体大小命令 \fz
 \NewDocumentCommand{\fz}{O{14pt} O{1.625}}{%
@@ -28,16 +26,30 @@
 }
 
 % 自定义英文字体大小命令 \enfz
+% \newcommand{\enfz}{
+% % \setlength{\baselineskip}{13.7931034482759 pt}
+% \setlength{\baselineskip}{13.4 pt}\fontsize{12 pt}{\baselineskip}\selectfont
+% }
+
 \newcommand{\enfz}{
-\setlength{\baselineskip}{13.7931034482759 pt}
-\fontsize{12 pt}{\baselineskip}\selectfont
+  % 设置字体大小和行间距
+  \fontsize{12 pt}{13.4 pt}\selectfont
 }
 
+
+
 % 自定义中文字体大小命令 \cnfz
+% \newcommand{\cnfz}{
+% \setlength{\baselineskip}{29.48804 pt}
+% \fontsize{14 pt}{\baselineskip}\selectfont
+% }
+
 \newcommand{\cnfz}{
-\setlength{\baselineskip}{29.48804 pt}
-\fontsize{14 pt}{\baselineskip}\selectfont
+% \setlength{\baselineskip}{29.48804 pt}
+\fontsize{14 pt}{29.48804 pt}\selectfont
 }
+
+
 
 % 如果写作语言是英文时,加载随机文字宏包
 \ifwriteqEn
@@ -74,4 +86,5 @@
 % \uselengthunit{cm}
 % \printlength{\mylength}
 
-
+% 加入控制算法表行高的宏包
+\RequirePackage{setspace}%行间距

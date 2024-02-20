@@ -1,14 +1,19 @@
+% tikz 样式设置
 \tikzset{
 tl/.style={inner sep = 0, anchor = north west, align = left},
-ul/.style={inner sep = 0, anchor = center, font = {\fontsize{14 pt}{\baselineskip}\selectfont}, minimum height, name = c1},
+ul/.style={inner sep = 0, anchor = center, font = {\cnfz}, minimum height, name = c1},
 ul2/.style={inner sep = 0,anchor = base, font = {\fontsize{11 pt}{\baselineskip}\selectfont},align = center, text width = 8 cm,name = c1}
 }
 
+% 英文模板下调用 GS004en.pdf 扉页
 \ifwriteqEn
     \def\titlefilepath{\resourcePath GS004en.pdf}
+% 中文模板下调用 GS004.pdf 扉页
 \else
     \def\titlefilepath{\resourcePath GS004.pdf}
 \fi
+
+% 定义扉页文字排版
 \newcommand{\addtitlepage}{
     \IfFileExists{\titlefilepath}{
         \clearpage
@@ -17,24 +22,30 @@ ul2/.style={inner sep = 0,anchor = base, font = {\fontsize{11 pt}{\baselineskip}
         \begin{tikzpicture}[remember picture,overlay]
             \node[inner sep = 0] at (current page.center) {\includegraphics[width=\paperwidth,height=\paperheight]{\titlefilepath}};
             \ifwriteqEn
-                \def\vdis{0.66}
-                \coordinate (tpos) at (8.5cm,-9.75cm);
+                \def\vdis{0.4}
+                \coordinate (tpos) at (8.5cm,-9.67cm);
                 \node[tl,font = {\fontsize{18 pt}{1.8\baselineskip}\selectfont},text width = 13.5 cm] at (0.44 cm,-2.35 cm)  {\enTitle};
+                \node[ul] at (tpos) {\Name };
+                \node[ul,below = 0.81 of c1.center]{\StudentNo};
+                \node[ul,below = 0.69 cm of c1.south]{\Faculty};
+                \node[ul,below = 0.66 cm of c1.south]{\Program};
+                \node[ul,below = 0.64 cm of c1.south]{\Major};
+                \node[ul,below = 0.67 cm of c1.south]{\Supervisor};
+                \node[ul,below = 0.67 cm of c1.south]{\DateofWriting};
             \else
-                \def\vdis{0.86}
-                \coordinate (tpos) at (8cm,-13cm);
+                \def\vdis{0.889}
+                \coordinate (tpos) at (8cm,-13.2);
                 \coordinate (entitlepos) at (0.82 cm,-6.1 cm);
                 \node[tl,font = {\fontsize{22 pt}{\baselineskip}\selectfont},text width = 12.5 cm] at (1.58 cm,-3.29 cm) {\cnTitle};
                 \node[tl,font = {\fontsize{18 pt}{\baselineskip}\selectfont},text width = 13.5 cm] at (0.9 cm,-6.16 cm)  {\enTitle};
+                \node[ul] at (tpos) {\Name };
+                \node[ul,below = 1.12 of c1.center]{\StudentNo};
+                \node[ul,below = 0.82 cm of c1.south]{\Faculty};
+                \node[ul,below = 0.83 cm of c1.south]{\Program};
+                \node[ul,below = 0.83 cm of c1.south]{\Major};
+                \node[ul,below = 0.83 cm of c1.south]{\Supervisor};
+                \node[ul,below = 0.98 cm of c1.south]{\DateofWriting};
             \fi
-            
-            \node[ul] at (tpos) {\Name };
-            \node[ul,below = \vdis cm of c1.south]{\StudentNo};
-            \node[ul,below = \vdis cm of c1.south]{\Faculty};
-            \node[ul,below = \vdis cm of c1.south]{\Program};
-            \node[ul,below = \vdis cm of c1.south]{\Major};
-            \node[ul,below = \vdis cm of c1.south]{\Supervisor};
-            \node[ul,below = \vdis cm of c1.south]{\DateofWriting};
         \end{tikzpicture}
         }{
         不存在,\titlefilepath,文件欠缺!
@@ -42,7 +53,11 @@ ul2/.style={inner sep = 0,anchor = base, font = {\fontsize{11 pt}{\baselineskip}
 }
 
 
+
+% 添加原创声明页
 \def\declarefilepath{\resourcePath S023.pdf}
+% \def\mySign{\resourcePath mySign.png}
+% \def\supervisorSign{\resourcePath supervisorSign.png}
 \newcommand{\adddeclarepage}{
     \IfFileExists{\declarefilepath}{
         \clearpage
@@ -56,12 +71,23 @@ ul2/.style={inner sep = 0,anchor = base, font = {\fontsize{11 pt}{\baselineskip}
             \begin{tikzpicture}[remember picture,overlay]
                 \node[inner sep = 0] at (current page.center) {\includegraphics[width=\paperwidth,height=\paperheight]{\declarefilepath}};
                 \coordinate (O) at ($(current page.north west) + (3.8cm, - 2.5cm)$);
-                \node[ul2,font= {\Large},name=R] at ($(O) + (-1.4 cm,-19.35 cm) +(0cm,\choo cm)$) {\textbf{$\checkmark$ }};
-                \node[ul2] at ($(O) + (1 cm, -8.9 cm)$) {\Name };
-                \node[ul2,below = 0.9 cm of c1]{\StudentNo};
-                \node[ul2,right = 4 cm of c1]{\DateofDeclaration};
-                \node[ul2,below = 13.7 cm of c1]{\DateofSignature};
-                \node[ul2,left = 3 cm of c1]{\DateofSignature};
+
+                % 声明部分
+                \node[ul2](n1) at ($(O) + (1 cm, -8.9 cm)$) {\Name};
+                \node[ul2,below = 1cm of n1.center,name =n2] {\StudentNo};
+                \node[ul2,anchor=center] (n1) at  ($(O) + (11 cm,-8.9 cm)$) {\includegraphics[width=1.5cm]{\mySign}};
+                \node[ul2,right = 2cm of n2]{\DateofDeclaration};
+
+                % 授权部分
+                \node[ul2,name=R] at ($(O) + (-1.4 cm,-19.35 cm) +(0cm,\choo cm)$) {\Checkmark};
+                \node[ul2,anchor=center] (n3) at  ($(O) + (1 cm,-23.2 cm)$) {
+                    \includegraphics[width=1.5cm]{\mySign}
+                }; 
+                \node[ul2,anchor=center] (n3) at  ($(O) + (11 cm,-23.2 cm)$) {
+                    \includegraphics[width=1.5cm]{\supervisorSign}
+                }; 
+                \node[ul2 ] at ($(O) + (1.5 cm,-24 cm)$){\DateofSignature};
+                \node[ul2,right = 2 cm of c1]{\DateofSignature};
             \end{tikzpicture}
         }{
           不存在,\titlefilepath,文件欠缺!

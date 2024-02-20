@@ -1,35 +1,37 @@
 % !TeX encoding = UTF-8
-% @Yongjian.Li 澳門科技大學-畢業論文 LaTeX template-2023.6.25
+% @Yongjian.Li 澳門科技大學-畢業論文 LaTeX template-2023.12.01
 % 使用手冊: https://iihciyekub.github.io/must-thesis-manual
 
+% 选择加载项
 \documentclass[writingLanguage=chinese,
     addPageTitle=on,
     addDeclaration=on,
     addMUSTlog=off,
     addFigTOC=on,   
     addTabTOC=on,
-    refIndent=on,
+    refIndent=off,
     printMod=off,
 ]{.def/must}
    
 % 論文基本信息,必填不能刪除
 \def\shool              {Macau University of Science and Technology}
-\def\cnTitle            {XXX 銀行(澳門分行)與 XXX 銀行合併之研究}
+\def\cnTitle            {我的毕业论文中文题目}
 \def\cnShortTitle       {\cnTitle}% 頁眉顯示的中文論文短題目
-\def\enTitle            {The Study on the Relationship between Social Responsibility and Organizational Trust}
+\def\enTitle            {English title of my graduation thesis}
 \def\enShortTitle       {\enTitle}% 頁眉顯示的英文論文短題目
-\def\Name               {模板}% 名稱
+\def\Name               {李永建}% 名稱
 \def\StudentNo          {1809853G-BM30-0053}% 學號
 \def\Faculty 	        {商學院}% 所在學院
 \def\Program 	        {管理學博士學位}% 學位名稱
 \def\Major              {商業量化}% 專業名稱
 \def\Supervisor	        {李新 副教授}% 指導老師
 \def\DateofWriting		{\datea\today}% 設置論文寫作完成時間
-\def\DateofDeclaration	{\dateb\today}% 設置論文原創聲明時間
-\def\DateofSignature	{2023/06/30}% 設置簽署論文原創聲明的時間
+\def\DateofDeclaration	{2023/11/20}% 設置論文原創聲明時間
+\def\DateofSignature	{2023/11/30}% 設置簽署論文原創聲明的時間
 \def\PublicAfterYears   {5}% 設置論文幾年後公開
+\def\mySign             {Fig/mySign.png}%支持带透明通道的png照片(推荐)
+\def\supervisorSign     {Fig/supervisorSign.png}%支持带透明通道的png照片
 
-\renewcommand{\arraystretch}{1.2}
 
 
 
@@ -78,10 +80,9 @@ market performance.
 \section{格式參數}
 \subsection{排版要求規範文件}
 \begin{table}[H]
-\large
-\renewcommand\arraystretch{1}
+\Large
 \centering
-\begin{tabular}{rl}
+\begin{tabularx}{\textwidth}{lX}
 \toprule
 序號 & 學校排版要求文件 (點擊查看) \\
 \midrule
@@ -91,9 +92,28 @@ market performance.
 4& \faHandORight\; \href{http://www.must.edu.mo/images/SGS/files/APA_7th_0710.pdf}{研究生論文格式參考資料(APA)}\\
 5& \faHandORight\; \href{https://lib.must.edu.mo/sites/default/files/must-logo.jpg}{校徽水印}\\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 \end{table}
 \subsection{版面設定}
+
+
+
+
+
+\begin{table}[H]
+    \caption{e}
+    \centering
+    \csvautobooktabular{Tab/reftab.csv} 
+\end{table}
+
+
+
+
+
+
+
+
+
 
 \begin{itemize}
     \item A4 紙張，29.7 cm * 21 cm;
@@ -132,10 +152,6 @@ Means(1932)指出，美國企業存在著股權分散的必要性，\textit{因�
 
  
 
-\begin{tikzpicture}[remember picture,overlay]
-\coordinate (O) at (current page.north west);
-\node[name=R,anchor = north west] at (O) {\textbf{$\checkmark$ }};
-\end{tikzpicture}
 
 
 \section{數學分析相關概念}
@@ -361,7 +377,7 @@ maseeselect
 \addedudate{2019 年 7 月}
 
 % 填寫教育經歷,注意內容以逗號作分隔,
-\addeduItem{2009.16-2012.13,中國澳門氹仔島澳門科技大學,商學院}
+\addeduItem{2009.16-2012.13,澳門科技大學,商學院}
 \addeduItem{2009.16-2012.13,澳門科技大學,商學院}
 \addeduItem{2009.16-2012.13,澳門科技大學,商學院}
 
@@ -375,8 +391,7 @@ maseeselect
 
 % 增加項目
 \addprojectItem{
-    \item 中國澳門氹仔島澳門科技大學,商學院商學院
-    \item  商學院商學院商學院中國澳門氹仔島澳門科技大學,商學院商學院商學院商學院商學院中國澳門氹仔島澳門科技大學,商學院商學院商學院商學院商學院
+    \item 无
 }
 \end{addcvpage}
 

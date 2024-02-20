@@ -1,5 +1,5 @@
 % !TeX encoding = UTF-8
-% @Yongjian.Li 澳門科技大學-畢業論文 LaTeX template-2023.6.10
+% @Yongjian.Li 澳門科技大學-畢業論文 LaTeX template-2023.12.01
 % 使用手冊: https://iihciyekub.github.io/must-thesis-manual
 
 \documentclass[writingLanguage=chinese,
@@ -8,28 +8,29 @@
     addMUSTlog=off,
     addFigTOC=on,   
     addTabTOC=on,
-    refIndent=on,
+    refIndent=off,
     printMod=off,
 ]{.def/must}
    
 % 論文基本信息,必填不能刪除
 \def\shool              {Macau University of Science and Technology}
-\def\cnTitle            {XXX 銀行(澳門分行)與 XXX 銀行合併之研究}
+\def\cnTitle            {我的毕业论文中文题目}
 \def\cnShortTitle       {\cnTitle}% 頁眉顯示的中文論文短題目
-\def\enTitle            { }
+\def\enTitle            {English title of my graduation thesis}
 \def\enShortTitle       {\enTitle}% 頁眉顯示的英文論文短題目
-\def\Name               {模板}% 名稱
+\def\Name               {李永建}% 名稱
 \def\StudentNo          {1809853G-BM30-0053}% 學號
 \def\Faculty 	        {商學院}% 所在學院
 \def\Program 	        {管理學博士學位}% 學位名稱
 \def\Major              {商業量化}% 專業名稱
 \def\Supervisor	        {李新 副教授}% 指導老師
 \def\DateofWriting		{\datea\today}% 設置論文寫作完成時間
-\def\DateofDeclaration	{\dateb\today}% 設置論文原創聲明時間
-\def\DateofSignature	{2023/06/30}% 設置簽署論文原創聲明的時間
+\def\DateofDeclaration	{2023/11/20}% 設置論文原創聲明時間
+\def\DateofSignature	{2023/11/30}% 設置簽署論文原創聲明的時間
 \def\PublicAfterYears   {5}% 設置論文幾年後公開
+\def\mySign             {Fig/mySign.png}%支持带透明通道的png照片(推荐)
+\def\supervisorSign     {Fig/supervisorSign.png}%支持带透明通道的png照片
 
-\usepackage{pgf}
 
 
 
@@ -82,12 +83,12 @@
 % 填寫個人簡歷
 \begin{addcvpage}
 % 設置入學時間
-\addedudate{2019 年 7 月}
+\addedudate{2018 年 7 月}
 
 % 填寫教育經歷,注意內容以逗號作分隔,
-\addeduItem{2009.16-2012.13,中國澳門氹仔島澳門科技大學,商學院}
-\addeduItem{2009.16-2012.13,澳門科技大學,商學院}
-\addeduItem{2009.16-2012.13,澳門科技大學,商學院}
+\addeduItem{2009.16 $\sim$ 2012.13,澳门科技大学,商學院}
+\addeduItem{2009.16 $\sim$ 2012.13,硕士毕业院校,**院}
+\addeduItem{2009.16 $\sim$ 2012.13,本科毕业院校,**院}
 
 
 %增加學術文章

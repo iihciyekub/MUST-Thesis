@@ -1,6 +1,6 @@
 \usepackage[colorlinks]{hyperref}
 \definecolor{bluecite}{HTML}{000000}
-\newcommand{\sethypcolor}[1]{
+\newcommand{\@sethypcolor}[1]{
     \hypersetup{
         breaklinks  =   true,
         urlcolor    =   #1,
@@ -9,22 +9,40 @@
         anchorcolor =   #1,
     }
 }
-\sethypcolor{bluecite}
+\def\sethypcolor{\@sethypcolor{Blue4}}
 
 
+
+
+
+
+
+
+
+
+
+
+% 文献引用格式
 \RequirePackage{natbib}
 \ifwriteqEn
     \setcitestyle{round, square,aysep={,}, yysep={,}, notesep={,},citesep ={;}}
     \bibpunct{(}{)}{;}{a}{,}{...}
 \else
-    \setcitestyle{round, square,aysep={，}, yysep={，}, notesep={，},citesep ={;}}
-    \bibpunct{（}{）}{；}{a}{，}{...}
+    \setcitestyle{
+        round, 
+        square,
+        aysep={，}, 
+        yysep={-}, 
+        notesep={，},
+        citesep ={;}
+    }
+    \bibpunct{(}{)}{；}{a}{，}{;}
 \fi
 
 
 
 
-
+% URL 宏包
 \RequirePackage{url}
 \urlstyle{same}
 % Line breaks in URL
@@ -48,10 +66,10 @@
     \list{\@biblabel{\@arabic\c@enumiv}}%
     {\settowidth\labelwidth{\@biblabel{#1}}
         \ifri
-            \itemindent -2 em%  
-        \else
             \advance\leftmargin -2em
             \itemindent 0 pt
+        \else
+            \itemindent -2 em%  
         \fi
         \@openbib@code%
         \usecounter{enumiv}%

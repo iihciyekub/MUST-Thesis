@@ -2,7 +2,7 @@
 \tikzset{
 ur/.style={
     inner sep = 0,
-    font = {\fontsize{12 pt}{14 pt}\selectfont},
+    font = {\fontsize{12 pt}{16 pt}\selectfont},
     text width = 3.5 cm,
     name = cr1,
     align = left, 
@@ -11,7 +11,7 @@ ur/.style={
     },
 ut/.style={
     inner sep = 0,
-    font = {\fontsize{12 pt}{14 pt}\selectfont},
+    font = {\fontsize{12 pt}{18 pt}\selectfont},
     text width = 3.5 cm,
     name = ct1,
     align = left, 
@@ -24,7 +24,7 @@ ut/.style={
     % 从宏包中 \RequirePackage{listofitems} 调用的命令
     \readlist\mylist{#1}
     \tikz{\path 
-            node[ut,text width = 3.5 cm,anchor = north west] at (0,0) {$\ast$ \mylist[1]}
+            node[ut,text width = 3.5 cm,anchor = north west] at (0,0) {\mylist[1]}
             node[ut,right =3.8 cm of ct1.north west, text width = 5.25 cm,anchor = north west]{\mylist[2]}
             node[ut,right =5.7 cm of ct1.north west, text width = 3.8 cm,anchor = north west]{\mylist[3]};
   }

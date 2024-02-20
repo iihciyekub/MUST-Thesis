@@ -47,21 +47,23 @@
 \else
     \titleformat{\chapter}[hang]
         {\centering\bfseries\fontsize{22 pt}{\baselineskip}\selectfont}
+        % {\centering\fontsize{22 pt}{\baselineskip}\selectfont}
         {第\thechapter 章}
         {22 pt}
         {\thispagestyle{fancy}}
         {}
-    \titlespacing{\chapter}{0 pt}{12 pt}{12 pt}[0 pt]
+    \titlespacing{\chapter}{0 mm}{-0.4cm}{0.2 cm}[0mm]
     % 2
     \titleformat{\section}[hang]
-        {\centering\bfseries\fontsize{18 pt}{\baselineskip}\selectfont}
+        {\bfseries\centering\fontsize{18 pt}{\baselineskip}\selectfont}
         {第\thesection 節}
-        {18 pt}
+        {10 pt}
         {}
-    \titlespacing{\section}{0 pt}{9 pt}{10 pt}[0 pt]
+    \titlespacing{\section}{0 pt}{5 pt}{5 pt}[0 pt]
     %3
     \titleformat{\subsection}[hang]
-        {\bfseries\itshape\fontsize{16 pt}{\baselineskip}\selectfont}
+        {\bfseries\fontsize{16 pt}{\baselineskip}\selectfont}
+        % {\fontsize{16 pt}{\baselineskip}\selectfont}
         {\thesubsection 、}
         {0 em}
         {}
@@ -69,6 +71,7 @@
     % 4
     \titleformat{\subsubsection}[hang]
         {\bfseries\fontsize{14pt}{\baselineskip}\selectfont}
+        % {\fontsize{14pt}{\baselineskip}\selectfont}
         {\thesubsubsection.}
         {0.2 em}
         {}

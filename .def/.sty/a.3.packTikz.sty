@@ -47,3 +47,14 @@
     splot #1 ;
 };
 }
+
+
+
+% 打勾打X的符号
+\newcommand{\dingfamily}{\fontencoding{U}\fontfamily{ding}\selectfont}
+\newcommand{\@chooseSymbol}[1]{{\dingfamily\symbol{#1}}}
+\newcommand{\Checkmark}{\@chooseSymbol{'041}}
+\newcommand{\CheckmarkBold}{\@chooseSymbol{'042}}
+\newcommand{\XSolidBrush}{\@chooseSymbol{'045}}
+
+

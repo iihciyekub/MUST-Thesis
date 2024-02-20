@@ -1,0 +1,77 @@
+\newcommand{\addtableofcontents}{
+    \clearpage
+    \ifwriteqEn
+        % 英文處理
+        % 設置目錄名稱
+        \renewcommand{\contentsname}{CONTENT}
+        \markboth{CONTENT}{}
+        \tableofcontents
+
+        % 如果設置 - 添加英文圖目錄
+        \iffigt
+            \clearpage
+            % \renewcommand{\listfigurename}{圖目錄}
+            \addcontentsline{toc}{chapter}{\hspace{\hdis em}List of Figures}
+            \listoffigures
+        \fi
+
+        % 如果設置 - 添加中文表目錄
+        \iftabt
+            \clearpage
+            % \renewcommand{\listtablename}{表目錄}
+            \addcontentsline{toc}{chapter}{\hspace{\hdis em}List of Tables}
+            \listoftables
+        \fi
+    \else
+        % 中文處理
+        % 添加目錄
+        \renewcommand{\contentsname}{目錄}
+        \markboth{目錄}{}
+        % 在目錄中使用黑色鏈接
+        \let\oldtableofcontents\tableofcontents
+        \renewcommand{\tableofcontents}{
+            \hypersetup{linkcolor=black}
+            \oldtableofcontents
+            \hypersetup{linkcolor=blue} % 重置為默認顏色
+        }
+        % 生成目錄
+        \tableofcontents
+
+        % 如果設置 - 添加中文圖目錄
+        \iffigt
+            \clearpage
+            \renewcommand{\listfigurename}{圖目錄}
+            % \addcontentsline{toc}{chapter}{\hspace{\hdis em}圖目錄}
+            % 在圖表目錄中使用藍色鏈接
+            \let\oldlistoffigures\listoffigures
+            \renewcommand{\listoffigures}{
+                \hypersetup{linkcolor=black}
+                \oldlistoffigures
+                \sethypcolor % 重置為默認顏色
+            }
+            \listoffigures
+        \fi
+
+        % 如果設置 - 添加中文表目錄
+        \iftabt
+            \clearpage
+            \renewcommand{\listtablename}{表目錄}
+            % \addcontentsline{toc}{chapter}{\hspace{\hdis em}表目錄}
+            % 設置表目錄超鏈接的顏色
+            \let\oldlistoftables\listoftables
+            \renewcommand{\listoftables}{
+                % 將表目錄中的超鏈接顏色設為黑
+                \hypersetup{linkcolor=black}
+                \oldlistoftables
+                \sethypcolor % 自定義命令, 重置為默認顏色
+            }
+            % 生成表目錄
+            \listoftables
+        \fi
+    \fi
+    % 正文
+    \clearpage
+    \pagestyle{fancy}
+    \pagenumbering{arabic}
+    \setcounter{page}{1}
+}
